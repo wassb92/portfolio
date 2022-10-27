@@ -46,7 +46,7 @@ const Projet = (props) => {
             </div>
           )}
           <div className="text-base font-normal">
-            Réaliser en{" "}
+            Réalisé en{" "}
             {props.nmemb === 1
               ? "solo"
               : "groupe de " + props.nmemb + " membres"}
