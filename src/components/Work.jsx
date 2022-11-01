@@ -32,7 +32,7 @@ const Projet = (props) => {
     <div className="">
       <div className="flex items-center justify-center w-full pt-4 h-full object-center">
         <img
-          className="rounded-xl bg-cover bg-center"
+          className="rounded-xl bg-cover bg-center object-contain"
           src={props.logo}
           alt={props.name}
         />
@@ -139,6 +139,7 @@ const Professional = () => {
     </div>
   );
 };
+
 const Game = () => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
@@ -282,6 +283,7 @@ const Game = () => {
     </div>
   );
 };
+
 const Web = () => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
@@ -353,6 +355,7 @@ const Unix = () => {
     </div>
   );
 };
+
 const Else = () => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
@@ -440,56 +443,55 @@ const WorkTabs = () => {
   };
 
   return (
-    <div className="overflow-y-auto h-4/6 border-b-4 rounded-b border-main">
+    <div className="overflow-y-auto h-3/4 border-b-4 rounded-b border-main">
       <Box sx={{ width: "100%" }}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <div className="bg-white rounded-t-lg sticky top-0 z-10">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-              variant={
-                useMediaQuery("(max-width: 600px)") ? "scrollable" : "fullWidth"
-              }
-              textColor="secondary"
-              indicatorColor="secondary"
-              TabIndicatorProps={
-                useMediaQuery("(max-width: 600px)")
-                  ? { style: { backgroundColor: "#8A37DC" } }
-                  : {
-                      style: {
-                        backgroundColor: "#8A37DC",
-                        width: "10%",
-                        marginLeft: "5%",
-                      },
-                    }
-              }
-            >
-              <Tab label="Professionnel" {...a11yProps(0)} />
-              <Tab label="Game" {...a11yProps(1)} />
-              <Tab label="Web" {...a11yProps(2)} />
-              <Tab label="Unix" {...a11yProps(3)} />
-              <Tab label="Autre" {...a11yProps(4)} />
-            </Tabs>
-          </div>
-          <div className="border-main border-r-2 border-l-2 p-4">
-            <TabPanel value={value} index={0}>
-              <Professional />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              <Game />
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              <Web />
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              <Unix />
-            </TabPanel>
-            <TabPanel value={value} index={4}>
-              <Else />
-            </TabPanel>
-          </div>
-        </Box>
+        <div className="bg-white rounded-t-lg sticky top-0 z-10 -mt-6">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+            variant={
+              useMediaQuery("(max-width: 600px)") ? "scrollable" : "fullWidth"
+            }
+            textColor="secondary"
+            indicatorColor="secondary"
+            TabIndicatorProps={
+              useMediaQuery("(max-width: 600px)")
+                ? { style: { backgroundColor: "#8A37DC", marginBottom: "2px" } }
+                : {
+                    style: {
+                      backgroundColor: "#8A37DC",
+                      width: "10%",
+                      marginLeft: "5%",
+                      marginBottom: "2px",
+                    },
+                  }
+            }
+          >
+            <Tab label="Professionnel" {...a11yProps(0)} />
+            <Tab label="Game" {...a11yProps(1)} />
+            <Tab label="Web" {...a11yProps(2)} />
+            <Tab label="Unix" {...a11yProps(3)} />
+            <Tab label="Autre" {...a11yProps(4)} />
+          </Tabs>
+        </div>
+        <div className="border-main border-r-2 border-l-2">
+          <TabPanel value={value} index={0}>
+            <Professional />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Game />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <Web />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <Unix />
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            <Else />
+          </TabPanel>
+        </div>
       </Box>
     </div>
   );
@@ -498,7 +500,7 @@ const WorkTabs = () => {
 const Work = () => {
   return (
     <div name="work" className="w-full h-screen text-white pt-0 sm:pt-10">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto mt-7 p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-white border-secondary">
             Expériences
