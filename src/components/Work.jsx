@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ublo from "../assets/projets/ublo.png";
 import arcade from "../assets/projets/arcade.png";
 import malloc from "../assets/projets/malloc.png";
@@ -19,6 +19,13 @@ import web from "../assets/projets/web.jpg";
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
 import "./ScrollBar.css";
+
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Projet = (props) => {
   return (
@@ -82,9 +89,9 @@ const Projet = (props) => {
   );
 };
 
-const Projets = () => {
+const Professional = () => {
   return (
-    <div className="overflow-y-auto h-4/6 shadow-lg shadow-main space-y-20 border-main border-2 rounded-lg p-4 divide-y divide-solid divide-secondary">
+    <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
         name="Ublo"
         logo={ublo}
@@ -117,7 +124,7 @@ const Projets = () => {
         ]}
         done={true}
         nmemb={5}
-      />
+      />{" "}
       <Projet
         name="Professeur de PHP"
         logo={webac}
@@ -129,39 +136,12 @@ const Projets = () => {
         done={true}
         nmemb={2}
       />
-      <Projet
-        name="EpiSolidaire"
-        logo={EpiSolidaire}
-        description={[
-          "Site pour promouvoir l'association, pouvoir se présenter en ligne, reçevoir des dons, voir les évènements à venir et passé, nous contactez, accéder à son espace membre et par conséquent accéder à son dashboard",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "Postman",
-          "EmailJS",
-          "SendGrid",
-          "Paypal SDK API",
-          "GitHub",
-          "Netlify",
-          "Heroku",
-        ]}
-        done={true}
-        nmemb={1}
-        url="https://episolidaire.com"
-      />
-      <Projet
-        name="my_teams"
-        logo={teams}
-        description={["Recoder teams"]}
-        techUsed={["C", "Makefile", "GitHub", "Programmation réseau", "CLI"]}
-        done={true}
-        nmemb={3}
-      />
+    </div>
+  );
+};
+const Game = () => {
+  return (
+    <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
         name="Zappy"
         logo={zappy}
@@ -299,6 +279,44 @@ const Projets = () => {
         done={true}
         nmemb={1}
       />
+    </div>
+  );
+};
+const Web = () => {
+  return (
+    <div className="space-y-20 divide-y divide-solid divide-secondary">
+      <Projet
+        name="EpiSolidaire"
+        logo={EpiSolidaire}
+        description={[
+          "Site pour promouvoir l'association, pouvoir se présenter en ligne, reçevoir des dons, voir les évènements à venir et passé, nous contactez, accéder à son espace membre et par conséquent accéder à son dashboard",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "EmailJS",
+          "SendGrid",
+          "Paypal SDK API",
+          "GitHub",
+          "Netlify",
+          "Heroku",
+        ]}
+        done={true}
+        nmemb={1}
+        url="https://episolidaire.com"
+      />
+    </div>
+  );
+};
+
+const Unix = () => {
+  return (
+    <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
         name="42sh"
         logo={shell}
@@ -316,6 +334,35 @@ const Projets = () => {
         techUsed={["C", "Makefile", "GitHub", "sbrk", "memory management"]}
         done={true}
         nmemb={1}
+      />
+      <Projet
+        name="my_web"
+        logo={web}
+        description={[
+          "Faire un dual boot entre Debian et Arch Linux sur une machine virtuel sans l'utilisation d'interface graphique pour assembler les partitions.",
+        ]}
+        techUsed={[
+          "Administration système",
+          "Commandes Unix",
+          "Oracle VM VirtualBox",
+          "LVM",
+        ]}
+        done={true}
+        nmemb={2}
+      />
+    </div>
+  );
+};
+const Else = () => {
+  return (
+    <div className="space-y-20 divide-y divide-solid divide-secondary">
+      <Projet
+        name="my_teams"
+        logo={teams}
+        description={["Recoder teams"]}
+        techUsed={["C", "Makefile", "GitHub", "Programmation réseau", "CLI"]}
+        done={true}
+        nmemb={3}
       />
       <Projet
         name="my_db"
@@ -348,21 +395,102 @@ const Projets = () => {
         done={true}
         nmemb={2}
       />
-      <Projet
-        name="my_web"
-        logo={web}
-        description={[
-          "Faire un dual boot entre Debian et Arch Linux sur une machine virtuel sans l'utilisation d'interface graphique pour assembler les partitions.",
-        ]}
-        techUsed={[
-          "Administration système",
-          "Commandes Unix",
-          "Oracle VM VirtualBox",
-          "LVM",
-        ]}
-        done={true}
-        nmemb={2}
-      />
+    </div>
+  );
+};
+
+const TabPanel = (props) => {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+};
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+const a11yProps = (index) => {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+};
+
+const WorkTabs = () => {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <div className="overflow-y-auto h-4/6 border-b-4 rounded-b border-main">
+      <Box sx={{ width: "100%" }}>
+        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <div className="bg-white rounded-t-lg">
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+              variant={
+                useMediaQuery("(max-width: 600px)") ? "scrollable" : "fullWidth"
+              }
+              textColor="secondary"
+              indicatorColor="secondary"
+              TabIndicatorProps={
+                useMediaQuery("(max-width: 600px)")
+                  ? { style: { backgroundColor: "#8A37DC" } }
+                  : {
+                      style: {
+                        backgroundColor: "#8A37DC",
+                        width: "10%",
+                        marginLeft: "5%",
+                      },
+                    }
+              }
+            >
+              <Tab label="Professionnel" {...a11yProps(0)} />
+              <Tab label="Game" {...a11yProps(1)} />
+              <Tab label="Web" {...a11yProps(2)} />
+              <Tab label="Unix" {...a11yProps(3)} />
+              <Tab label="Autre" {...a11yProps(4)} />
+            </Tabs>
+          </div>
+          <div className="border-main border-l-2 p-4">
+            <TabPanel value={value} index={0}>
+              <Professional />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <Game />
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <Web />
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              <Unix />
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+              <Else />
+            </TabPanel>
+          </div>
+        </Box>
+      </Box>
     </div>
   );
 };
@@ -376,8 +504,7 @@ const Work = () => {
             Expériences
           </p>
         </div>
-        <div className="inline text-right">(Défilable)</div>
-        <Projets />
+        <WorkTabs />
         <div className="flex p-4 justify-between">
           <DownButtonRedirect to="contact" />
           <UpButtonRedirect to="skills" />
