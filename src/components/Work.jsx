@@ -443,7 +443,7 @@ const WorkTabs = () => {
     <div className="overflow-y-auto h-4/6 border-b-4 rounded-b border-main">
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <div className="bg-white rounded-t-lg">
+          <div className="bg-white rounded-t-lg sticky top-0 z-10">
             <Tabs
               value={value}
               onChange={handleChange}
@@ -472,7 +472,7 @@ const WorkTabs = () => {
               <Tab label="Autre" {...a11yProps(4)} />
             </Tabs>
           </div>
-          <div className="border-main border-l-2 p-4">
+          <div className="border-main border-r-2 border-l-2 p-4">
             <TabPanel value={value} index={0}>
               <Professional />
             </TabPanel>
