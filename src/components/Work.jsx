@@ -15,6 +15,7 @@ import zappy from "../assets/projets/zappy.png";
 import bomberman from "../assets/projets/bomberman.png";
 import webac from "../assets/projets/webac.jpg";
 import web from "../assets/projets/web.jpg";
+import ionis_stm from "../assets/projets/ionis-stm.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -124,7 +125,35 @@ const Professional = () => {
         ]}
         done={true}
         nmemb={5}
-      />{" "}
+      />
+      <Projet
+        name="Teaching & Coaching"
+        description={[
+          "Stage de 6 mois en tant qu'assistant pédagogique chez IONIS School of Technology and Management.",
+          "Je suis en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
+          "Cela signifie que je suis entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
+          "Je suis également chargé de faire passer des suivis et des soutenances de projets.",
+          "J'exerce principalement pour les formations des Web@cadémie de 1ère et 2ème année, mais aussi pour la formation Coding Club.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Socket.IO",
+          "React Native",
+          "PHP",
+          "HTML",
+          "CSS",
+          "TailwindCSS",
+          "Styled-Components",
+          "MongoDB",
+          "MySQL",
+          "Postman",
+        ]}
+        done={false}
+        logo={ionis_stm}
+        nmemb={5}
+      />
       <Projet
         name="Professeur de PHP"
         logo={webac}
