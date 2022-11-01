@@ -28,6 +28,9 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+
 const Projet = (props) => {
   return (
     <div className="">
@@ -478,15 +481,32 @@ const WorkTabs = () => {
           <Tabs
             value={value}
             onChange={handleChange}
-            aria-label="basic tabs example"
+            scrollButtons
+            allowScrollButtonsMobile
+            aria-label="scrollable force tabs example"
             variant={
               useMediaQuery("(max-width: 600px)") ? "scrollable" : "fullWidth"
             }
             textColor="secondary"
             indicatorColor="secondary"
+            ScrollButtonComponent={(props) => (
+              <div className="m-4">
+                {props.direction === "left"
+                  ? value !== 0 && (
+                      <div onClick={() => setValue(value - 1)}>
+                        <ArrowBackIosIcon {...props} color="secondary" />
+                      </div>
+                    )
+                  : value !== 4 && (
+                      <div onClick={() => setValue(value + 1)}>
+                        <ArrowForwardIosIcon {...props} color="secondary" />
+                      </div>
+                    )}
+              </div>
+            )}
             TabIndicatorProps={
               useMediaQuery("(max-width: 600px)")
-                ? { style: { backgroundColor: "#8A37DC", marginBottom: "2px" } }
+                ? { style: { backgroundColor: "#8A37DC", marginBottom: "4px" } }
                 : {
                     style: {
                       backgroundColor: "#8A37DC",
