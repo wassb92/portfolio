@@ -17,6 +17,7 @@ import webac from "../assets/projets/webac.jpg";
 import web from "../assets/projets/web.jpg";
 import ionis_stm from "../assets/projets/ionis-stm.png";
 import react from "../assets/projets/react.png";
+import fratelli from "../assets/projets/fratelli.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -363,6 +364,27 @@ const Web = () => {
         done={true}
         nmemb={1}
         url="https://www.wassini-bouzidi.com/"
+      />
+      <Projet
+        name="Fratelli Pizza"
+        logo={fratelli}
+        description={[
+          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
+          "L'administrateur a un dashboard pour gérer les commandes et les produits.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Next.js",
+          "MongoDB",
+          "CSS",
+          "Postman",
+          "Paypal SDK API",
+          "GitHub",
+        ]}
+        done={true}
+        nmemb={1}
       />
     </div>
   );
