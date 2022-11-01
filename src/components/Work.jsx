@@ -16,6 +16,7 @@ import bomberman from "../assets/projets/bomberman.png";
 import webac from "../assets/projets/webac.jpg";
 import web from "../assets/projets/web.jpg";
 import ionis_stm from "../assets/projets/ionis-stm.png";
+import react from "../assets/projets/react.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -343,6 +344,25 @@ const Web = () => {
         done={true}
         nmemb={1}
         url="https://episolidaire.com"
+      />
+      <Projet
+        name="Portfolio"
+        logo={react}
+        description={[
+          "Mon expérience, mes compétences, ma personnalité; tout ça ne peut pas être résumé en un CV, c'est pourquoi j'ai crée ce portfolio.",
+          "Vous pouvez y retrouver mes projets, mes compétences, mes expériences, mon association, me contacter et bien plus encore !",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "TailwindCSS",
+          "CSS",
+          "GitHub",
+          "Netlify",
+        ]}
+        done={true}
+        nmemb={1}
+        url="https://www.wassini-bouzidi.com/"
       />
     </div>
   );
