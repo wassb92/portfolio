@@ -47,7 +47,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="z-50 fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-white">
+    <div className="z-50 fixed w-full h-[80px] flex justify-center items-center px-4 bg-[#0a192f] text-white">
       <br />
       <ul className="hidden md:flex">
         <MenuBar to="home" name="Accueil" />
