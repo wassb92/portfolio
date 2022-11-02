@@ -18,6 +18,7 @@ import web from "../assets/projets/web.jpg";
 import ionis_stm from "../assets/projets/ionis-stm.png";
 import react from "../assets/projets/react.png";
 import fratelli from "../assets/projets/fratelli.png";
+import matchstick from "../assets/projets/matchstick.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -324,6 +325,18 @@ const Game = () => {
           "Le personnage peut se déplacer dans les quatre directions, recommencer une partie, quitter la partie, revenir au menu principal, etc...",
         ]}
         techUsed={["C", "Ncurses", "Makefile", "GitHub", "FL Studio"]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="matchstick"
+        logo={matchstick}
+        description={[
+          "Le but de ce projet était de crée un jeu de type Nim, dans lequel il y a un nombre d'allumettes, le joueur et l'ordinateur.",
+          "Le joueur et l'ordinateur vont tour à tour retirer des allumettes, le but étant de retirer la dernière allumette.",
+          "Le joueur peut retirer 1, 2 ou 3 allumettes à chaque tour, l'ordinateur va retirer le nombre d'allumettes qui lui permettra de gagner.",
+        ]}
+        techUsed={["C", "AI", "Makefile", "GitHub"]}
         done={true}
         nmemb={1}
       />
