@@ -19,6 +19,7 @@ import ionis_stm from "../assets/projets/ionis-stm.png";
 import react from "../assets/projets/react.png";
 import fratelli from "../assets/projets/fratelli.png";
 import matchstick from "../assets/projets/matchstick.png";
+import cat from "../assets/projets/cat.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -451,6 +452,34 @@ const Unix = () => {
         ]}
         done={true}
         nmemb={2}
+      />
+      <Projet
+        name="my_printf"
+        logo={
+          "https://developers.redhat.com/sites/default/files/styles/share/public/ST-c_1x%20%282%29.png?itok=wFoDINrX"
+        }
+        description={["Recoder la fonction printf."]}
+        techUsed={["C", "Makefile", "va_arg", "GitHub"]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="my_ls"
+        logo={
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDlKkshcRnYO7n-NP9HxOUAeC6hqsbzU-cPSX-Is8ajyAV0ASOT3GBuT8bd69GSL5XqR4&usqp=CAU"
+        }
+        description={["Recoder la commande ls."]}
+        techUsed={["C", "Makefile", "GitHub"]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="my_cat"
+        logo={cat}
+        description={["Recoder la commande cat."]}
+        techUsed={["C", "GitHub"]}
+        done={true}
+        nmemb={1}
       />
     </div>
   );
