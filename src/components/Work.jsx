@@ -53,6 +53,7 @@ const Projet = (props) => {
                 className="underline underline-offset-4 text-[#6be0dc]"
                 href={props.url}
                 target="_blank"
+                rel="noreferrer"
               >
                 {props.url}
               </a>
@@ -311,6 +312,18 @@ const Game = () => {
           "Photoshop",
           "FL Studio",
         ]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="my_sokoban"
+        logo="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sokoban_ani.gif"
+        description={[
+          "Le but de ce projet était de crée un jeu de type Sokoban, dans lequel il y a un personnage qui doit pousser des caisses sur des emplacements spécifiques.",
+          "Le personnage ne peut pas pousser plusieurs caisses en même temps, il ne peut pas pousser une caisse sur une autre caisse, il ne peut pas pousser une caisse sur un mur.",
+          "Le personnage peut se déplacer dans les quatre directions, recommencer une partie, quitter la partie, revenir au menu principal, etc...",
+        ]}
+        techUsed={["C", "Ncurses", "Makefile", "GitHub", "FL Studio"]}
         done={true}
         nmemb={1}
       />
