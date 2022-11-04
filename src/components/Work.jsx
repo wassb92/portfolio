@@ -37,6 +37,11 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
+const getNbrProjet = (projet) => {
+  if (!projet?.props?.children?.length) return "";
+  return ` (${projet.props.children.length})`;
+};
+
 const Projet = (props) => {
   return (
     <div className="">
@@ -725,11 +730,14 @@ const WorkTabs = () => {
                   }
             }
           >
-            <Tab label="Professionnel" {...a11yProps(0)} />
-            <Tab label="Game" {...a11yProps(1)} />
-            <Tab label="Web" {...a11yProps(2)} />
-            <Tab label="Unix" {...a11yProps(3)} />
-            <Tab label="Autre" {...a11yProps(4)} />
+            <Tab
+              label={`Professionnel${getNbrProjet(Professional())}`}
+              {...a11yProps(0)}
+            />
+            <Tab label={`Game${getNbrProjet(Game())}`} {...a11yProps(1)} />
+            <Tab label={`Web${getNbrProjet(Web())}`} {...a11yProps(2)} />
+            <Tab label={`Unix${getNbrProjet(Unix())}`} {...a11yProps(3)} />
+            <Tab label={`Autre${getNbrProjet(Else())}`} {...a11yProps(4)} />
           </Tabs>
         </div>
         <div className="border-main border-r-2 border-l-2">
