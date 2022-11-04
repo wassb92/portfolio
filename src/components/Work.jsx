@@ -487,8 +487,6 @@ const Unix = () => {
 };
 
 const Else = () => {
-  // mybsq
-  // asm
   // bdsh
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
@@ -530,6 +528,36 @@ const Else = () => {
           "Le programme doit afficher la grille avec le premier plus grand carré rempli de 'x'.",
         ]}
         techUsed={["C", "Makefile", "GitHub"]}
+        done={true}
+        nmemb={1}
+      />
+
+      <Projet
+        name="MiniLibC"
+        logo="https://assets.exercism.io/tracks/x86-64-assembly-hex-turquoise.png"
+        description={[
+          "Recoder les fonctions de la librairie C standard en assembleur x86_64.",
+          "Les fonctions étaients :",
+          "• strlen",
+          "• strchr",
+          "• strrchr",
+          "• memset",
+          "• memcpy",
+          "• strcmp",
+          "• memmove",
+          "• strncmp",
+          "• strcasecmp",
+          "• strstr",
+          "• strpbrk",
+          "• strcspn",
+        ]}
+        techUsed={[
+          "Assembly",
+          "Shared librairies",
+          "x86_64",
+          "Makefile",
+          "GitHub",
+        ]}
         done={true}
         nmemb={1}
       />
