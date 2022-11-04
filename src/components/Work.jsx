@@ -487,7 +487,6 @@ const Unix = () => {
 };
 
 const Else = () => {
-  // bdsh
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
@@ -558,6 +557,19 @@ const Else = () => {
           "Makefile",
           "GitHub",
         ]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="bdsh"
+        logo="https://cameronnokes.com/images/json-bash.png"
+        description={[
+          "Écrire un script shell qui permet de gérer une base de données dans un fichier json.",
+          "Vous devez créer des tables, insérer-mettre à jour-supprimer des données, exécuter des requêtes, ...",
+          "La ligne de commande doit être capable de pouvoir créer une database, une table, insérer des données, supprimer des données, sélectionner des données, ...",
+          "La command-line jq était interdite.",
+        ]}
+        techUsed={["Bash", "JSON", "GitHub"]}
         done={true}
         nmemb={1}
       />
