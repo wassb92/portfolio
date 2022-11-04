@@ -346,6 +346,7 @@ const Game = () => {
 };
 
 const Web = () => {
+  // area
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
@@ -486,6 +487,9 @@ const Unix = () => {
 };
 
 const Else = () => {
+  // mybsq
+  // asm
+  // bdsh
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
@@ -517,6 +521,19 @@ const Else = () => {
         done={false}
         nmemb={1}
       />
+      <Projet
+        name="BSQ"
+        logo="https://camo.githubusercontent.com/3901ac95415ef9326702194b8b817827a7f7175dcb701e82d3a38a587c5ddfaa/687474703a2f2f692e696d6775722e636f6d2f436955733269332e706e67"
+        description={[
+          "Trouver le plus grand carré dans une grille de caractères.",
+          "La grille est composée de caractères '.' et de caractères 'o'.",
+          "Le programme doit afficher la grille avec le premier plus grand carré rempli de 'x'.",
+        ]}
+        techUsed={["C", "Makefile", "GitHub"]}
+        done={true}
+        nmemb={1}
+      />
+
       <Projet
         name="Cash register"
         logo={cash_register}
