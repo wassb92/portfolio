@@ -20,6 +20,7 @@ import react from "../assets/projets/react.png";
 import fratelli from "../assets/projets/fratelli.png";
 import matchstick from "../assets/projets/matchstick.png";
 import cat from "../assets/projets/cat.png";
+import popeye from "../assets/projets/popeye.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -393,6 +394,20 @@ const Web = () => {
         nmemb={1}
         url="https://www.wassini-bouzidi.com/"
       />
+      <Projet
+        name="Popeye"
+        logo={popeye}
+        description={[
+          "Popeye est un projet qui consiste à conteneriser une application web.",
+          "Pour cela, il fallait utilisé Docker, un outil qui permet de créer des conteneurs, c'est-à-dire des environnements virtuels.",
+          "L'application était consituté d'un poll en Flask, d'une queue en Redis, d'un worker en Java, d'une base de données PostgreSQL et d'un result en NodeJS.",
+          "Il fallait donc conteneriser notre application web, et pouvoir la déployer en local.",
+        ]}
+        techUsed={["Docker", "DevOps", "GitHub"]}
+        done={true}
+        nmemb={1}
+      />
+
       <Projet
         name="Fratelli Pizza"
         logo={fratelli}
