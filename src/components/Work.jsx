@@ -467,6 +467,7 @@ const Web = () => {
           "CSS",
           "Postman",
           "Paypal SDK API",
+          "Cloudinary",
           "GitHub",
         ]}
         done={true}
