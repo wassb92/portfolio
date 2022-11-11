@@ -130,6 +130,8 @@ const Professional = () => {
           "Material-UI",
           "Postman",
           "Docker",
+          "Algolia",
+          "DigitalOcean",
           "GitHub",
           "Nest",
           "DBeaver",
