@@ -28,6 +28,10 @@ const About = () => {
                 <br />
                 <div className="inline">• Développeur chez Epitech</div>
                 <br />
+                <div className="inline">
+                  • Assistant pédagogique chez Ionis-STM
+                </div>
+                <br />
               </div>
             </div>
           </div>
