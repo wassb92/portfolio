@@ -22,6 +22,7 @@ import matchstick from "../assets/projets/matchstick.png";
 import cat from "../assets/projets/cat.png";
 import popeye from "../assets/projets/popeye.png";
 import area from "../assets/projets/area.png";
+import ERP from "../assets/projets/ERP.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -364,6 +365,7 @@ const Web = () => {
           "JavaScript",
           "React",
           "NodeJS",
+          "Express",
           "MongoDB",
           "TailwindCSS",
           "CSS",
@@ -371,6 +373,7 @@ const Web = () => {
           "EmailJS",
           "SendGrid",
           "Paypal SDK API",
+          "Authentification",
           "GitHub",
           "Netlify",
           "Heroku",
@@ -395,6 +398,7 @@ const Web = () => {
           "Le deployement de l'application se fait via Docker.",
         ]}
         techUsed={[
+          "JavaScript",
           "NodeJS",
           "Express",
           "ReactJS",
@@ -412,11 +416,39 @@ const Web = () => {
           "Facebook API",
           "SendGrid",
           "Méthode agile",
+          "Authentification",
           "GitHub",
           "Notion",
         ]}
         done={false}
         nmemb={5}
+      />
+      <Projet
+        name="ERP"
+        logo={ERP}
+        description={[
+          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
+          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
+          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e).",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "XLSX",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "Netlify",
+          "Heroku",
+        ]}
+        done={true}
+        nmemb={2}
+        url="https://nuvoleviaggi.netlify.app/"
       />
       <Projet
         name="Portfolio"
@@ -463,6 +495,7 @@ const Web = () => {
           "React",
           "NodeJS",
           "Next.js",
+          "Redux",
           "MongoDB",
           "CSS",
           "Postman",
