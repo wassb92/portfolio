@@ -388,16 +388,16 @@ const Web = () => {
         name="AREA"
         logo={area}
         description={[
-          "AREA est une plateforme de gestion de tâches automatisées. (AREA = Action REAction)",
+          "AREA est une plateforme de gestion de tâches automatisées. AREA signifie Action REAction.",
           "Comme IFTTT ou Zapier, AREA permet de créer des tâches automatisées.",
           "AREA a un serveur, un client web et un client mobile.",
           "L'utilisateur peut se connecter grâce à notre authentification, mais il peut également se connecter grâce à son compte Google, Discord, Microsoft ou bien Facebook grâce à OAuth2.",
           "Une fois connecté, l'utilisateur peut créer des tâches automatisées, pour cela il doit sélectionner une action et une réaction parmi une liste de services.",
-          "Il peut par exemple créer une tâche qui lui permet de recevoir un mail quand il créé un nouvel event sur son calendrier Google.",
-          "Une fois l'AREA créée, elle est sauvegardée dans la base de données et est disponible dans la liste des tâches de l'utilisateur.",
-          "L'utilisateur peut également supprimer une tâche.",
+          "Il peut par exemple créer une tâche qui lui permet de recevoir un appel sur son téléphone lorsqu'il recoit un mail sur son compte Gmail qui contient un mot clé.",
+          "Une fois l'AREA créée, elle est sauvegardée dans la base de données et est disponible dans la liste des AREAs actives de l'utilisateur.",
+          "L'utilisateur peut également supprimer une AREA",
           "AREA est principalement centré sur le serveur, ce qui signifie que tout ce qui est disponible sur le client web l'est également sur le client mobile.",
-          "Le deployement de l'application se fait via Docker.",
+          "Le déploiement de l'application se fait via Docker.",
         ]}
         techUsed={[
           "JavaScript",
@@ -407,7 +407,7 @@ const Web = () => {
           "Flutter",
           "TailwindCSS",
           "CSS",
-          "Material-UI",
+          "MUI",
           "MongoDB",
           "Docker",
           "Postman",
@@ -416,13 +416,18 @@ const Web = () => {
           "Discord API",
           "Microsoft API",
           "Facebook API",
+          "Twitter API",
+          "WhatsApp",
+          "Twilio",
           "SendGrid",
+          "OpenWeatherMap",
           "Méthode agile",
           "Authentification",
+          "Swagger",
           "GitHub",
           "Notion",
         ]}
-        done={false}
+        done={true}
         nmemb={5}
       />
       <Projet
