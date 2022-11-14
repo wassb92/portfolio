@@ -3,6 +3,43 @@ import { Link } from "react-scroll";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
+import animatedReact from "../assets/animatedReact.gif";
+
+const UnderlinedText = ({ children }) => {
+  return (
+    <strong className="inline underline underline-offset-2">{children}</strong>
+  );
+};
+
+const FreelanceSearchingText = () => {
+  return (
+    <div>
+      <div className="mt-2">
+        Actuellement développeur freelance spécialisé dans le{" "}
+        <UnderlinedText>développement web Front-End</UnderlinedText>, et plus
+        particulièrement sur du <UnderlinedText>React</UnderlinedText>,{" "}
+        <UnderlinedText>TailwindCSS</UnderlinedText> et je suis à la recherche
+        de nouveaux projets.
+      </div>
+      <div className="mt-2">
+        J'ai également des compétences en{" "}
+        <UnderlinedText>Node.js</UnderlinedText>,{" "}
+        <UnderlinedText>MongoDB</UnderlinedText>, ma stack préférée étant{" "}
+        <UnderlinedText>MERN</UnderlinedText>.
+      </div>
+      <div className="mt-2">
+        Je suis disponible à hauteur de{" "}
+        <UnderlinedText>3 jours par semaines</UnderlinedText>, avec une
+        préfèrence pour le distanciel.
+      </div>
+      <div className="mt-2">
+        Je reste notamment{" "}
+        <UnderlinedText>ouvert à la discussion</UnderlinedText> concernant les
+        stacks techniques, le distanciel, les jours de travail, etc.
+      </div>
+    </div>
+  );
+};
 
 const Help = ({ text }) => {
   const [open, setOpen] = useState(false);
@@ -31,11 +68,37 @@ const Help = ({ text }) => {
   );
 };
 
+const InternSearchingText = () => {
+  return (
+    <div>
+      <p className="inline">
+        Passionné par le développement de jeux vidéo, de système automatisé
+      </p>{" "}
+      (
+      <p className="inline underline underline-offset-2">
+        <strong>C / C++</strong>
+      </p>
+      ) mais également du développement web (
+      <p className="inline underline underline-offset-2">
+        <strong>JS, TS, React, Node.js, MongoDB, TailwindCSS</strong>
+      </p>
+      ).
+      <div className="mt-2">
+        Actuellement en 3ème année je suis à la recherche d'un{" "}
+        <strong>stage</strong> de début <strong>avril</strong> à fin{" "}
+        <strong>août</strong> afin d'appronfondir mes connaissances, d'évoluer
+        dans un domaine qui me plait et de pouvoir satisfaire un besoin.{" "}
+        <Help text="Je suis également disponible pour de la freelance après cette date" />
+      </div>
+    </div>
+  );
+};
+
 const Home = () => {
   return (
-    <div name="home" className="w-full h-screen">
+    <div name="home" className="w-full">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <div className="pt-24">
+        <div className="pt-16 mt-20">
           <div className="text-secondary font-bold text-xl FromTop">
             Salutations !
           </div>
@@ -43,29 +106,30 @@ const Home = () => {
             <strong>Wassini Bouzidi</strong>
           </div>
         </div>
-        <div className="text-4xl sm:text-6xl font-bold text-gray-400">
-          <strong>Développeur chez Epitech Paris</strong>
+        <div className="text-4xl text-[#61DBFB] sm:text-6xl font-bold atext-gray-400">
+          {global.current === "freelance" ? (
+            <div className="flex">
+              <strong className="sm:hidden flex">Freelance Frontend</strong>
+              <strong className="sm:flex hidden">Freelance Front-End</strong>
+              <div className="px-2 rounded-md">
+                <img
+                  src={animatedReact}
+                  alt="react"
+                  className="sm:w-20 w-10 sm:-mt-2"
+                />
+              </div>
+            </div>
+          ) : (
+            <strong>Développeur chez Epitech Paris</strong>
+          )}
         </div>
         <div className="text-white py-4 max-w-[700px] mt-6">
-          <p className="inline">
-            Passionné par le développement de jeux vidéo, de système automatisé
-          </p>{" "}
-          (
-          <p className="inline underline underline-offset-2">
-            <strong>C / C++</strong>
-          </p>
-          ) mais également du développement web (
-          <p className="inline underline underline-offset-2">
-            <strong>JS, TS, React, Node.js, MongoDB, TailwindCSS</strong>
-          </p>
-          ).
-          <div className="mt-2">
-            Actuellement en 3ème année je suis à la recherche d'un{" "}
-            <strong>stage</strong> de début <strong>avril</strong> à fin{" "}
-            <strong>août</strong> afin d'appronfondir mes connaissances,
-            d'évoluer dans un domaine qui me plait et de pouvoir satisfaire un
-            besoin.{" "}
-            <Help text="Je suis également disponible pour de la freelance après cette date" />
+          <div>
+            {global.current === "freelance" ? (
+              <FreelanceSearchingText />
+            ) : (
+              <InternSearchingText />
+            )}
           </div>
           <div className="mt-2">
             Ce portfolio a était coder en React, TailwindCSS et CSS par

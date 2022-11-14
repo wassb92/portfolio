@@ -16,13 +16,12 @@ const About = () => {
               À propos de moi
             </p>
           </div>
-          <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
           <div className="sm:text-left text-3xl font-bold">
             <div className=" bg-clip-text bg-gradient-to-br from-secondary to-main">
               <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main">
-                <div className="inline">• Président d'EpiSolidaire </div>
+                <div className="inline">• Président d'EpiSolidaire</div>
                 <br />
                 <div className="inline">• Lead Dev chez EpiSolidaire</div>
                 <br />
@@ -66,6 +65,7 @@ const About = () => {
                 className="underline underline-offset-4 text-[#6be0dc]"
                 href="https://episolidaire.com"
                 target="_blank"
+                rel="noreferrer"
               >
                 EpiSolidaire
               </a>

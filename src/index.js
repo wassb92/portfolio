@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
 
-
+global.current = "freelance";
 
 ReactDOM.render(
   <React.StrictMode>
