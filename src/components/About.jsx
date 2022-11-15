@@ -21,16 +21,11 @@ const About = () => {
           <div className="sm:text-left text-3xl font-bold">
             <div className=" bg-clip-text bg-gradient-to-br from-secondary to-main">
               <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main">
-                <div className="inline">• Président d'EpiSolidaire</div>
-                <br />
-                <div className="inline">• Lead Dev chez EpiSolidaire</div>
-                <br />
-                <div className="inline">• Développeur chez Epitech</div>
-                <br />
-                <div className="inline">
-                  • Assistant pédagogique chez Ionis-STM
-                </div>
-                <br />
+                <div>• Freelance Front-End</div>
+                <div>• Président d'EpiSolidaire</div>
+                <div>• Lead Dev chez EpiSolidaire</div>
+                <div>• Développeur chez Epitech</div>
+                <div>• Assistant pédagogique chez Ionis-STM</div>
               </div>
             </div>
           </div>
