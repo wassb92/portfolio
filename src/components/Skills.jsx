@@ -14,6 +14,9 @@ import Mongo from "../assets/langages/mongo.png";
 import Linux from "../assets/langages/linux.png";
 import PostgreSQL from "../assets/langages/postgresql.png";
 import VSCode from "../assets/langages/vscode.png";
+import Netlify from "../assets/langages/netlify.png";
+import Heroku from "../assets/langages/heroku.png";
+import Docker from "../assets/langages/docker.png";
 import MUI from "../assets/langages/MUI.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
@@ -21,12 +24,13 @@ import UpButtonRedirect from "./UpButtonRedirect";
 
 const Skill = (props) => {
   return (
-    <div className="-z-1 reveal shadow-lg shadow-secondary hover:scale-110 duration-300 hover:shadow-main">
-      <img className="my-4 w-20 mx-auto" src={props.logo} alt="icon" />
-      <div className="my-4 text-white font-semibold">
-        {props.name === "GitHub" ? <div className="py-2" /> : null}
-        {props.name}
-      </div>
+    <div className="-z-1 areveal shadow-lg shadow-secondary hover:scale-110 duration-300 hover:shadow-main">
+      <img
+        className={"my-4 w-20 mx-auto " + props.className}
+        src={props.logo}
+        alt={props.name}
+      />
+      <div className="my-4 text-white font-semibold">{props.name}</div>
     </div>
   );
 };
@@ -41,19 +45,22 @@ const Skills = () => {
           </div>
         </div>
         {global.current === "freelance" ? (
-          <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-4 gap-4 md:gap-6 text-center py-8">
+          <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
             <Skill name="React" logo={ReactImg} />
             <Skill name="TailwindCSS" logo={Tailwind} />
             <Skill name="Node.js" logo={Node} />
             <Skill name="MongoDB" logo={Mongo} />
-            <Skill name="TypeScript" logo={TypeScript} />
-            <Skill name="JavaScript" logo={JavaScript} />
-            <Skill name="MUI" logo={MUI} />
-            <Skill name="GitHub" logo={GitHub} />
-            <Skill name="Bash" logo={Bash} />
+            <Skill name="Docker" logo={Docker} />
+            <Skill name="TypeScript" logo={TypeScript} className="mt-8" />
+            <Skill name="JavaScript" logo={JavaScript} className="mt-8" />
+            <Skill name="GitHub" logo={GitHub} className="mt-8" />
+            <Skill name="Netlify" logo={Netlify} className="mt-8" />
+            <Skill name="Heroku" logo={Heroku} />
             <Skill name="Linux" logo={Linux} />
-            <Skill name="HTML" logo={HTML} />
-            <Skill name="CSS" logo={CSS} />
+            <Skill name="Bash" logo={Bash} className="mt-5" />
+            <Skill name="MUI" logo={MUI} className="mt-8" />
+            <Skill name="HTML" logo={HTML} className="mt-8" />
+            <Skill name="CSS" logo={CSS} className="mt-8" />
           </div>
         ) : (
           <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
