@@ -1,6 +1,8 @@
 import React from "react";
-import resumePng from "../assets/resume/resume.png";
-import resumePdf from "../assets/resume/resume.pdf";
+import resumeInternPng from "../assets/resume/resumeIntern.png";
+import resumeInternPdf from "../assets/resume/resumeIntern.pdf";
+import resumeFreelancePng from "../assets/resume/resumeFreelance.png";
+import resumeFreelancePdf from "../assets/resume/resumeFreelance.pdf";
 
 const DownloadResume = (props) => {
   return (
@@ -21,13 +23,27 @@ const Resume = () => {
     <div className="w-full h-full text-center bg-gradient-to-br from-main to-secondary">
       <div className="flex justify-center p-4 md:px-80">
         <img
-          src={resumePng}
+          src={
+            global.current === "freelance"
+              ? resumeFreelancePng
+              : resumeInternPng
+          }
           className="rounded-xl object-cover w-full h-full"
           alt="resume"
         />
       </div>
-      <DownloadResume ext="PDF" file={resumePdf} />
-      <DownloadResume ext="PNG" file={resumePng} />
+      <DownloadResume
+        ext="PDF"
+        file={
+          global.current === "freelance" ? resumeFreelancePdf : resumeInternPdf
+        }
+      />
+      <DownloadResume
+        ext="PNG"
+        file={
+          global.current === "freelance" ? resumeFreelancePng : resumeInternPng
+        }
+      />
     </div>
   );
 };
