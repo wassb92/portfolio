@@ -106,7 +106,15 @@ const Home = () => {
             <strong>Wassini Bouzidi</strong>
           </div>
         </div>
-        <div className="text-4xl text-[#61DBFB] sm:text-6xl font-bold atext-gray-400">
+        <div
+          className={
+            "text-4xl " +
+            (global.current === "freelance"
+              ? "text-[#61DBFB]"
+              : "text-gray-400") +
+            " sm:text-6xl font-bold"
+          }
+        >
           {global.current === "freelance" ? (
             <div className="flex">
               <strong className="sm:hidden flex">Freelance Frontend</strong>
