@@ -739,7 +739,7 @@ const WorkTabs = () => {
             textColor="secondary"
             indicatorColor="secondary"
             ScrollButtonComponent={(props) => (
-              <div className="m-4">
+              <div className="m-4 hover:cursor-pointer">
                 {props.direction === "left"
                   ? value !== 0 && (
                       <div onClick={() => setValue(value - 1)}>
