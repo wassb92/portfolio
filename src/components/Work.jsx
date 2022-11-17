@@ -149,7 +149,7 @@ const Professional = () => {
           "Stage de 6 mois en tant qu'assistant pédagogique chez IONIS School of Technology and Management.",
           "Je suis en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
           "Cela signifie que je suis entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
-          "Je suis également chargé de faire passer des suivis et des soutenances de projets.",
+          "Je suis également chargé de faire passer des suivis, des soutenances de projets et d'encadrer les étudiants durant les piscines.",
           "J'exerce principalement pour les formations des Web@cadémie de 1ère et 2ème année, mais aussi pour la formation Coding Club.",
         ]}
         techUsed={[
