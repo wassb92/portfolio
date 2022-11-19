@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <div className="z-50 fixed w-full h-[80px] flex justify-between md:justify-center items-center px-4 bg-[#0a192f] text-white">
       <br />
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex FromFrontLight">
         <MenuBar to="home" name="Accueil" />
         <MenuBar to="about" name="À propos de moi" />
         <MenuBar to="skills" name="Compétences" />
@@ -123,7 +123,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex z-999 lg:hidden fixed space-x-3">
+      <div className="flex z-999 md:hidden fixed space-x-3">
         <li className="flex py-2 rounded-xl hover:scale-125 bg-blue-600">
           <SocialBar
             icon={<FaLinkedin size={0} />}

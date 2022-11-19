@@ -23,7 +23,7 @@ window.addEventListener("scroll", reveal);
 
 const App = () => {
   return (
-    <div className="font-sans">
+    <div className="overflow-hidden font-sans">
       <Navbar />
       <div className="bg-gradient-to-br from-main via-black to-secondary ">
         <Home />
