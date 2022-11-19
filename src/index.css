@@ -101,3 +101,21 @@
 }
 
 /*-----------------------------------------------------------------------------*/
+
+.BackFlip {
+  animation: BackFlip 2.25s infinite ease-in-out;
+}
+
+@keyframes BackFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
