@@ -116,10 +116,14 @@ const Home = () => {
           }
         >
           {global.current === "freelance" ? (
-            <div className="flex">
-              <strong className="sm:flex hidden">Freelance Front-End</strong>
-              <strong className="sm:hidden flex">Freelance Frontend</strong>
-              <div className="px-2 rounded-md">
+            <div className="flex h-full ">
+              <strong className="sm:flex hidden FromRight">
+                Freelance Front-End
+              </strong>
+              <strong className="sm:hidden flex FromRight">
+                Freelance Frontend
+              </strong>
+              <div className="px-2 rounded-md FromFrontHard">
                 <img
                   src={animatedReact}
                   alt="react"
