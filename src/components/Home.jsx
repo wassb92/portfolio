@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
-import animatedReact from "../assets/animatedReact.gif";
+import animatedReact from "assets/animatedReact.gif";
 
 const UnderlinedText = ({ children }) => {
   return (

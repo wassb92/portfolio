@@ -1,8 +1,8 @@
 import React from "react";
-import resumeInternPng from "../assets/resume/intern.png";
-import resumeInternPdf from "../assets/resume/intern.pdf";
-import resumeFreelancePng from "../assets/resume/freelance.png";
-import resumeFreelancePdf from "../assets/resume/freelance.pdf";
+import resumeInternPng from "assets/resume/intern.png";
+import resumeInternPdf from "assets/resume/intern.pdf";
+import resumeFreelancePng from "assets/resume/freelance.png";
+import resumeFreelancePdf from "assets/resume/freelance.pdf";
 
 const DownloadResume = (props) => {
   return (
