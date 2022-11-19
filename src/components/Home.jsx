@@ -111,19 +111,19 @@ const Home = () => {
             "text-4xl " +
             (global.current === "freelance"
               ? "text-[#61DBFB]"
-              : "text-gray-400") +
+              : "text-indigo-500") +
             " sm:text-6xl font-bold"
           }
         >
           {global.current === "freelance" ? (
             <div className="flex">
-              <strong className="sm:hidden flex">Freelance Frontend</strong>
               <strong className="sm:flex hidden">Freelance Front-End</strong>
+              <strong className="sm:hidden flex">Freelance Frontend</strong>
               <div className="px-2 rounded-md">
                 <img
                   src={animatedReact}
                   alt="react"
-                  className="sm:w-20 w-10 sm:-mt-2"
+                  className="sm:w-20 w-10 sm:-mt-2 BackFlip"
                 />
               </div>
             </div>
