@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
+import Malt from "assets/malt.png";
 
 const MenuBar = (props) => {
   return (
@@ -45,6 +46,16 @@ const SocialBar = (props) => {
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
+  const FaMalt = () => {
+    return (
+      <img
+        src={Malt}
+        alt="Malt"
+        className="w-8 h-8 rounded-full border-2 border-white"
+      />
+    );
+  };
 
   return (
     <div className="z-50 fixed w-full h-[80px] flex justify-between md:justify-center items-center px-4 bg-[#0a192f] text-white">
@@ -100,6 +111,13 @@ const Navbar = () => {
               redirect="https://www.linkedin.com/in/wassini-bouzidi/"
             />
           </li>
+          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff3b6d]">
+            <SocialBar
+              name="Malt"
+              icon={<FaMalt />}
+              redirect="https://www.malt.fr/profile/wassinibouzidi"
+            />
+          </li>
           <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <SocialBar
               name="Github"
@@ -123,11 +141,17 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex z-999 md:hidden fixed space-x-3">
+      <div className="flex z-999 md:hidden fixed">
         <li className="flex py-2 rounded-xl hover:scale-125 bg-blue-600">
           <SocialBar
-            icon={<FaLinkedin size={0} />}
+            icon={<FaLinkedin size={30} />}
             redirect="https://www.linkedin.com/in/wassini-bouzidi/"
+          />
+        </li>
+        <li className="flex py-2 rounded-xl hover:scale-125 bg-[#ff3b6d]">
+          <SocialBar
+            icon={<FaMalt />}
+            redirect="https://www.malt.fr/profile/wassinibouzidi"
           />
         </li>
         <li className="flex py-2 rounded-xl hover:scale-125 bg-[#333333]">
