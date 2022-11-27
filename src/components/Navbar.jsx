@@ -141,7 +141,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex z-999 md:hidden fixed">
+      <div className="flex z-999 md:hidden fixed space-x-1">
         <li className="flex py-2 rounded-xl hover:scale-125 bg-blue-600">
           <SocialBar
             icon={<FaLinkedin size={30} />}
