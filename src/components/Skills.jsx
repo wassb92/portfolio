@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import HTML from "assets/langages/html.png";
 import CSS from "assets/langages/css.png";
 import JavaScript from "assets/langages/javascript.png";
@@ -21,6 +21,7 @@ import MUI from "assets/langages/MUI.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
+import { SeekingContext } from "SeekingContext";
 
 const Skill = (props) => {
   return (
@@ -36,15 +37,17 @@ const Skill = (props) => {
 };
 
 const Skills = () => {
+  const { seeking } = useContext(SeekingContext);
+
   return (
     <div name="skills" className="w-full sm:h-screen text-white">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className={global.current === "freelance" && "mt-20"}>
+        <div className={seeking === "freelance" && "mt-20"}>
           <div className="text-4xl font-bold inline border-b-4 border-secondary">
             Compétences
           </div>
         </div>
-        {global.current === "freelance" ? (
+        {seeking === "freelance" ? (
           <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
             <Skill name="React" logo={ReactImg} />
             <Skill name="TailwindCSS" logo={Tailwind} />
