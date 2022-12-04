@@ -21,9 +21,7 @@ const About = () => {
           <div className="sm:text-left text-3xl font-bold">
             <div className=" bg-clip-text bg-gradient-to-br from-secondary to-main">
               <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main">
-                {global.current === "freelance" && (
-                  <div>• Freelance Front-End</div>
-                )}
+                <div>• Freelance Front-End</div>
                 <div>• Président d'EpiSolidaire</div>
                 <div>• Lead Dev chez EpiSolidaire</div>
                 <div>• Développeur chez Epitech</div>
