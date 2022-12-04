@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -6,16 +6,32 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
 
-global.current = "freelance";
+import { SeekingContext } from "SeekingContext";
+
+const Routing = () => {
+  const [seeking, setSeeking] = useState("freelance");
+  return (
+    <SeekingContext.Provider value={{ seeking, setSeeking }}>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route
+          path="/resume_internship"
+          element={<Resume seeking="internship" />}
+        />
+        <Route
+          path="/resume_freelance"
+          element={<Resume seeking="freelance" />}
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </SeekingContext.Provider>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Routing />
     </BrowserRouter>
   </React.StrictMode>,
 
