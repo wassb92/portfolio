@@ -142,11 +142,8 @@ const Home = () => {
         >
           {seeking === "freelance" ? (
             <div className="flex h-full">
-              <strong className="sm:flex hidden FromRight">
+              <strong className="FromRight sm:text-6xl text-2xl">
                 Freelance Front-End
-              </strong>
-              <strong className="sm:hidden flex FromRight">
-                Freelance Frontend
               </strong>
               <div className="px-2 rounded-md FromFrontHard">
                 <img
