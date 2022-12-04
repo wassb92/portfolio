@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-scroll";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import animatedReact from "assets/animatedReact.gif";
+import { SeekingContext } from "SeekingContext";
 
 const UnderlinedText = ({ children }) => {
   return (
@@ -95,8 +96,34 @@ const InternSearchingText = () => {
 };
 
 const Home = () => {
+  const { seeking, setSeeking } = useContext(SeekingContext);
+
+  const SwitchSeeking = () => {
+    const handleClick = () => {
+      if (seeking === "internship") {
+        setSeeking("freelance");
+      } else if (seeking === "freelance") {
+        setSeeking("internship");
+      }
+    };
+
+    return (
+      <button
+        className="group border-2 px-6 py-3 my-2 flex items-center hover:border-secondary rounded-xl"
+        onClick={handleClick}
+      >
+        {seeking === "freelance"
+          ? "Voir le profil Stagiaire"
+          : "Voir le profil Freelance"}
+      </button>
+    );
+  };
+
   return (
     <div name="home" className="w-full">
+      <div className="mt-20 mr-2 absolute top-0 right-0 text-white">
+        <SwitchSeeking />
+      </div>
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className="pt-16 mt-20">
           <div className="text-secondary font-bold text-xl FromTop">
@@ -109,14 +136,12 @@ const Home = () => {
         <div
           className={
             "text-4xl " +
-            (global.current === "freelance"
-              ? "text-[#61DBFB]"
-              : "text-indigo-500") +
+            (seeking === "freelance" ? "text-[#61DBFB]" : "text-[#006ab3]") +
             " sm:text-6xl font-bold"
           }
         >
-          {global.current === "freelance" ? (
-            <div className="flex h-full ">
+          {seeking === "freelance" ? (
+            <div className="flex h-full">
               <strong className="sm:flex hidden FromRight">
                 Freelance Front-End
               </strong>
@@ -132,12 +157,14 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <strong>Développeur chez Epitech Paris</strong>
+            <strong className="flex h-full mb-10">
+              Développeur chez Epitech Paris
+            </strong>
           )}
         </div>
         <div className="text-white py-4 max-w-[700px] mt-6">
           <div>
-            {global.current === "freelance" ? (
+            {seeking === "freelance" ? (
               <FreelanceSearchingText />
             ) : (
               <InternSearchingText />
@@ -161,7 +188,7 @@ const Home = () => {
           <div className="FromBottom">
             <a
               className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-              href="resume"
+              href={`resume_${seeking}`}
               target="_blank"
               rel="noreferrer"
             >
