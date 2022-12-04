@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import Malt from "assets/malt.png";
+import { SeekingContext } from "SeekingContext";
 
 const MenuBar = (props) => {
   return (
@@ -45,6 +46,7 @@ const SocialBar = (props) => {
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const { seeking } = useContext(SeekingContext);
   const handleClick = () => setNav(!nav);
 
   const FaMalt = () => {
@@ -67,11 +69,9 @@ const Navbar = () => {
         <MenuBar to="work" name="Expériences" />
         <MenuBar to="contact" name="Contact" />
       </ul>
-
       <div onClick={handleClick} className="md:hidden z-10">
         {!nav ? <FaBars size={32} /> : <FaTimes size={32} />}
       </div>
-
       <ul
         className={
           !nav
@@ -136,7 +136,7 @@ const Navbar = () => {
             <SocialBar
               name="CV"
               icon={<BsFillPersonLinesFill size={30} />}
-              redirect="resume"
+              redirect={`resume_${seeking}`}
             />
           </li>
         </ul>
@@ -169,7 +169,7 @@ const Navbar = () => {
         <li className="flex py-2 rounded-xl hover:scale-125 bg-gray-700">
           <SocialBar
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect="resume"
+            redirect={`resume_${seeking}`}
           />
         </li>
       </div>
