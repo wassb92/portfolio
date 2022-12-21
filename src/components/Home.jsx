@@ -105,7 +105,18 @@ const Home = () => {
           to="about"
           smooth={true}
           duration={350}
-          className="border-2 sm:px-6 px-2 py-3 flex items-center hover:bg-secondary hover:border-secondary rounded-xl hover:cursor-pointer"
+          className={`group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
+          ${
+            seeking === "internship"
+              ? "hover:border-main"
+              : "hover:border-secondary"
+          }
+          sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
+          ${
+            seeking === "internship"
+              ? "sm:hover:shadow-main"
+              : "sm:hover:shadow-secondary"
+          }`}
         >
           C'est parti !
           <span className="group-hover:rotate-90 duration-300">
@@ -128,7 +139,18 @@ const Home = () => {
     return (
       <button className="text-white">
         <div
-          className="group border-2 sm:px-6 px-2 py-3 my-2 flex items-center hover:border-secondary rounded-xl hover:cursor-pointer"
+          className={`group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
+          ${
+            seeking === "internship"
+              ? "hover:border-secondary"
+              : "hover:border-main"
+          }
+          sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
+          ${
+            seeking === "internship"
+              ? "sm:hover:shadow-secondary"
+              : "sm:hover:shadow-main"
+          }`}
           onClick={handleClick}
         >
           {seeking === "freelance"
