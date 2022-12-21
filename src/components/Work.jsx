@@ -23,6 +23,7 @@ import cat from "assets/projets/cat.png";
 import popeye from "assets/projets/popeye.png";
 import area from "assets/projets/area.png";
 import ERP from "assets/projets/ERP.png";
+import OWL from "assets/projets/OWL.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -382,7 +383,7 @@ const Web = () => {
         ]}
         done={true}
         nmemb={1}
-        url="https://episolidaire.com"
+        url="https://www.episolidaire.com/"
       />
       <Projet
         name="AREA"
@@ -429,6 +430,35 @@ const Web = () => {
         ]}
         done={true}
         nmemb={5}
+      />
+      <Projet
+        name="OWL"
+        logo={OWL}
+        description={[
+          "OWL (Other Way to Look) est une application mobile qui permet de lutter contre la somnolence au volant.",
+          "L'application est composée d'un client mobile et d'un serveur.",
+          "L'application mobile est connectée à une montre connectée qui détecte principalement le rythme cardiaque, l'apport en oxygène et la durée de sommeil du conducteur.",
+          "Grâce à ces informations, un algorithme est appliqué pour déterminer si le conducteur est fatigué ou non.",
+          "Si le conducteur est fatigué, l'application mobile fait une action pour le prévenir et lui propose de prendre une pause.",
+          "Une action peut être caractérisée par une vibration de la montre connectée, du téléphone, un message sur le téléphone, un appel, etc...",
+          "Le conducteur peut ensuite obtenir une destination pour se rendre au point d'intérêt le plus proche (restaurant, hôtel, etc...) si nécessaire.",
+        ]}
+        techUsed={[
+          "TypeScript",
+          "React Native",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "CSS",
+          "Bluetooth",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "render.com",
+          "Connect smartwatch to mobile",
+        ]}
+        done={false}
+        nmemb={9}
       />
       <Projet
         name="ERP"
