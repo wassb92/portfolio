@@ -98,6 +98,24 @@ const InternSearchingText = () => {
 const Home = () => {
   const { seeking, setSeeking } = useContext(SeekingContext);
 
+  const GoAbout = () => {
+    return (
+      <button className="text-white">
+        <Link
+          to="about"
+          smooth={true}
+          duration={350}
+          className="border-2 sm:px-6 px-2 py-3 flex items-center hover:bg-secondary hover:border-secondary rounded-xl hover:cursor-pointer"
+        >
+          C'est parti !
+          <span className="group-hover:rotate-90 duration-300">
+            <HiArrowNarrowRight className="ml-3" />
+          </span>
+        </Link>
+      </button>
+    );
+  };
+
   const SwitchSeeking = () => {
     const handleClick = () => {
       if (seeking === "internship") {
@@ -108,22 +126,36 @@ const Home = () => {
     };
 
     return (
-      <button
-        className="group border-2 px-6 py-3 my-2 flex items-center hover:border-secondary rounded-xl"
-        onClick={handleClick}
-      >
-        {seeking === "freelance"
-          ? "Voir le profil Stagiaire"
-          : "Voir le profil Freelance"}
+      <button className="text-white">
+        <div
+          className="group border-2 sm:px-6 px-2 py-3 my-2 flex items-center hover:border-secondary rounded-xl hover:cursor-pointer"
+          onClick={handleClick}
+        >
+          {seeking === "freelance"
+            ? "Voir le profil Stagiaire"
+            : "Voir le profil Freelance"}
+        </div>
       </button>
+    );
+  };
+
+  const AccessResume = () => {
+    return (
+      <div className="FromBottom flex items-center">
+        <a
+          className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
+          href={`resume_${seeking}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Accéder directement à mon CV
+        </a>
+      </div>
     );
   };
 
   return (
     <div name="home" className="w-full">
-      <div className="mt-20 mr-2 absolute top-0 right-0 text-white">
-        <SwitchSeeking />
-      </div>
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className="pt-16 mt-20">
           <div className="text-secondary font-bold text-xl FromTop">
@@ -173,24 +205,22 @@ const Home = () => {
           </div>
           <div className="mt-10 font-semibold">Prêt à me découvrir ?</div>
         </div>
-        <div className="text-white grid sm:grid-cols-2 gap-4 items-center">
-          <Link to="about" smooth={true} duration={350}>
-            <button className="group border-2 px-6 py-3 my-2 flex items-center hover:bg-secondary hover:border-secondary rounded-xl">
-              C'est parti !
-              <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight className="ml-3 " />
-              </span>
-            </button>
-          </Link>
-          <div className="FromBottom">
-            <a
-              className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-              href={`resume_${seeking}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Accéder directement à mon CV
-            </a>
+
+        <div className="space-y-2">
+          <div className="flex justify-between items-center text-white space-x-2">
+            <GoAbout />
+            <div className="sm:flex hidden">
+              <AccessResume />
+            </div>
+            <div className="sm:flex hidden">
+              <SwitchSeeking />
+            </div>
+            <div className="sm:hidden flex">
+              <SwitchSeeking />
+            </div>
+          </div>
+          <div className="sm:hidden flex">
+            <AccessResume />
           </div>
         </div>
       </div>
