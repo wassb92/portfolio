@@ -145,7 +145,7 @@ const Professional = () => {
         nmemb={5}
       />
       <Projet
-        name="Teaching & Coaching"
+        name="Assistant pédagogique"
         description={[
           "Stage de 6 mois en tant qu'assistant pédagogique chez IONIS School of Technology and Management.",
           "Je suis en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
