@@ -147,3 +147,23 @@
     transform: rotateY(360deg);
   }
 }
+
+/*-----------------------------------------------------------------------------*/
+
+button:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155343"), auto !important;
+}
+
+a:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155343"), auto !important;
+}
+
+input:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155334"), auto !important;
+}
+
+textarea:hover {
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155334"), auto !important;
+}
+
+/*-----------------------------------------------------------------------------*/
