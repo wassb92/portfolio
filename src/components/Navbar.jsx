@@ -54,7 +54,7 @@ const Navbar = () => {
       <img
         src={Malt}
         alt="Malt"
-        className="w-8 h-8 rounded-full border-2 border-white"
+        className="w-8 h-8 rounded-full border-2 border-white min-w-[32px] min-h-[32px]"
       />
     );
   };
