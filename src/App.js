@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -22,8 +23,13 @@ const reveal = () => {
 window.addEventListener("scroll", reveal);
 
 const App = () => {
+  const cursorUrl = "http://www.rw-designer.com/cursor-extern.php?id=155305";
+
   return (
-    <div className="overflow-hidden font-sans">
+    <div
+      className="overflow-hidden font-sans w-full h-full"
+      style={{ cursor: `url(${cursorUrl}), auto` }}
+    >
       <Navbar />
       <div className="bg-gradient-to-br from-main via-black to-secondary ">
         <Home />

@@ -137,9 +137,8 @@ const Home = () => {
     };
 
     return (
-      <button className="text-white">
-        <div
-          className={`group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
+      <button
+        className={`text-white group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
           ${
             seeking === "internship"
               ? "hover:border-secondary"
@@ -151,12 +150,11 @@ const Home = () => {
               ? "sm:hover:shadow-secondary"
               : "sm:hover:shadow-main"
           }`}
-          onClick={handleClick}
-        >
-          {seeking === "freelance"
-            ? "Voir le profil Stagiaire"
-            : "Voir le profil Freelance"}
-        </div>
+        onClick={handleClick}
+      >
+        {seeking === "freelance"
+          ? "Voir le profil Stagiaire"
+          : "Voir le profil Freelance"}
       </button>
     );
   };
