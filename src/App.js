@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
 
+import cursor from "./assets/cursors/Normal_Select.cur";
+
 const reveal = () => {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -23,12 +25,10 @@ const reveal = () => {
 window.addEventListener("scroll", reveal);
 
 const App = () => {
-  const cursorUrl = "http://www.rw-designer.com/cursor-extern.php?id=155305";
-
   return (
     <div
       className="overflow-hidden font-sans w-full h-full"
-      style={{ cursor: `url(${cursorUrl}), auto` }}
+      style={{ cursor: `url(${cursor}), auto` }}
     >
       <Navbar />
       <div className="bg-gradient-to-br from-main via-black to-secondary ">
