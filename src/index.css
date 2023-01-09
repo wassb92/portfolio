@@ -149,21 +149,19 @@
 }
 
 /*-----------------------------------------------------------------------------*/
-
-button:hover {
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155343"), auto !important;
+:root {
+  --ButtonInputCursor: url("assets/cursors/Link_Select.cur");
+  --textInputCursor: url("assets/cursors/Text_Select.cur");
 }
 
+button:hover,
 a:hover {
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155343"), auto !important;
+  cursor: var(--ButtonInputCursor), auto !important;
 }
 
-input:hover {
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155334"), auto !important;
-}
-
+input:hover,
 textarea:hover {
-  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=155334"), auto !important;
+  cursor: var(--textInputCursor), auto !important;
 }
 
 /*-----------------------------------------------------------------------------*/
