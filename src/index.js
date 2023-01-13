@@ -9,7 +9,7 @@ import Resume from "./components/Resume";
 import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {
-  const [seeking, setSeeking] = useState("freelance");
+  const [seeking, setSeeking] = useState("internship");
   return (
     <SeekingContext.Provider value={{ seeking, setSeeking }}>
       <Routes>
