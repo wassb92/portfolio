@@ -111,13 +111,15 @@ const Navbar = () => {
               redirect="https://www.linkedin.com/in/wassini-bouzidi/"
             />
           </li>
-          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff3b6d]">
-            <SocialBar
-              name="Malt"
-              icon={<FaMalt />}
-              redirect="https://www.malt.fr/profile/wassinibouzidi"
-            />
-          </li>
+          {seeking === "freelance" && (
+            <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff3b6d]">
+              <SocialBar
+                name="Malt"
+                icon={<FaMalt />}
+                redirect="https://www.malt.fr/profile/wassinibouzidi"
+              />
+            </li>
+          )}
           <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <SocialBar
               name="Github"
@@ -148,12 +150,14 @@ const Navbar = () => {
             redirect="https://www.linkedin.com/in/wassini-bouzidi/"
           />
         </li>
-        <li className="flex py-2 rounded-xl hover:scale-125 bg-[#ff3b6d]">
-          <SocialBar
-            icon={<FaMalt />}
-            redirect="https://www.malt.fr/profile/wassinibouzidi"
-          />
-        </li>
+        {seeking === "freelance" && (
+          <li className="flex py-2 rounded-xl hover:scale-125 bg-[#ff3b6d]">
+            <SocialBar
+              icon={<FaMalt />}
+              redirect="https://www.malt.fr/profile/wassinibouzidi"
+            />
+          </li>
+        )}
         <li className="flex py-2 rounded-xl hover:scale-125 bg-[#333333]">
           <SocialBar
             icon={<FaGithub size={30} />}
