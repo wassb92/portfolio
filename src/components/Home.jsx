@@ -117,14 +117,14 @@ const Home = () => {
           className={`group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
           ${
             seeking === "internship"
-              ? "hover:border-main"
-              : "hover:border-secondary"
+              ? "hover:border-secondary"
+              : "hover:border-main"
           }
           sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
           ${
             seeking === "internship"
-              ? "sm:hover:shadow-main"
-              : "sm:hover:shadow-secondary"
+              ? "sm:hover:shadow-secondary"
+              : "sm:hover:shadow-main"
           }`}
         >
           C'est parti !
@@ -150,14 +150,14 @@ const Home = () => {
         className={`text-white group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
           ${
             seeking === "internship"
-              ? "hover:border-secondary"
-              : "hover:border-main"
+              ? "hover:border-main"
+              : "hover:border-secondary"
           }
           sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
           ${
             seeking === "internship"
-              ? "sm:hover:shadow-secondary"
-              : "sm:hover:shadow-main"
+              ? "sm:hover:shadow-main"
+              : "sm:hover:shadow-secondary"
           }`}
         onClick={handleClick}
       >

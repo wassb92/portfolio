@@ -36,6 +36,72 @@ const Skill = (props) => {
   );
 };
 
+const InternSkills = () => {
+  return (
+    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
+      <Skill name="C" logo={C} />
+      <Skill name="C++" logo={Cpp} />
+      <Skill name="Bash" logo={Bash} />
+      <Skill name="Linux" logo={Linux} />
+      <Skill name="GitHub" logo={GitHub} />
+      <Skill name="TypeScript" logo={TypeScript} />
+      <Skill name="JavaScript" logo={JavaScript} />
+      <Skill name="React" logo={ReactImg} />
+      <Skill name="Node.js" logo={Node} />
+      <Skill name="TailwindCSS" logo={Tailwind} />
+      <Skill name="PostgreSQL" logo={PostgreSQL} />
+      <Skill name="MongoDB" logo={Mongo} />
+      <Skill name="HTML" logo={HTML} />
+      <Skill name="CSS" logo={CSS} />
+      <Skill name="Visual Studio Code" logo={VSCode} />
+    </div>
+  );
+};
+
+const FreelanceSkills = () => {
+  return (
+    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
+      <Skill name="React" logo={ReactImg} />
+      <Skill name="TailwindCSS" logo={Tailwind} />
+      <Skill name="Node.js" logo={Node} />
+      <Skill name="MongoDB" logo={Mongo} />
+      <Skill name="Docker" logo={Docker} />
+      <Skill name="TypeScript" logo={TypeScript} className="mt-8" />
+      <Skill name="JavaScript" logo={JavaScript} className="mt-8" />
+      <Skill name="GitHub" logo={GitHub} className="mt-8" />
+      <Skill name="Netlify" logo={Netlify} className="mt-8" />
+      <Skill name="Heroku" logo={Heroku} />
+      <Skill name="Linux" logo={Linux} />
+      <Skill name="Bash" logo={Bash} className="mt-5" />
+      <Skill name="MUI" logo={MUI} className="mt-8" />
+      <Skill name="HTML" logo={HTML} className="mt-8" />
+      <Skill name="CSS" logo={CSS} className="mt-8" />
+    </div>
+  );
+};
+
+const MergedSkills = () => {
+  return (
+    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
+      <Skill name="TypeScript" logo={TypeScript} />
+      <Skill name="JavaScript" logo={JavaScript} />
+      <Skill name="React" logo={ReactImg} />
+      <Skill name="Node.js" logo={Node} />
+      <Skill name="TailwindCSS" logo={Tailwind} />
+      <Skill name="MongoDB" logo={Mongo} />
+      <Skill name="PostgreSQL" logo={PostgreSQL} />
+      <Skill name="MUI" logo={MUI} />
+      <Skill name="Docker" logo={Docker} />
+      <Skill name="GitHub" logo={GitHub} />
+      <Skill name="C" logo={C} />
+      <Skill name="C++" logo={Cpp} />
+      <Skill name="Bash" logo={Bash} />
+      <Skill name="Linux" logo={Linux} />
+      <Skill name="Visual Studio Code" logo={VSCode} className="mt-8" />
+    </div>
+  );
+};
+
 const Skills = () => {
   const { seeking } = useContext(SeekingContext);
 
@@ -47,43 +113,7 @@ const Skills = () => {
             Compétences
           </div>
         </div>
-        {seeking === "freelance" ? (
-          <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-            <Skill name="React" logo={ReactImg} />
-            <Skill name="TailwindCSS" logo={Tailwind} />
-            <Skill name="Node.js" logo={Node} />
-            <Skill name="MongoDB" logo={Mongo} />
-            <Skill name="Docker" logo={Docker} />
-            <Skill name="TypeScript" logo={TypeScript} className="mt-8" />
-            <Skill name="JavaScript" logo={JavaScript} className="mt-8" />
-            <Skill name="GitHub" logo={GitHub} className="mt-8" />
-            <Skill name="Netlify" logo={Netlify} className="mt-8" />
-            <Skill name="Heroku" logo={Heroku} />
-            <Skill name="Linux" logo={Linux} />
-            <Skill name="Bash" logo={Bash} className="mt-5" />
-            <Skill name="MUI" logo={MUI} className="mt-8" />
-            <Skill name="HTML" logo={HTML} className="mt-8" />
-            <Skill name="CSS" logo={CSS} className="mt-8" />
-          </div>
-        ) : (
-          <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-            <Skill name="C" logo={C} />
-            <Skill name="C++" logo={Cpp} />
-            <Skill name="Bash" logo={Bash} />
-            <Skill name="Linux" logo={Linux} />
-            <Skill name="GitHub" logo={GitHub} />
-            <Skill name="TypeScript" logo={TypeScript} />
-            <Skill name="JavaScript" logo={JavaScript} />
-            <Skill name="React" logo={ReactImg} />
-            <Skill name="Node.js" logo={Node} />
-            <Skill name="TailwindCSS" logo={Tailwind} />
-            <Skill name="PostgreSQL" logo={PostgreSQL} />
-            <Skill name="MongoDB" logo={Mongo} />
-            <Skill name="HTML" logo={HTML} />
-            <Skill name="CSS" logo={CSS} />
-            <Skill name="Visual Studio Code" logo={VSCode} />
-          </div>
-        )}
+        {seeking === "freelance" ? <FreelanceSkills /> : <MergedSkills />}
         <div className="flex justify-between">
           <DownButtonRedirect to="work" />
           <UpButtonRedirect to="about" />
