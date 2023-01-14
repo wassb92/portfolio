@@ -206,7 +206,7 @@ const Home = () => {
               </div>
             </div>
           ) : (
-            <strong className="flex h-full mb-10">
+            <strong className="FromRight flex h-full mb-10">
               Développeur chez Epitech Paris
             </strong>
           )}
