@@ -60,7 +60,7 @@ const Help = ({ text }) => {
       {open && (
         <div className="z-40 absolute">
           <CloseButton />
-          <div className="bg-white rounded-xl border-2 border-main text-main text-lg p-3">
+          <div className="bg-white rounded-xl border-2 border-main text-main text-lg p-3 max-w-sm">
             {text}
           </div>
         </div>
@@ -86,10 +86,19 @@ const InternSearchingText = () => {
       ).
       <div className="mt-2">
         Actuellement en 3ème année je suis à la recherche d'un{" "}
-        <strong>stage</strong> de début <strong>avril</strong> à fin{" "}
-        <strong>août</strong> afin d'appronfondir mes connaissances, d'évoluer
-        dans un domaine qui me plait et de pouvoir satisfaire un besoin.{" "}
-        <Help text="Je suis également disponible pour de la freelance après cette date" />
+        <strong>stage</strong> débutant en{" "}
+        <strong className="underline underline-offset-2">avril</strong> à{" "}
+        <strong className="underline underline-offset-2">fin août</strong>, mais
+        je suis également disposé à{" "}
+        <strong className="underline underline-offset-2">
+          commencer immédiatement
+        </strong>{" "}
+        sous forme de contrat <strong>freelance</strong>. Ce contrat n'inclurait{" "}
+        <strong>pas un TJM élevé</strong> et me permettra de{" "}
+        <strong className="underline underline-offset-2">
+          débuter le stage immédiatement.
+        </strong>{" "}
+        <Help text="La charge de travail imposée par mon école me permet d'être libre toute la semaine." />
       </div>
     </div>
   );
