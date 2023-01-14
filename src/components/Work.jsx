@@ -24,6 +24,7 @@ import popeye from "assets/projets/popeye.png";
 import area from "assets/projets/area.png";
 import ERP from "assets/projets/ERP.png";
 import OWL from "assets/projets/OWL.png";
+import rtype from "assets/projets/rtype.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -190,6 +191,32 @@ const Professional = () => {
 const Game = () => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
+      <Projet
+        name="R-Type"
+        logo={rtype}
+        description={[
+          "R-Type est un jeu vidéo d'arcade de tir à défilement horizontal développé et publié par Irem en 1987 et le premier jeu de la série R-Type.",
+          "Le joueur contrôle un vaisseau spatial, le R-9 'Arrowhead', dans ses efforts pour détruire le Bydo, une puissante race extraterrestre déterminée à anéantir toute l'humanité.",
+          "Le jeu est en réseau, ayant un client et un serveur.",
+          "Le serveur doit être en multithread pour pouvoir gérer plusieurs clients en même temps et limiter les laggs.",
+          "Ce projet doit être réalisé dans des conditions réelles de développement, c'est-à-dire en utilisant des outils de gestion de versions, de tests, de documentation, packaging, etc.",
+        ]}
+        techUsed={[
+          "C++",
+          "SFML",
+          "Boost",
+          "Asio",
+          "Multithreading",
+          "CMake",
+          "vcpkg",
+          "Network programming",
+          "CMake",
+          "GitHub",
+        ]}
+        done={false}
+        nmemb={5}
+      />
+
       <Projet
         name="Zappy"
         logo={zappy}
