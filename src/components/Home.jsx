@@ -6,6 +6,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import animatedReact from "assets/animatedReact.gif";
 import { SeekingContext } from "SeekingContext";
 
+import resumeInternPdf from "assets/resume/intern.pdf";
+import resumeFreelancePdf from "assets/resume/freelance.pdf";
+
 const UnderlinedText = ({ children }) => {
   return (
     <strong className="inline underline underline-offset-2">{children}</strong>
@@ -173,7 +176,7 @@ const Home = () => {
       <div className="FromBottom flex items-center">
         <a
           className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-          href={`resume_${seeking}`}
+          href={seeking === "internship" ? resumeInternPdf : resumeFreelancePdf}
           target="_blank"
           rel="noreferrer"
         >

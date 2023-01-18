@@ -6,6 +6,9 @@ import { Link } from "react-scroll";
 import Malt from "assets/malt.png";
 import { SeekingContext } from "SeekingContext";
 
+import resumeInternPdf from "assets/resume/intern.pdf";
+import resumeFreelancePdf from "assets/resume/freelance.pdf";
+
 const MenuBar = (props) => {
   return (
     <li className="text-xl font-bold">
@@ -138,7 +141,9 @@ const Navbar = () => {
             <SocialBar
               name="CV"
               icon={<BsFillPersonLinesFill size={30} />}
-              redirect={`resume_${seeking}`}
+              redirect={
+                seeking === "internship" ? resumeInternPdf : resumeFreelancePdf
+              }
             />
           </li>
         </ul>
@@ -173,7 +178,9 @@ const Navbar = () => {
         <li className="flex py-2 rounded-xl hover:scale-125 bg-gray-700">
           <SocialBar
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect={`resume_${seeking}`}
+            redirect={
+              seeking === "internship" ? resumeInternPdf : resumeFreelancePdf
+            }
           />
         </li>
       </div>
