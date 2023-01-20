@@ -2113,6 +2113,11 @@
   dependencies:
     "@types/jest" "*"
 
+"@types/tinycolor2@^1.4.3":
+  "integrity" "sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ=="
+  "resolved" "https://registry.npmjs.org/@types/tinycolor2/-/tinycolor2-1.4.3.tgz"
+  "version" "1.4.3"
+
 "@types/trusted-types@^2.0.2":
   "integrity" "sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg=="
   "resolved" "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.2.tgz"
@@ -3582,6 +3587,11 @@
     "abab" "^2.0.3"
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
+
+"date-fns@^2.29.3":
+  "integrity" "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.3.tgz"
+  "version" "2.29.3"
 
 "debug@^2.6.0":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
@@ -7344,6 +7354,15 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
+"react-activity-calendar@^1.7.0":
+  "integrity" "sha512-iyUNhnYYM2zuSI5KUD4xjTbWH4wBFYFm7M1FwZ1J+g8jK7o48730n9v7OemcP++PouH9f4G/oVSGF4Nk3BBcnQ=="
+  "resolved" "https://registry.npmjs.org/react-activity-calendar/-/react-activity-calendar-1.7.0.tgz"
+  "version" "1.7.0"
+  dependencies:
+    "@types/tinycolor2" "^1.4.3"
+    "date-fns" "^2.29.3"
+    "tinycolor2" "^1.4.0"
+
 "react-app-polyfill@^3.0.0":
   "integrity" "sha512-sZ41cxiU5llIB003yxxQBYrARBqe0repqPTTYBTmMqTz9szeBbE37BehCE891NZsmdZqqP+xWKdT3eo3vOzN8w=="
   "resolved" "https://registry.npmjs.org/react-app-polyfill/-/react-app-polyfill-3.0.0.tgz"
@@ -7404,6 +7423,13 @@
   "integrity" "sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA=="
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
   "version" "3.2.0"
+
+"react-github-calendar@^3.4.0":
+  "integrity" "sha512-3HiUjZAivwcDhNdL3Nwz5MNSUolOwsIuyrBnq6fYfJJE7l0CONHKX9N0lJ/4wpJWZBBYMHOmvFM10sNCRPpYaQ=="
+  "resolved" "https://registry.npmjs.org/react-github-calendar/-/react-github-calendar-3.4.0.tgz"
+  "version" "3.4.0"
+  dependencies:
+    "react-activity-calendar" "^1.7.0"
 
 "react-icons@^4.3.1":
   "integrity" "sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ=="
@@ -8481,6 +8507,11 @@
   "integrity" "sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q="
   "resolved" "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz"
   "version" "0.3.0"
+
+"tinycolor2@^1.4.0":
+  "integrity" "sha512-h80m9GPFGbcLzZByXlNSEhp1gf8Dy+VX/2JCGUZsWLo7lV1mnE/XlxGYgRBoMLJh1lIDXP0EMC4RPTjlRaV+Bg=="
+  "resolved" "https://registry.npmjs.org/tinycolor2/-/tinycolor2-1.5.2.tgz"
+  "version" "1.5.2"
 
 "tmpl@1.0.5":
   "integrity" "sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw=="
