@@ -141,9 +141,7 @@ const Navbar = () => {
             <SocialBar
               name="CV"
               icon={<BsFillPersonLinesFill size={30} />}
-              redirect={
-                seeking === "internship" ? resumeInternPdf : resumeFreelancePdf
-              }
+              redirect={`resume_${seeking}`}
             />
           </li>
         </ul>
@@ -178,9 +176,7 @@ const Navbar = () => {
         <li className="flex py-2 rounded-xl hover:scale-125 bg-gray-700">
           <SocialBar
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect={
-              seeking === "internship" ? resumeInternPdf : resumeFreelancePdf
-            }
+            redirect={`resume_${seeking}`}
           />
         </li>
       </div>

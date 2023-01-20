@@ -176,7 +176,7 @@ const Home = () => {
       <div className="FromBottom flex items-center">
         <a
           className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-          href={seeking === "internship" ? resumeInternPdf : resumeFreelancePdf}
+          href={`resume_${seeking}`}
           target="_blank"
           rel="noreferrer"
         >

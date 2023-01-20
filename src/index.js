@@ -10,24 +10,16 @@ import Snowfall from "react-snowfall";
 import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {
-  const [seeking, setSeeking] = useState("internship");
+  const seeks = ["internship", "freelance"];
+  const [seeking, setSeeking] = useState(seeks[0]);
+
   return (
     <SeekingContext.Provider value={{ seeking, setSeeking }}>
-      <Snowfall
-        color={seeking === "internship" ? "#4031D9" : "#8A37DC"}
-        style={{ position: "fixed" }}
-        snowflakeCount={200}
-      />
       <Routes>
         <Route path="/" element={<App />} />
-        <Route
-          path="/resume_internship"
-          element={<Resume seeking="internship" />}
-        />
-        <Route
-          path="/resume_freelance"
-          element={<Resume seeking="freelance" />}
-        />
+        {seeks.map((seek) => (
+          <Route path={`resume_${seek}`} element={<Resume />} key={seek} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </SeekingContext.Provider>

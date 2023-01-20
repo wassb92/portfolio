@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
+import Snowfall from "react-snowfall";
+import { SeekingContext } from "./SeekingContext";
 
 import cursor from "./assets/cursors/Normal_Select.cur";
 
@@ -25,11 +27,17 @@ const reveal = () => {
 window.addEventListener("scroll", reveal);
 
 const App = () => {
+  const { seeking } = useContext(SeekingContext);
   return (
     <div
       className="overflow-hidden font-sans w-full h-full"
       style={{ cursor: `url(${cursor}), auto` }}
     >
+      <Snowfall
+        color={seeking === "internship" ? "#4031D9" : "#8A37DC"}
+        style={{ position: "fixed" }}
+        snowflakeCount={200}
+      />
       <Navbar />
       <div className="bg-gradient-to-br from-main via-black to-secondary ">
         <Home />
