@@ -17,8 +17,9 @@ const Resume = () => {
     <iframe
       src={seeking === "freelance" ? resumeFreelancePdf : resumeInternPdf}
       className="w-full h-screen"
-      title="Resdume"
-      name="Resdume"
+      title={`CV ${seeking}`}
+      name={`CV ${seeking}`}
+      download={`wassini_bouzidi_${seeking}_cv.pdf`}
     />
   );
 };
