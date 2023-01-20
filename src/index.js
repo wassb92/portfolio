@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
+import Snowfall from "react-snowfall";
 
 import { SeekingContext } from "SeekingContext";
 
@@ -12,6 +13,11 @@ const Routing = () => {
   const [seeking, setSeeking] = useState("internship");
   return (
     <SeekingContext.Provider value={{ seeking, setSeeking }}>
+      <Snowfall
+        color={seeking === "internship" ? "#4031D9" : "#8A37DC"}
+        style={{ position: "fixed" }}
+        snowflakeCount={200}
+      />
       <Routes>
         <Route path="/" element={<App />} />
         <Route
