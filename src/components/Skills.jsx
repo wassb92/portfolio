@@ -108,7 +108,7 @@ const Skills = () => {
   return (
     <div name="skills" className="w-full sm:h-screen text-white">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div className={seeking === "freelance" && "mt-20"}>
+        <div className="mt-20">
           <div className="text-4xl font-bold inline border-b-4 border-secondary">
             Compétences
           </div>
