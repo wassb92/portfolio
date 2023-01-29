@@ -187,9 +187,9 @@ const Home = () => {
   };
 
   return (
-    <div name="home" className="w-full">
+    <div name="home" className="w-full sm:h-screen">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <div className="pt-16 mt-20">
+        <div className="pt-16 mt-20 xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">
             Salutations !
           </div>
@@ -232,8 +232,7 @@ const Home = () => {
             )}
           </div>
           <div className="mt-2">
-            Ce portfolio a était coder en React, TailwindCSS et CSS par
-            moi-même.
+            Ce portfolio a été codé en React, TailwindCSS et CSS par moi-même.
           </div>
           <div className="mt-10 font-semibold">Prêt à me découvrir ?</div>
         </div>

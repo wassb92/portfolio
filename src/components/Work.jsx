@@ -254,9 +254,9 @@ const Game = () => {
         name="Arcade"
         logo={arcade}
         description={[
-          "L'objectif de ce projet était de crée une plateforme de jeu, avec un seul core qui peut charger dynamiquement plusieurs bibliothèques graphiques différentes et avec au moins deux jeux.",
+          "L'objectif de ce projet était de créer une plateforme de jeu, avec un seul core qui peut charger dynamiquement plusieurs bibliothèques graphiques différentes et avec au moins deux jeux.",
           "Les librairies graphiques choisies ont été la SFML, la Ncurses et la SDL2.",
-          "Les jeux choisies ont été Nibbler et Pacman.",
+          "Les jeux choisis ont été Nibbler et Pacman.",
           "Le joueur peut choisir son pseudo, selectionnez son jeu, dynamiquement changer de librairie graphique et a un score enregistré dans une base de données.",
         ]}
         techUsed={[
@@ -275,7 +275,7 @@ const Game = () => {
         name="my_rpg"
         logo={rpg}
         description={[
-          "Comme son nom l'indique, le but de ce projet était de crée un Role Playing Game (RPG), dans lequel il y a une histoire, des quêtes, des niveaux, des combats, des donjons, un inventaire, des niveaux de compétences et énormément d'autre chose qui caractérise ce qu'est un RPG.",
+          "Comme son nom l'indique, le but de ce projet était de créer un Role Playing Game (RPG), dans lequel il y a une histoire, des quêtes, des niveaux, des combats, des donjons, un inventaire, des niveaux de compétences et énormément d'autres choses qui caractérise ce qu'est un RPG.",
         ]}
         techUsed={[
           "C",
@@ -295,10 +295,10 @@ const Game = () => {
         logo={defender}
         description={[
           "Un mini League Of Legends ça vous dit ?",
-          "Le but ce projet était de crée un jeu de type Tower Defense, avec une base à défendre, des ennemis qui apparraissent et qui vont attaquer cette dernière.",
+          "Le but ce projet était de créer un jeu de type Tower Defense, avec une base à défendre, des ennemis qui apparraissent et qui vont attaquer cette dernière.",
           "Le joueur a pour but de défendre sa base, et pour cela il doit poser des tourelles qui peuvent détruire les ennemis, chaque tourelle a une spécification particulière (Dégâts, portée, impact sur les caractéristiques des ennemis, etc...)",
           "Afin de poser une tourelle il faut avoir une certaine somme d'argent, les tourelles peuvent également être améliorées.",
-          "Tous les graphismes et sons ont était tiré du jeu officiel de League Of Legends.",
+          "Tous les graphismes et sons sont tirés du jeu officiel de League Of Legends.",
         ]}
         techUsed={[
           "C",
@@ -318,7 +318,7 @@ const Game = () => {
         logo={runner}
         description={[
           "Vous connaissez sûrement le T-Rex Game ? Ce jeu que Google peut vous proposez lorsque vous n'avez pas de connexion.",
-          "J'en ai recrée un, avec des graphismes différent mais le but reste le même, c'est un runner.",
+          "J'en ai recrée un, avec des graphismes différents mais le but reste le même, c'est un runner.",
           "Le but étant de sauter avec son personnage dans une immense carte qui défile, il doit éviter les obstacles et les ennemis.",
           "À la fin de cette carte il y a une ligne d'arrivée, cela signifie que vous avez gagnez la partie !",
           "À ce moment là, votre score est sauvegardé et vous pouvez recommencer une partie à partir de votre ancien score, c'est de cette manière que vous pourrez toujours faire en sorte d'avoir le plus grand score !",
@@ -341,7 +341,7 @@ const Game = () => {
           "Piou Piou ! + Among us = ?",
           "Vous l'avez dans le mille ! Mon my_hunter.",
           "Des ennemis arrivent de la droite et de la gauche, au milieu de la carte il y a une base que les ennemis ne doivent surtout pas franchir, sinon vous perdez des points de vie",
-          "Pour cela, vous êtes équiper d'une arme qui vous permet de tuer les ennemis avant qu'ils n'arrivent à destination !",
+          "Pour cela, vous êtes équipés d'une arme qui vous permet de tuer les ennemis avant qu'ils n'arrivent à destination !",
         ]}
         techUsed={[
           "C",
@@ -358,7 +358,7 @@ const Game = () => {
         name="my_sokoban"
         logo="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sokoban_ani.gif"
         description={[
-          "Le but de ce projet était de crée un jeu de type Sokoban, dans lequel il y a un personnage qui doit pousser des caisses sur des emplacements spécifiques.",
+          "Le but de ce projet était de créer un jeu de type Sokoban, dans lequel il y a un personnage qui doit pousser des caisses sur des emplacements spécifiques.",
           "Le personnage ne peut pas pousser plusieurs caisses en même temps, il ne peut pas pousser une caisse sur une autre caisse, il ne peut pas pousser une caisse sur un mur.",
           "Le personnage peut se déplacer dans les quatre directions, recommencer une partie, quitter la partie, revenir au menu principal, etc...",
         ]}
@@ -370,7 +370,7 @@ const Game = () => {
         name="matchstick"
         logo={matchstick}
         description={[
-          "Le but de ce projet était de crée un jeu de type Nim, dans lequel il y a un nombre d'allumettes, le joueur et l'ordinateur.",
+          "Le but de ce projet était de créer un jeu de type Nim, dans lequel il y a un nombre d'allumettes, le joueur et l'ordinateur.",
           "Le joueur et l'ordinateur vont tour à tour retirer des allumettes, le but étant de retirer la dernière allumette.",
           "Le joueur peut retirer 1, 2 ou 3 allumettes à chaque tour, l'ordinateur va retirer le nombre d'allumettes qui lui permettra de gagner.",
         ]}
@@ -389,7 +389,7 @@ const Web = () => {
         name="EpiSolidaire"
         logo={EpiSolidaire}
         description={[
-          "Site pour promouvoir l'association, pouvoir se présenter en ligne, reçevoir des dons, voir les évènements à venir et passé, nous contactez, accéder à son espace membre et par conséquent accéder à son dashboard",
+          "Site pour promouvoir l'association, pouvoir se présenter en ligne, reçevoir des dons, voir les évènements à venir et passés, nous contacter, accéder à son espace membre et par conséquent accéder à son dashboard",
         ]}
         techUsed={[
           "JavaScript",
@@ -538,8 +538,8 @@ const Web = () => {
         logo={popeye}
         description={[
           "Popeye est un projet qui consiste à conteneriser une application web.",
-          "Pour cela, il fallait utilisé Docker, un outil qui permet de créer des conteneurs, c'est-à-dire des environnements virtuels.",
-          "L'application était consituté d'un poll en Flask, d'une queue en Redis, d'un worker en Java, d'une base de données PostgreSQL et d'un result en NodeJS.",
+          "Pour cela, il fallait utiliser Docker, un outil qui permet de créer des conteneurs, c'est-à-dire des environnements virtuels.",
+          "L'application était constituée d'un poll en Flask, d'une queue en Redis, d'un worker en Java, d'une base de données PostgreSQL et d'un result en NodeJS.",
           "Il fallait donc conteneriser notre application web, et pouvoir la déployer en local.",
         ]}
         techUsed={["Docker", "DevOps", "GitHub"]}

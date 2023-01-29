@@ -5,7 +5,6 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
-import Snowfall from "react-snowfall";
 
 import { SeekingContext } from "SeekingContext";
 
