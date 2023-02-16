@@ -108,7 +108,7 @@ const InternSearchingText = () => {
 };
 
 const Home = () => {
-  const { seeking, setSeeking } = useContext(SeekingContext);
+  const { seeking, setSeeking, defaultSeek } = useContext(SeekingContext);
 
   const GoAbout = () => {
     return (
@@ -244,7 +244,7 @@ const Home = () => {
               <AccessResume />
             </div>
             <div className="sm:flex hidden">
-              <SwitchSeeking />
+              {defaultSeek !== "freelance" && <SwitchSeeking />}
             </div>
             <div className="sm:hidden flex">
               <SwitchSeeking />
