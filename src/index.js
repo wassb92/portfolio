@@ -10,10 +10,11 @@ import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {
   const seeks = ["internship", "freelance"];
-  const [seeking, setSeeking] = useState(seeks[0]);
+  const defaultSeek = seeks[1];
+  const [seeking, setSeeking] = useState(defaultSeek);
 
   return (
-    <SeekingContext.Provider value={{ seeking, setSeeking }}>
+    <SeekingContext.Provider value={{ seeking, setSeeking, defaultSeek }}>
       <Routes>
         <Route path="/" element={<App />} />
         {seeks.map((seek) => (
