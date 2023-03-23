@@ -82,7 +82,11 @@ const Projet = (props) => {
               ? "solo"
               : "groupe de " + props.nmemb + " membres"}
           </div>
-          {props.done ? (
+          {props.isComing ? (
+            <div className="text-[#23DC3D] flex justify-end text-md">
+              À venir...
+            </div>
+          ) : props.done ? (
             <div className="text-secondary flex justify-end text-md">
               Terminé
             </div>
@@ -131,6 +135,7 @@ const Professional = () => {
         done={false}
         nmemb={"n"}
         job="Développeur Front-End"
+        isComing={true}
       />
       <Projet
         name="Ublo"
