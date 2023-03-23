@@ -25,6 +25,9 @@ import area from "assets/projets/area.png";
 import ERP from "assets/projets/ERP.png";
 import OWL from "assets/projets/OWL.png";
 import rtype from "assets/projets/rtype.png";
+import rakuten from "assets/projets/rakuten.png";
+import freelance from "assets/projets/freelance.png";
+import evogue from "assets/projets/evogue.jpeg";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -56,7 +59,10 @@ const Projet = (props) => {
       </div>
       <div className="px-6 py-4">
         <div className="text-white font-bold text-2xl mb-8">
-          <div>{props.name}</div>
+          {props.job && <div className="xs:text-3xl my-6">{props.job}</div>}
+          <div className={"text-xl" + (props?.job && " text-secondary")}>
+            {props.name}
+          </div>
           {props.url && (
             <div className="text-base font-normal">
               Lien :{" "}
@@ -111,6 +117,22 @@ const Professional = () => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
+        name="Rakuten"
+        logo={rakuten}
+        description={[]}
+        techUsed={[
+          "TypeScript",
+          "React",
+          "TailwindCSS",
+          "MUI",
+          "GitHub",
+          "Figma",
+        ]}
+        done={false}
+        nmemb={"n"}
+        job="Développeur Front-End"
+      />
+      <Projet
         name="Ublo"
         logo={ublo}
         description={[
@@ -144,9 +166,85 @@ const Professional = () => {
         ]}
         done={true}
         nmemb={5}
+        job="Développeur Full-Stack"
       />
       <Projet
-        name="Assistant pédagogique"
+        name="Nuvoleviaggi"
+        logo={freelance}
+        description={[
+          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
+          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
+          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e).",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "XLSX",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "Netlify",
+          "Heroku",
+        ]}
+        done={true}
+        nmemb={2}
+        job="Développeur Full-Stack (Freelance)"
+      />
+      <Projet
+        name="Fratelli.B"
+        logo={freelance}
+        description={[
+          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
+          "L'administrateur a un dashboard pour gérer les commandes et les produits.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Next.js",
+          "Redux",
+          "MongoDB",
+          "CSS",
+          "Postman",
+          "Paypal SDK API",
+          "Cloudinary",
+          "GitHub",
+        ]}
+        done={true}
+        nmemb={1}
+        job="Développeur Full-Stack (Freelance)"
+      />
+
+      <Projet
+        name="EVOGUE"
+        logo={evogue}
+        description={[
+          "En tant que professeur, j'ai été chargé de préparer, d'organiser, d'assurer des cours de programmation et de corrigés les exercices et les TP des étudiants.",
+          "Les profils des étudiants étaient très variés, allant de débutants pour découvrir certaine notions de programmation à des étudiants plus avancés de niveau Bac +3/+4.",
+          "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins.",
+        ]}
+        techUsed={[
+          "SQL",
+          "Java",
+          "C#",
+          "HTML",
+          "CSS",
+          "OOP",
+          "UML",
+          "Enseignement",
+        ]}
+        done={true}
+        nmemb={1}
+        job="Professeur d'informatique (Freelance)"
+      />
+
+      <Projet
+        name="IONIS School of Technology and Management"
         description={[
           "Stage de 6 mois en tant qu'assistant pédagogique chez IONIS School of Technology and Management.",
           "Je suis en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
@@ -169,12 +267,13 @@ const Professional = () => {
           "MySQL",
           "Postman",
         ]}
-        done={false}
+        done={true}
         logo={ionis_stm}
         nmemb={5}
+        job="Assistant pédagogique"
       />
       <Projet
-        name="Professeur de PHP"
+        name="Web@cademie"
         logo={webac}
         description={[
           "Professeur / Assistant lors d'une piscine de PHP pour la Web@cademie.",
@@ -183,6 +282,7 @@ const Professional = () => {
         techUsed={["PHP", "GitHub"]}
         done={true}
         nmemb={2}
+        job="Professeur de PHP"
       />
     </div>
   );
@@ -204,16 +304,18 @@ const Game = () => {
         techUsed={[
           "C++",
           "SFML",
+          "ECS",
+          "CMake",
+          "Conan",
+          "Docker",
+          "Doxygen",
           "Boost",
           "Asio",
-          "Multithreading",
-          "CMake",
-          "vcpkg",
           "Network programming",
-          "CMake",
+          "Multithreading",
           "GitHub",
         ]}
-        done={false}
+        done={true}
         nmemb={5}
       />
 
@@ -457,6 +559,25 @@ const Web = () => {
         ]}
         done={true}
         nmemb={5}
+      />
+      <Projet
+        name="R-Type Website"
+        logo={rtype}
+        description={[
+          "Après avoir codé le jeu R-Type, j'ai décidé de créer un site pour le promouvoir, le télécharger et jouer en ligne.",
+          "Le site contient une section Accueil, une section Média où l'on peut voir des vidéos et des images du jeu, une section Jeux où l'on peut retrouver d'autres jeux que j'ai codé, une section À propos où l'on peut en savoir plus sur le jeu et l'équipe de développement, et enfin une section Téléchargement où l'on peut télécharger le jeu et voir les dernières mises à jour.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "TailwindCSS",
+          "CSS",
+          "GitHub",
+          "Netlify",
+        ]}
+        done={true}
+        nmemb={1}
+        url="https://rtype.netlify.app/"
       />
       <Projet
         name="OWL"
