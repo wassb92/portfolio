@@ -5,13 +5,16 @@ import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import animatedReact from "assets/animatedReact.gif";
 import { SeekingContext } from "SeekingContext";
+import rakuten from "assets/projets/rakuten.png";
 
 import resumeInternPdf from "assets/resume/intern.pdf";
 import resumeFreelancePdf from "assets/resume/freelance.pdf";
 
-const UnderlinedText = ({ children }) => {
+const UnderlinedText = ({ children, className = "" }) => {
   return (
-    <strong className="inline underline underline-offset-2">{children}</strong>
+    <strong className="inline underline underline-offset-2">
+      <span className={className}>{children}</span>
+    </strong>
   );
 };
 
@@ -19,27 +22,24 @@ const FreelanceSearchingText = () => {
   return (
     <div>
       <div className="mt-2">
-        Actuellement développeur freelance spécialisé dans le{" "}
-        <UnderlinedText>développement web Front-End</UnderlinedText>, et plus
-        particulièrement sur du <UnderlinedText>React</UnderlinedText>,{" "}
-        <UnderlinedText>TailwindCSS</UnderlinedText> et je suis à la recherche
-        de nouveaux projets.
+        Actuellement développeur Front-End chez{" "}
+        <img src={rakuten} alt="Rakuten" className="h-4 inline" /> à temps
+        plein, je suis également disponible pour des missions freelance en
+        dehors de mes heures de travail.
       </div>
       <div className="mt-2">
-        J'ai également des compétences en{" "}
-        <UnderlinedText>Node.js</UnderlinedText>,{" "}
-        <UnderlinedText>MongoDB</UnderlinedText>, ma stack préférée étant{" "}
-        <UnderlinedText>MERN</UnderlinedText>.
+        Mes compétences en développement web incluent{" "}
+        <UnderlinedText>React</UnderlinedText>,{" "}
+        <UnderlinedText>TailwindCSS</UnderlinedText>,{" "}
+        <UnderlinedText>Node.js</UnderlinedText>, et{" "}
+        <UnderlinedText>MongoDB</UnderlinedText>, avec une préférence pour la
+        stack <UnderlinedText>MERN</UnderlinedText>.
       </div>
       <div className="mt-2">
-        Je suis disponible à hauteur de{" "}
-        <UnderlinedText>3 jours par semaines</UnderlinedText>, avec une
-        préfèrence pour le distanciel.
-      </div>
-      <div className="mt-2">
-        Je reste notamment{" "}
-        <UnderlinedText>ouvert à la discussion</UnderlinedText> concernant les
-        stacks techniques, le distanciel, les jours de travail, etc.
+        Si vous cherchez un développeur web fiable et compétent pour vos
+        projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks
+        techniques et les modalités de travail, et je serai heureux de discuter
+        avec vous pour trouver la solution la plus adaptée à vos besoins.
       </div>
     </div>
   );

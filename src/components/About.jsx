@@ -3,7 +3,7 @@ import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
 import GitHubCalendar from "react-github-calendar";
 
-const currentActivities
+const currentActivities = [
   "Freelance Front-End",
   "Développeur chez Rakuten",
   "Développeur chez OWL",
