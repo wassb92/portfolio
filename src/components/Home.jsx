@@ -23,7 +23,7 @@ const FreelanceSearchingText = () => {
     <div>
       <div className="mt-2">
         Actuellement développeur Front-End chez{" "}
-        <img src={rakuten} alt="Rakuten" className="h-4 inline" /> à temps
+        <img src={rakuten} alt="Rakuten" className="h-5 inline" /> à temps
         plein, je suis également disponible pour des missions freelance en
         dehors de mes heures de travail.
       </div>
