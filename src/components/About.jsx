@@ -3,11 +3,12 @@ import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
 import GitHubCalendar from "react-github-calendar";
 
-const currentActivites = [
-  "Freelance Full-Stack",
-  "Développeur chez Epitech",
-  "Assistant pédagogique chez Ionis-STM",
-  "Président d'EpiSolidaire",
+const currentActivities
+  "Freelance Front-End",
+  "Développeur chez Rakuten",
+  "Développeur chez OWL",
+  // "Développeur chez Epitech",
+  "Ex-Président d'EpiSolidaire",
 ];
 
 const About = () => {
@@ -24,8 +25,8 @@ const About = () => {
         <div className="max-w-[1000px] w-full gap-8 px-4 space-y-10">
           <div className="sm:text-left text-3xl font-bold flex flex-col items-center">
             <div className=" bg-clip-text bg-gradient-to-br from-secondary to-main">
-              <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main  text-center">
-                {currentActivites.map((activity, index) => {
+              <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main">
+                {currentActivities.map((activity, index) => {
                   return <div key={index}>• {activity}</div>;
                 })}
               </div>
