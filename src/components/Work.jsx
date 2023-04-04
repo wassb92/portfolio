@@ -82,7 +82,7 @@ const Projet = (props) => {
               ? "solo"
               : "groupe de " + props.nmemb + " membres"}
           </div>
-          {props.isComing ? (
+          {props.inComing ? (
             <div className="text-[#23DC3D] flex justify-end text-md">
               À venir...
             </div>
@@ -127,15 +127,17 @@ const Professional = () => {
         techUsed={[
           "TypeScript",
           "React",
-          "TailwindCSS",
+          "Next.js",
           "MUI",
-          "GitHub",
+          "Bitbucket",
+          "Jira",
+          "Notion",
           "Figma",
+          "Slack",
         ]}
         done={false}
-        nmemb={"n"}
+        nmemb={9}
         job="Développeur Front-End"
-        isComing={true}
       />
       <Projet
         name="Ublo"
