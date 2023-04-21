@@ -123,7 +123,9 @@ const Professional = () => {
       <Projet
         name="Rakuten"
         logo={rakuten}
-        description={[]}
+        description={[
+          "Développement de composants React custom et override de composants MUI pour un service commun à toutes les plateformes Rakuten.",
+        ]}
         techUsed={[
           "TypeScript",
           "React",
@@ -131,6 +133,7 @@ const Professional = () => {
           "MUI",
           "Bitbucket",
           "Jira",
+          "Chromatic",
           "Notion",
           "Figma",
           "Slack",
@@ -143,7 +146,6 @@ const Professional = () => {
         name="Ublo"
         logo={ublo}
         description={[
-          "Stage de 6 mois en tant que développer Full-Stack chez Ublo.immo.",
           "Ublo vise à simplifier la gestion locative par l'intermédiaire d'un logiciel de gestion immobilière intuitif et efficace.",
           "J'ai été chargé de développer dans un premier temps un formulaire d'état des lieux d'entrée et de sortie devant être effectué sur tablette.",
           "Et dans second temps, de travailler sur le site web d'Ublo pour les clients.",
@@ -253,10 +255,9 @@ const Professional = () => {
       <Projet
         name="IONIS School of Technology and Management"
         description={[
-          "Stage de 6 mois en tant qu'assistant pédagogique chez IONIS School of Technology and Management.",
-          "Je suis en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
-          "Cela signifie que je suis entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
-          "Je suis également chargé de faire passer des suivis, des soutenances de projets et d'encadrer les étudiants durant les piscines.",
+          "J'étais en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
+          "Cela signifie que j'étais entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
+          "J'étais également chargé de faire passer des suivis, des soutenances de projets et d'encadrer les étudiants durant les piscines.",
           "J'exerce principalement pour les formations des Web@cadémie de 1ère et 2ème année, mais aussi pour la formation Coding Club.",
         ]}
         techUsed={[
