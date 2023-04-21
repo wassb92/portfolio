@@ -243,12 +243,16 @@ const Home = () => {
             <div className="sm:flex hidden">
               <AccessResume />
             </div>
-            <div className="sm:flex hidden">
-              {defaultSeek !== "freelance" && <SwitchSeeking />}
-            </div>
-            <div className="sm:hidden flex">
-              <SwitchSeeking />
-            </div>
+            {defaultSeek !== "freelance" && (
+              <>
+                <div className="sm:flex hidden">
+                  <SwitchSeeking />
+                </div>
+                <div className="sm:hidden flex">
+                  <SwitchSeeking />
+                </div>
+              </>
+            )}
           </div>
           <div className="sm:hidden flex">
             <AccessResume />
