@@ -42,7 +42,17 @@ const SocialBar = (props) => {
       target="_blank"
       rel="noreferrer"
     >
-      {props.name} {props.icon}
+      {!props.shortSize ? (
+        <li
+          className={`rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${props.color}`}
+        >
+          {props.name} {props.icon}
+        </li>
+      ) : (
+        <li className={`flex py-2 rounded-xl hover:scale-125 ${props.color}`}>
+          {props.name} {props.icon}
+        </li>
+      )}
     </a>
   );
 };
@@ -107,78 +117,73 @@ const Navbar = () => {
 
       <div className="hidden md:flex fixed flex-col top-[35%] left-0">
         <ul>
-          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
-            <SocialBar
-              name="LinkedIn"
-              icon={<FaLinkedin size={30} />}
-              redirect="https://www.linkedin.com/in/wassini-bouzidi/"
-            />
-          </li>
+          <SocialBar
+            name="LinkedIn"
+            icon={<FaLinkedin size={30} />}
+            redirect="https://www.linkedin.com/in/wassini-bouzidi/"
+            color="bg-blue-600"
+          />
           {seeking === "freelance" && (
-            <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#ff3b6d]">
-              <SocialBar
-                name="Malt"
-                icon={<FaMalt />}
-                redirect="https://www.malt.fr/profile/wassinibouzidi"
-              />
-            </li>
+            <SocialBar
+              name="Malt"
+              icon={<FaMalt />}
+              redirect="https://www.malt.fr/profile/wassinibouzidi"
+              color="bg-[#ff3b6d]"
+            />
           )}
-          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
-            <SocialBar
-              name="GitHub"
-              icon={<FaGithub size={30} />}
-              redirect="https://github.com/wassb92"
-            />
-          </li>
-          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#00A4EF]">
-            <SocialBar
-              name="Email"
-              icon={<HiOutlineMail size={30} />}
-              redirect="mailto:wassini.bouzidi@epitech.eu"
-            />
-          </li>
-          <li className="rounded-xl w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gray-700">
-            <SocialBar
-              name="CV"
-              icon={<BsFillPersonLinesFill size={30} />}
-              redirect={`resume_${seeking}`}
-            />
-          </li>
+          <SocialBar
+            name="GitHub"
+            icon={<FaGithub size={30} />}
+            redirect="https://github.com/wassb92"
+            color="bg-[#333333]"
+          />
+          <SocialBar
+            name="Email"
+            icon={<HiOutlineMail size={30} />}
+            redirect="mailto:wassini.bouzidi@epitech.eu"
+            color="bg-[#00A4EF]"
+          />
+          <SocialBar
+            name="CV"
+            icon={<BsFillPersonLinesFill size={30} />}
+            redirect={`resume_${seeking}`}
+            color="bg-gray-700"
+          />
         </ul>
       </div>
       <div className="flex z-999 md:hidden fixed space-x-1">
-        <li className="flex py-2 rounded-xl hover:scale-125 bg-blue-600">
-          <SocialBar
-            icon={<FaLinkedin size={30} />}
-            redirect="https://www.linkedin.com/in/wassini-bouzidi/"
-          />
-        </li>
+        <SocialBar
+          icon={<FaLinkedin size={30} />}
+          redirect="https://www.linkedin.com/in/wassini-bouzidi/"
+          color="bg-blue-600"
+          shortSize
+        />
         {seeking === "freelance" && (
-          <li className="flex py-2 rounded-xl hover:scale-125 bg-[#ff3b6d]">
-            <SocialBar
-              icon={<FaMalt />}
-              redirect="https://www.malt.fr/profile/wassinibouzidi"
-            />
-          </li>
+          <SocialBar
+            icon={<FaMalt />}
+            redirect="https://www.malt.fr/profile/wassinibouzidi"
+            color="bg-[#ff3b6d]"
+            shortSize
+          />
         )}
-        <li className="flex py-2 rounded-xl hover:scale-125 bg-[#333333]">
-          <SocialBar
-            icon={<FaGithub size={30} />}
-            redirect="https://github.com/wassb92"
-          />
-        </li>
-        <li className="flex py-2 rounded-xl hover:scale-125 bg-[#00A4EF]">
-          <SocialBar
-            icon={<HiOutlineMail size={30} />}
-            redirect="mailto:wassini.bouzidi@epitech.eu"
-          />
-        </li>
-        <li className="flex py-2 rounded-xl hover:scale-125 bg-gray-700">
-          <SocialBar
-            icon={<BsFillPersonLinesFill size={30} />}
-            redirect={`resume_${seeking}`}
-          />
-        </li>
+        <SocialBar
+          icon={<FaGithub size={30} />}
+          redirect="https://github.com/wassb92"
+          color="bg-[#333333]"
+          shortSize
+        />
+        <SocialBar
+          icon={<HiOutlineMail size={30} />}
+          redirect="mailto:wassini.bouzidi@epitech.eu"
+          color="bg-[#00A4EF]"
+          shortSize
+        />
+        <SocialBar
+          icon={<BsFillPersonLinesFill size={30} />}
+          redirect={`resume_${seeking}`}
+          color="bg-gray-700"
+          shortSize
+        />
       </div>
     </div>
   );
