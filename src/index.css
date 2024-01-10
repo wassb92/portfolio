@@ -10,7 +10,6 @@
   }
   li {
     @apply px-4;
-    @apply cursor-pointer;
   }
 }
 
@@ -147,21 +146,3 @@
     transform: rotateY(360deg);
   }
 }
-
-/*-----------------------------------------------------------------------------*/
-:root {
-  --ButtonInputCursor: url("assets/cursors/Link_Select.cur");
-  --textInputCursor: url("assets/cursors/Text_Select.cur");
-}
-
-button:hover,
-a:hover {
-  cursor: var(--ButtonInputCursor), auto !important;
-}
-
-input:hover,
-textarea:hover {
-  cursor: var(--textInputCursor), auto !important;
-}
-
-/*-----------------------------------------------------------------------------*/

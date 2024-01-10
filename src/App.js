@@ -9,8 +9,6 @@ import Footer from "./components/Footer";
 import Snowfall from "react-snowfall";
 import { SeekingContext } from "./SeekingContext";
 
-import cursor from "./assets/cursors/Normal_Select.cur";
-
 const reveal = () => {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -30,10 +28,7 @@ window.addEventListener("scroll", reveal);
 const App = () => {
   const { seeking } = useContext(SeekingContext);
   return (
-    <div
-      className="overflow-hidden font-sans w-full h-full"
-      style={{ cursor: `url(${cursor}), auto` }}
-    >
+    <div className="overflow-hidden font-sans w-full h-full">
       <Snowfall
         color={seeking === "internship" ? "#4031D9" : "#8A37DC"}
         style={{ position: "fixed" }}
