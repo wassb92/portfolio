@@ -4,8 +4,10 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
 import animatedReact from "assets/animatedReact.gif";
+import animatedNode from "assets/animatedNode.gif";
 import { SeekingContext } from "SeekingContext";
 import rakuten from "assets/projets/rakuten.png";
+import { TypeAnimation } from "react-type-animation";
 
 import resumeInternPdf from "assets/resume/intern.pdf";
 import resumeFreelancePdf from "assets/resume/freelance.pdf";
@@ -107,8 +109,26 @@ const InternSearchingText = () => {
   );
 };
 
+const AccessResume = () => {
+  const { seeking } = useContext(SeekingContext);
+
+  return (
+    <div className="FromBottom flex items-center">
+      <a
+        className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
+        href={`resume_${seeking}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Accéder directement à mon CV
+      </a>
+    </div>
+  );
+};
+
 const Home = () => {
   const { seeking, setSeeking, defaultSeek } = useContext(SeekingContext);
+  const [textColor, setTextColor] = useState("61DBFB");
 
   const GoAbout = () => {
     return (
@@ -171,25 +191,10 @@ const Home = () => {
     );
   };
 
-  const AccessResume = () => {
-    return (
-      <div className="FromBottom flex items-center">
-        <a
-          className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-          href={`resume_${seeking}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Accéder directement à mon CV
-        </a>
-      </div>
-    );
-  };
-
   return (
-    <div name="home" className="w-full sm:h-screen">
+    <div name="home" className="w-full h-full sm:pt-40 pt-28">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-        <div className="pt-16 mt-20 xs:pt-0 xs:mt-0">
+        <div className=" xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">
             Salutations !
           </div>
@@ -200,19 +205,48 @@ const Home = () => {
         <div
           className={
             "text-4xl " +
-            (seeking === "freelance" ? "text-[#61DBFB]" : "text-[#006ab3]") +
+            // (seeking === "freelance" ? "text-[#61DBFB]" : "text-[#006ab3]") +
             " sm:text-6xl font-bold"
           }
         >
           {seeking === "freelance" ? (
             <div className="flex h-full">
-              <strong className="FromRight sm:text-6xl text-2xl">
-                Freelance Front-End
-              </strong>
               <div className="px-2 rounded-md FromFrontHard">
                 <img
                   src={animatedReact}
                   alt="react"
+                  className="sm:w-20 w-10 sm:-mt-2 BackFlip"
+                />
+              </div>
+              <strong className="FromRight text-xl sm:text-4xl lg:text-6xl">
+                <div
+                  style={{
+                    color: textColor,
+                  }}
+                >
+                  <TypeAnimation
+                    sequence={[
+                      () => setTextColor("#61DBFB"),
+                      "Développeur Front-End",
+                      1000,
+                      () => setTextColor("#68A063"),
+                      "Développeur Back-End",
+                      1000,
+                      () => setTextColor("#8A37DC"),
+                      "Développeur Full-Stack",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={30}
+                    style={{ display: "inline-block" }}
+                    repeat={Infinity}
+                  />
+                </div>
+              </strong>
+              <div className="px-2 rounded-md FromFrontHard">
+                <img
+                  src={animatedNode}
+                  alt="node"
                   className="sm:w-20 w-10 sm:-mt-2 BackFlip"
                 />
               </div>
