@@ -124,12 +124,22 @@ const Professional = () => {
         name="Rakuten"
         logo={rakuten}
         description={[
-          "Développement de composants React custom et override de composants MUI pour un service commun à toutes les plateformes Rakuten.",
+          "Développement en TypeScript, rendu côté serveur avec NextJS, chargement de données via GraphQL.",
+          "Ajout de nouvelles fonctionnalités au site web, de la conception UX jusqu'au déploiement.",
+          "Tests complets (End2End) avec Cypress, tests des composants React.",
+          "Collaboration sur les Pull Requests et les revues de code, travail au sein d'une équipe multilingue.",
+          "Migration de code JS vers TypeScript, compétence approfondie en CSS, modules CSS, MUI Style Overrides, et CSS en JS.",
+          "Utilisation avancée d'outils de gestion de projet comme Jira et Notion pour l'estimation de la complexité.",
+          "Expérience avec plusieurs dépôts Git et gestion des dépendances sur des dépôts self-hosted.",
         ]}
         techUsed={[
           "TypeScript",
           "React",
           "Next.js",
+          "TailwindCSS",
+          "CSS",
+          "GraphQL",
+          "Cypress",
           "MUI",
           "Bitbucket",
           "Jira",
@@ -138,7 +148,7 @@ const Professional = () => {
           "Figma",
           "Slack",
         ]}
-        done={false}
+        done={true}
         nmemb={9}
         job="Développeur Front-End"
       />

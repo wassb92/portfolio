@@ -62,8 +62,8 @@ const FreelanceSkills = () => {
   return (
     <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
       <Skill name="React" logo={ReactImg} />
-      <Skill name="TailwindCSS" logo={Tailwind} />
       <Skill name="Node.js" logo={Node} />
+      <Skill name="TailwindCSS" logo={Tailwind} />
       <Skill name="MongoDB" logo={Mongo} />
       <Skill name="Docker" logo={Docker} />
       <Skill name="TypeScript" logo={TypeScript} className="mt-8" />

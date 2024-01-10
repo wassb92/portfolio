@@ -4,10 +4,10 @@ import UpButtonRedirect from "./UpButtonRedirect";
 import GitHubCalendar from "react-github-calendar";
 
 const currentActivities = [
-  "Freelance Front-End",
-  "Développeur chez Rakuten",
+  "Freelance Full-Stack",
+  "Étudiant à UCLA (University of California, Los Angeles)",
   "Développeur chez OWL",
-  // "Développeur chez Epitech",
+  "Ex-Développeur chez Rakuten",
   "Ex-Président d'EpiSolidaire",
 ];
 
