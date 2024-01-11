@@ -7,6 +7,8 @@ import animatedReact from "assets/animatedReact.gif";
 import animatedNode from "assets/animatedNode.gif";
 import { SeekingContext } from "SeekingContext";
 import rakuten from "assets/projets/rakuten.png";
+import BruinGif from "assets/bruin.gif";
+
 import { TypeAnimation } from "react-type-animation";
 
 import resumeInternPdf from "assets/resume/intern.pdf";
@@ -21,30 +23,71 @@ const UnderlinedText = ({ children, className = "" }) => {
 };
 
 const FreelanceSearchingText = () => {
+  {
+    /* Text without underline and without div mt-2 */
+  }
+  {
+    /* Actuellement étudiant à UCLA, je suis en parallèle développeur Full-Stack
+      avec une solide expérience le domaine du développement web/mobile. Je
+      recherche de nouvelles missions freelance. Si vous avez besoin d'un
+      professionnel expérimenté pour vos projets, n'hésitez pas à me contacter.
+      Mon adaptabilité et mon engagement à répondre aux besoins spécifiques du
+      projet font de moi un choix idéal.
+    </> */
+  }
+
+  // Text with underline and with div mt-2
   return (
     <div>
       <div className="mt-2">
-        Actuellement développeur Front-End chez{" "}
-        <img src={rakuten} alt="Rakuten" className="h-5 inline" /> à temps
-        plein, je suis également disponible pour des missions freelance en
-        dehors de mes heures de travail.
+        Actuellement étudiant à <UnderlinedText>UCLA</UnderlinedText>{" "}
+        (University of California, Los Angeles), je suis en parallèle
+        développeur <UnderlinedText>Full-Stack</UnderlinedText> avec une solide
+        expérience le domaine du développement web/mobile. Je suis à la
+        recherche de nouvelles{" "}
+        <UnderlinedText>missions freelance</UnderlinedText>.
       </div>
       <div className="mt-2">
-        Mes compétences en développement web incluent{" "}
+        Mes compétences en développement web/mobile incluent{" "}
         <UnderlinedText>React</UnderlinedText>,{" "}
         <UnderlinedText>TailwindCSS</UnderlinedText>,{" "}
         <UnderlinedText>Node.js</UnderlinedText>, et{" "}
         <UnderlinedText>MongoDB</UnderlinedText>, avec une préférence pour la
-        stack <UnderlinedText>MERN</UnderlinedText>.
+        stack <UnderlinedText>MERN</UnderlinedText>, et bien d'autres.
       </div>
       <div className="mt-2">
-        Si vous cherchez un développeur web fiable et compétent pour vos
+        Si vous cherchez un développeur web/mobile fiable et compétent pour vos
         projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks
         techniques et les modalités de travail, et je serai heureux de discuter
         avec vous pour trouver la solution la plus adaptée à vos besoins.
       </div>
     </div>
   );
+
+  // return (
+  //   <div>
+  //     <div className="mt-2">
+  //       Actuellement développeur Front-End chez{" "}
+  //       <img src={"https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJvcmgwdWZveTBraDUyN2s5cnlhOTF2OG9wcWg1Ymh3czFkeXZ3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1Rhz7GhtPDSFwO4Otd/giphy.gif"} alt="Rakuten" className="h-5 inline" />
+  //       plein, je suis également disponible pour des missions freelance en
+  //       dehors de mes heures de travail.
+  //     </div>
+  //     <div className="mt-2">
+  //       Mes compétences en développement web incluent{" "}
+  //       <UnderlinedText>React</UnderlinedText>,{" "}
+  //       <UnderlinedText>TailwindCSS</UnderlinedText>,{" "}
+  //       <UnderlinedText>Node.js</UnderlinedText>, et{" "}
+  //       <UnderlinedText>MongoDB</UnderlinedText>, avec une préférence pour la
+  //       stack <UnderlinedText>MERN</UnderlinedText>.
+  //     </div>
+  //     <div className="mt-2">
+  //       Si vous cherchez un développeur web fiable et compétent pour vos
+  //       projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks
+  //       techniques et les modalités de travail, et je serai heureux de discuter
+  //       avec vous pour trouver la solution la plus adaptée à vos besoins.
+  //     </div>
+  //   </div>
+  // );
 };
 
 const Help = ({ text }) => {
@@ -198,8 +241,13 @@ const Home = () => {
           <div className="text-secondary font-bold text-xl FromTop">
             Salutations !
           </div>
-          <div className="FromLeft text-4xl sm:text-7xl font-bold text-white ">
-            <strong>Wassini Bouzidi</strong>
+          <div className="FromLeft text-4xl sm:text-7xl font-bold text-white flex items-center">
+            <strong className="mr-2">Wassini Bouzidi</strong>{" "}
+            <img
+              src={BruinGif}
+              alt="UCLA_Bruin"
+              className="sm:w-20 w-10 -mt-4 ml-2"
+            />
           </div>
         </div>
         <div
@@ -210,7 +258,7 @@ const Home = () => {
           }
         >
           {seeking === "freelance" ? (
-            <div className="flex h-full">
+            <div className="flex h-full mt-2">
               <div className="px-2 rounded-md FromFrontHard">
                 <img
                   src={animatedReact}

@@ -28,6 +28,8 @@ import rtype from "assets/projets/rtype.png";
 import rakuten from "assets/projets/rakuten.png";
 import freelance from "assets/projets/freelance.png";
 import evogue from "assets/projets/evogue.jpeg";
+import allocine from "assets/projets/allocine.png";
+import promeetup from "assets/projets/pro-meetup.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -188,6 +190,31 @@ const Professional = () => {
         job="Développeur Full-Stack"
       />
       <Projet
+        name="Pro-meetup"
+        logo={freelance}
+        description={[
+          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
+          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
+          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
+          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "GitHub",
+        ]}
+        done={true}
+        nmemb={1}
+        job="Développeur Full-Stack (Freelance)"
+      />
+      <Projet
         name="Nuvoleviaggi"
         logo={freelance}
         description={[
@@ -238,7 +265,6 @@ const Professional = () => {
         nmemb={1}
         job="Développeur Full-Stack (Freelance)"
       />
-
       <Projet
         name="EVOGUE"
         logo={evogue}
@@ -248,11 +274,18 @@ const Professional = () => {
           "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins.",
         ]}
         techUsed={[
-          "SQL",
+          "JavaScript",
+          "React",
+          "PHP",
           "Java",
           "C#",
           "HTML",
           "CSS",
+          "SQL",
+          "Cypress",
+          "Jest",
+          "PHPUnit",
+          "Tests unitaires",
           "OOP",
           "UML",
           "Enseignement",
@@ -577,6 +610,57 @@ const Web = () => {
         ]}
         done={true}
         nmemb={5}
+      />
+      <Projet
+        name="Pro-meetup"
+        logo={promeetup}
+        description={[
+          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
+          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
+          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
+          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "GitHub",
+        ]}
+        done={true}
+        nmemb={1}
+      />
+      <Projet
+        name="MyAllociné"
+        logo={allocine}
+        description={[
+          "Conception et mise en œuvre d'un MVP pour une startup fictive 'NeoMovie', aspirant à concurrencer AlloCiné.",
+          "Développement d'une page d'accueil, d'une interface de connexion avec sauvegarde de sessions, personnalisation des préférences de films par utilisateur, recherche avancée avec filtres par année, genre et langue, ainsi que des fonctionnalités de création de playlists et de gestion d'historique de visionnage.",
+          "L'objectif était de fournir une expérience cinématographique immersive et personnalisée aux utilisateurs.",
+        ]}
+        techUsed={[
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "Swagger",
+          "GitHub",
+          "Netlify",
+          "Render",
+        ]}
+        done={true}
+        nmemb={1}
+        url="https://myallocine-neomovie.netlify.app/"
       />
       <Projet
         name="R-Type Website"

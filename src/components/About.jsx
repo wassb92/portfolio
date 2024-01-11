@@ -11,6 +11,14 @@ const currentActivities = [
   "Ex-Président d'EpiSolidaire",
 ];
 
+const emojisMapping = {
+  "Freelance Full-Stack": "💻",
+  "Étudiant à UCLA (University of California, Los Angeles)": "📚",
+  "Développeur chez OWL": "🦉",
+  "Ex-Développeur chez Rakuten": "🛒",
+  "Ex-Président d'EpiSolidaire": "🤝🏼",
+};
+
 const About = () => {
   return (
     <div name="about" className="w-full sm:h-screen text-white">
@@ -25,9 +33,16 @@ const About = () => {
         <div className="max-w-[1000px] w-full gap-8 px-4 space-y-10">
           <div className="sm:text-left text-3xl font-bold flex flex-col items-center">
             <div className=" bg-clip-text bg-gradient-to-br from-secondary to-main">
-              <div className="reveal text-transparent bg-clip-text bg-gradient-to-br from-secondary to-main">
+              <div className="reveal text-transparent bg-clip-text bg-gradient-to-b from-secondary to-main">
                 {currentActivities.map((activity, index) => {
-                  return <div key={index}>• {activity}</div>;
+                  return (
+                    <div key={index}>
+                      <span className="text-white">
+                        {emojisMapping[activity]}
+                      </span>{" "}
+                      {activity}
+                    </div>
+                  );
                 })}
               </div>
             </div>
