@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,72 +23,30 @@ const UnderlinedText = ({ children, className = "" }) => {
   );
 };
 
-const FreelanceSearchingText = () => {
-  {
-    /* Text without underline and without div mt-2 */
-  }
-  {
-    /* Actuellement étudiant à UCLA, je suis en parallèle développeur Full-Stack
-      avec une solide expérience le domaine du développement web/mobile. Je
-      recherche de nouvelles missions freelance. Si vous avez besoin d'un
-      professionnel expérimenté pour vos projets, n'hésitez pas à me contacter.
-      Mon adaptabilité et mon engagement à répondre aux besoins spécifiques du
-      projet font de moi un choix idéal.
-    </> */
-  }
-
-  // Text with underline and with div mt-2
+const FreelanceSearchingText = ({ t }) => {
   return (
     <div>
       <div className="mt-2">
-        Actuellement étudiant à <UnderlinedText>UCLA</UnderlinedText>{" "}
-        (University of California, Los Angeles), je suis en parallèle
-        développeur <UnderlinedText>Full-Stack</UnderlinedText> avec une solide
-        expérience le domaine du développement web/mobile. Je suis à la
-        recherche de nouvelles{" "}
-        <UnderlinedText>missions freelance</UnderlinedText>.
+        {t("Home.intro.university")}{" "}
+        <UnderlinedText>{t("Home.intro.ucla")}</UnderlinedText> (
+        {t("Home.intro.universityFullName")}), {t("Home.intro.sameTime")}{" "}
+        <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
+        {t("Home.intro.withExperience")}{" "}
+        <UnderlinedText>{t("Home.intro.freelanceMissions")}</UnderlinedText>.
       </div>
       <div className="mt-2">
-        Mes compétences en développement web/mobile incluent{" "}
-        <UnderlinedText>React</UnderlinedText>,{" "}
-        <UnderlinedText>TailwindCSS</UnderlinedText>,{" "}
-        <UnderlinedText>Node.js</UnderlinedText>, et{" "}
-        <UnderlinedText>MongoDB</UnderlinedText>, avec une préférence pour la
-        stack <UnderlinedText>MERN</UnderlinedText>, et bien d'autres.
+        {t("Home.skills.webMobileDevelopment")}{" "}
+        <UnderlinedText>{t("Home.skills.react")}</UnderlinedText>,{" "}
+        <UnderlinedText>{t("Home.skills.tailwindCSS")}</UnderlinedText>,{" "}
+        <UnderlinedText>{t("Home.skills.nodeJS")}</UnderlinedText>,{" "}
+        {t("Home.skills.and")}{" "}
+        <UnderlinedText>{t("Home.skills.mongoDB")}</UnderlinedText>,{" "}
+        {t("Home.skills.preferMERNStack")} <UnderlinedText>MERN</UnderlinedText>
+        , {t("Home.skills.andMore")}
       </div>
-      <div className="mt-2">
-        Si vous cherchez un développeur web/mobile fiable et compétent pour vos
-        projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks
-        techniques et les modalités de travail, et je serai heureux de discuter
-        avec vous pour trouver la solution la plus adaptée à vos besoins.
-      </div>
+      <div className="mt-2">{t("Home.lookingFor")}</div>
     </div>
   );
-
-  // return (
-  //   <div>
-  //     <div className="mt-2">
-  //       Actuellement développeur Front-End chez{" "}
-  //       <img src={"https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJvcmgwdWZveTBraDUyN2s5cnlhOTF2OG9wcWg1Ymh3czFkeXZ3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/1Rhz7GhtPDSFwO4Otd/giphy.gif"} alt="Rakuten" className="h-5 inline" />
-  //       plein, je suis également disponible pour des missions freelance en
-  //       dehors de mes heures de travail.
-  //     </div>
-  //     <div className="mt-2">
-  //       Mes compétences en développement web incluent{" "}
-  //       <UnderlinedText>React</UnderlinedText>,{" "}
-  //       <UnderlinedText>TailwindCSS</UnderlinedText>,{" "}
-  //       <UnderlinedText>Node.js</UnderlinedText>, et{" "}
-  //       <UnderlinedText>MongoDB</UnderlinedText>, avec une préférence pour la
-  //       stack <UnderlinedText>MERN</UnderlinedText>.
-  //     </div>
-  //     <div className="mt-2">
-  //       Si vous cherchez un développeur web fiable et compétent pour vos
-  //       projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks
-  //       techniques et les modalités de travail, et je serai heureux de discuter
-  //       avec vous pour trouver la solution la plus adaptée à vos besoins.
-  //     </div>
-  //   </div>
-  // );
 };
 
 const Help = ({ text }) => {
@@ -152,7 +111,7 @@ const InternSearchingText = () => {
   );
 };
 
-const AccessResume = () => {
+const AccessResume = ({ t }) => {
   const { seeking } = useContext(SeekingContext);
 
   return (
@@ -163,7 +122,7 @@ const AccessResume = () => {
         target="_blank"
         rel="noreferrer"
       >
-        Accéder directement à mon CV
+        {t("Home.accessResume")}
       </a>
     </div>
   );
@@ -172,6 +131,7 @@ const AccessResume = () => {
 const Home = () => {
   const { seeking, setSeeking, defaultSeek } = useContext(SeekingContext);
   const [textColor, setTextColor] = useState("61DBFB");
+  const { t } = useTranslation();
 
   const GoAbout = () => {
     return (
@@ -193,7 +153,7 @@ const Home = () => {
               : "sm:hover:shadow-main"
           }`}
         >
-          C'est parti !
+          {t("Home.letsGo")}
           <span className="group-hover:rotate-90 duration-300">
             <HiArrowNarrowRight className="ml-3" />
           </span>
@@ -239,7 +199,7 @@ const Home = () => {
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className=" xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">
-            Salutations !
+            {t("Home.greetings")}
           </div>
           <div className="FromLeft text-4xl sm:text-7xl font-bold text-white flex items-center">
             <strong className="mr-2">Wassini Bouzidi</strong>{" "}
@@ -275,13 +235,13 @@ const Home = () => {
                   <TypeAnimation
                     sequence={[
                       () => setTextColor("#61DBFB"),
-                      "Développeur Front-End",
+                      t("Common.frontEndDeveloper"),
                       1000,
                       () => setTextColor("#68A063"),
-                      "Développeur Back-End",
+                      t("Common.backEndDeveloper"),
                       1000,
                       () => setTextColor("#8A37DC"),
-                      "Développeur Full-Stack",
+                      t("Common.fullStackDeveloper"),
                       1000,
                     ]}
                     wrapper="span"
@@ -308,22 +268,20 @@ const Home = () => {
         <div className="text-white py-4 max-w-[700px] mt-6">
           <div>
             {seeking === "freelance" ? (
-              <FreelanceSearchingText />
+              <FreelanceSearchingText t={t} />
             ) : (
               <InternSearchingText />
             )}
           </div>
-          <div className="mt-2">
-            Ce portfolio a été codé en React, TailwindCSS et CSS par moi-même.
-          </div>
-          <div className="mt-10 font-semibold">Prêt à me découvrir ?</div>
+          <div className="mt-2">{t("Home.portfolioInfo")}</div>
+          <div className="mt-10 font-semibold">{t("Home.discoverMe")}</div>
         </div>
 
         <div className="space-y-2">
           <div className="flex justify-between items-center text-white space-x-2">
             <GoAbout />
             <div className="sm:flex hidden">
-              <AccessResume />
+              <AccessResume t={t} />
             </div>
             <div className="sm:flex hidden">
               {defaultSeek !== "freelance" && <SwitchSeeking />}
@@ -333,7 +291,7 @@ const Home = () => {
             </div>
           </div>
           <div className="sm:hidden flex">
-            <AccessResume />
+            <AccessResume t={t} />
           </div>
         </div>
       </div>

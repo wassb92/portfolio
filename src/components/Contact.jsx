@@ -1,8 +1,11 @@
 import React from "react";
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       name="contact"
@@ -15,27 +18,27 @@ const Contact = () => {
       >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-secondary text-white">
-            Contact
+            {t("Contact.contact")}
           </p>
         </div>
         <input
           className="rounded-md bg-secondary text-white placeholder-gray-400 p-2"
           type="text"
-          placeholder="NOM Prénom (requis)"
+          placeholder={t("Contact.form.name")}
           name="name"
           required={true}
         />
         <input
           className="rounded-md my-4 p-2 bg-secondary text-white placeholder-gray-400"
           type="email"
-          placeholder="Email (requis)"
+          placeholder={t("Contact.form.email")}
           name="email"
           required={true}
         />
         <input
           className="rounded-md my-4 bg-secondary text-white placeholder-gray-400 p-2"
           type="text"
-          placeholder="Entreprise (optionnel)"
+          placeholder={t("Contact.form.company")}
           name="company"
           required={false}
         />
@@ -43,10 +46,10 @@ const Contact = () => {
           className="rounded-md bg-secondary text-white placeholder-gray-400 p-2"
           name="message"
           rows="10"
-          placeholder="Votre message"
+          placeholder={t("Contact.form.message")}
         />
         <button className="text-white border-2 hover:bg-secondary hover:border-secondary px-4 py-3 my-8 mx-auto flex items-center rounded-xl">
-          Collaborons !
+          {t("Contact.send")}
         </button>
         <div className="flex justify-between">
           <DownButtonRedirect to="home" />

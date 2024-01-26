@@ -9,6 +9,26 @@ import Footer from "./components/Footer";
 import Snowfall from "react-snowfall";
 import { SeekingContext } from "./SeekingContext";
 
+import { initReactI18next } from "react-i18next";
+import i18n from "i18next";
+import enTranslation from "./translations/en.json";
+import frTranslation from "./translations/fr.json";
+
+const resources = {
+  en: { translation: enTranslation },
+  fr: { translation: frTranslation },
+};
+
+const lng = "fr";
+
+i18n.use(initReactI18next).init({
+  resources,
+  lng,
+  interpolation: {
+    escapeValue: false,
+  },
+});
+
 const reveal = () => {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -27,6 +47,7 @@ window.addEventListener("scroll", reveal);
 
 const App = () => {
   const { seeking } = useContext(SeekingContext);
+
   return (
     <div className="overflow-hidden font-sans w-full h-full">
       <Snowfall

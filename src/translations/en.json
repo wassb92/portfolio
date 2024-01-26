@@ -1,0 +1,27 @@
+{
+  "intro": {
+    "university": "Currently a student at",
+    "ucla": "UCLA",
+    "universityFullName": "University of California, Los Angeles",
+    "developerExperience": "I am also a Full-Stack developer with a strong background in web/mobile development.",
+    "fullStack": "Full-Stack",
+    "withSolidExperience": "with solid experience in the web/mobile development field.",
+    "freelanceOpportunities": "I am looking for new freelance opportunities."
+  },
+  "skills": {
+    "webMobileDevelopment": "My skills in web/mobile development include",
+    "react": "React",
+    "tailwindCSS": "TailwindCSS",
+    "nodeJS": "Node.js",
+    "and": "and",
+    "mongoDB": "MongoDB",
+    "preferMERNStack": "with a preference for the MERN stack, and many others.",
+    "andMore": "and many others."
+  },
+  "lookingFor": {
+    "developer": "If you're looking for a reliable and skilled web/mobile developer for your projects, feel free to contact me.",
+    "contact": "I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
+    "flexible": "I am flexible on technical stacks and working arrangements,",
+    "happyToDiscuss": "and I will be happy to discuss with you to find the solution that best fits your needs."
+  }
+}

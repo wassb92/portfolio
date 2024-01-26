@@ -5,13 +5,14 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import Malt from "assets/malt.png";
 import { SeekingContext } from "SeekingContext";
+import { useTranslation } from "react-i18next";
 
 import resumeInternPdf from "assets/resume/intern.pdf";
 import resumeFreelancePdf from "assets/resume/freelance.pdf";
 
 const MenuBar = (props) => {
   return (
-    <li className="text-xl font-bold">
+    <li className="text-xl font-bold cursor-pointer">
       <Link to={props.to} smooth={true} duration={350}>
         {props.name}
       </Link>
@@ -21,7 +22,7 @@ const MenuBar = (props) => {
 
 const MenuBarResponsive = (props) => {
   return (
-    <li className="py-6 text-4xl">
+    <li className="py-6 text-4xl cursor-pointer">
       <Link
         onClick={props.handleClick}
         to={props.to}
@@ -61,6 +62,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const { seeking } = useContext(SeekingContext);
   const handleClick = () => setNav(!nav);
+  const { t } = useTranslation();
 
   const FaMalt = () => {
     return (
@@ -76,13 +78,13 @@ const Navbar = () => {
     <div className="z-50 fixed w-full h-[80px] flex justify-between md:justify-center items-center px-4 bg-[#0a192f] text-white">
       <br />
       <ul className="hidden md:flex FromFrontLight">
-        <MenuBar to="home" name="Accueil" />
-        <MenuBar to="about" name="À propos de moi" />
-        <MenuBar to="skills" name="Compétences" />
-        <MenuBar to="work" name="Expériences" />
-        <MenuBar to="contact" name="Contact" />
+        <MenuBar to="home" name={t("Navbar.home")} />
+        <MenuBar to="about" name={t("Navbar.about")} />
+        <MenuBar to="skills" name={t("Navbar.skills")} />
+        <MenuBar to="work" name={t("Navbar.work")} />
+        <MenuBar to="contact" name={t("Navbar.contact")} />
       </ul>
-      <div onClick={handleClick} className="md:hidden z-10">
+      <div onClick={handleClick} className="md:hidden z-10 cursor-pointer">
         {!nav ? <FaBars size={32} /> : <FaTimes size={32} />}
       </div>
       <ul
@@ -92,25 +94,29 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
         }
       >
-        <MenuBarResponsive to="home" name="Accueil" handleClick={handleClick} />
+        <MenuBarResponsive
+          to="home"
+          name={t("Navbar.home")}
+          handleClick={handleClick}
+        />
         <MenuBarResponsive
           to="about"
-          name="À propos de moi"
+          name={t("Navbar.about")}
           handleClick={handleClick}
         />
         <MenuBarResponsive
           to="skills"
-          name="Compétences"
+          name={t("Navbar.skills")}
           handleClick={handleClick}
         />
         <MenuBarResponsive
           to="work"
-          name="Experiences"
+          name={t("Navbar.work")}
           handleClick={handleClick}
         />
         <MenuBarResponsive
           to="contact"
-          name="Contact"
+          name={t("Navbar.contact")}
           handleClick={handleClick}
         />
       </ul>

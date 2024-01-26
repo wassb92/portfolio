@@ -43,6 +43,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useTranslation } from "react-i18next";
 
 const getNbrProjet = (projet) => {
   if (!projet?.props?.children?.length) return "";
@@ -50,6 +51,8 @@ const getNbrProjet = (projet) => {
 };
 
 const Projet = (props) => {
+  const t = props?.t;
+
   return (
     <div className="">
       <div className="flex items-center justify-center w-full pt-4 h-full object-center">
@@ -67,7 +70,7 @@ const Projet = (props) => {
           </div>
           {props.url && (
             <div className="text-base font-normal">
-              Lien :{" "}
+              {t("Work.link")} :{" "}
               <a
                 className="underline underline-offset-4 text-[#6be0dc]"
                 href={props.url}
@@ -79,22 +82,22 @@ const Projet = (props) => {
             </div>
           )}
           <div className="text-base font-normal">
-            Réalisé en{" "}
+            {t("Work.realisedWith")}{" "}
             {props.nmemb === 1
-              ? "solo"
-              : "groupe de " + props.nmemb + " membres"}
+              ? t("Work.solo")
+              : t("Work.group", { nmemb: props.nmemb })}
           </div>
           {props.inComing ? (
             <div className="text-[#23DC3D] flex justify-end text-md">
-              À venir...
+              {t("Work.inComing")}
             </div>
           ) : props.done ? (
             <div className="text-secondary flex justify-end text-md">
-              Terminé
+              {t("Work.done")}
             </div>
           ) : (
             <div className="text-main flex justify-end text-md">
-              En cours...
+              {t("Work.inProgress")}
             </div>
           )}
         </div>
@@ -119,849 +122,491 @@ const Projet = (props) => {
   );
 };
 
-const Professional = () => {
+const Professional = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
-        name="Rakuten"
+        name={t("Work.professional.rakuten.name")}
         logo={rakuten}
-        description={[
-          "Développement en TypeScript, rendu côté serveur avec NextJS, chargement de données via GraphQL.",
-          "Ajout de nouvelles fonctionnalités au site web, de la conception UX jusqu'au déploiement.",
-          "Tests complets (End2End) avec Cypress, tests des composants React.",
-          "Collaboration sur les Pull Requests et les revues de code, travail au sein d'une équipe multilingue.",
-          "Migration de code JS vers TypeScript, compétence approfondie en CSS, modules CSS, MUI Style Overrides, et CSS en JS.",
-          "Utilisation avancée d'outils de gestion de projet comme Jira et Notion pour l'estimation de la complexité.",
-          "Expérience avec plusieurs dépôts Git et gestion des dépendances sur des dépôts self-hosted.",
-        ]}
-        techUsed={[
-          "TypeScript",
-          "React",
-          "Next.js",
-          "TailwindCSS",
-          "CSS",
-          "GraphQL",
-          "Cypress",
-          "MUI",
-          "Bitbucket",
-          "Jira",
-          "Chromatic",
-          "Notion",
-          "Figma",
-          "Slack",
-        ]}
+        description={t("Work.professional.rakuten.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.rakuten.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={9}
-        job="Développeur Front-End"
+        job={t("Common.frontEndDeveloper")}
+        t={t}
       />
       <Projet
-        name="Ublo"
+        name={t("Work.professional.ublo.name")}
         logo={ublo}
-        description={[
-          "Ublo vise à simplifier la gestion locative par l'intermédiaire d'un logiciel de gestion immobilière intuitif et efficace.",
-          "J'ai été chargé de développer dans un premier temps un formulaire d'état des lieux d'entrée et de sortie devant être effectué sur tablette.",
-          "Et dans second temps, de travailler sur le site web d'Ublo pour les clients.",
-        ]}
-        techUsed={[
-          "TypeScript",
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "React-Admin",
-          "PostgreSQL",
-          "MongoDB",
-          "TailwindCSS",
-          "Styled-Components",
-          "Material-UI",
-          "Postman",
-          "Docker",
-          "Algolia",
-          "DigitalOcean",
-          "GitHub",
-          "Nest",
-          "DBeaver",
-          "Figma",
-          "Notion",
-          "Méthode agile",
-          "Clean architecture",
-        ]}
+        description={t("Work.professional.ublo.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.ublo.techUsed", { returnObjects: true })}
         done={true}
         nmemb={5}
-        job="Développeur Full-Stack"
+        job={t("Common.fullStackDeveloper")}
+        t={t}
       />
       <Projet
-        name="Pro-meetup"
-        logo={freelance}
-        description={[
-          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
-          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
-          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
-          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "Postman",
-          "Authentification",
-          "GitHub",
-        ]}
-        done={true}
-        nmemb={1}
-        job="Développeur Full-Stack (Freelance)"
-      />
-      <Projet
-        name="Nuvoleviaggi"
-        logo={freelance}
-        description={[
-          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
-          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
-          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e).",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "XLSX",
-          "Postman",
-          "Authentification",
-          "GitHub",
-          "Netlify",
-          "Heroku",
-        ]}
-        done={true}
-        nmemb={2}
-        job="Développeur Full-Stack (Freelance)"
-      />
-      <Projet
-        name="Fratelli.B"
-        logo={freelance}
-        description={[
-          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
-          "L'administrateur a un dashboard pour gérer les commandes et les produits.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Next.js",
-          "Redux",
-          "MongoDB",
-          "CSS",
-          "Postman",
-          "Paypal SDK API",
-          "Cloudinary",
-          "GitHub",
-        ]}
-        done={true}
-        nmemb={1}
-        job="Développeur Full-Stack (Freelance)"
-      />
-      <Projet
-        name="EVOGUE"
+        name={t("Work.professional.evogue.name")}
         logo={evogue}
-        description={[
-          "En tant que professeur, j'ai été chargé de préparer, d'organiser, d'assurer des cours de programmation et de corrigés les exercices et les TP des étudiants.",
-          "Les profils des étudiants étaient très variés, allant de débutants pour découvrir certaine notions de programmation à des étudiants plus avancés de niveau Bac +3/+4.",
-          "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "PHP",
-          "Java",
-          "C#",
-          "HTML",
-          "CSS",
-          "SQL",
-          "Cypress",
-          "Jest",
-          "PHPUnit",
-          "Tests unitaires",
-          "OOP",
-          "UML",
-          "Enseignement",
-        ]}
+        description={t("Work.professional.evogue.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.evogue.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={1}
-        job="Professeur d'informatique (Freelance)"
+        job={t("Common.freelanceTeacher")}
+        t={t}
       />
-
       <Projet
-        name="IONIS School of Technology and Management"
-        description={[
-          "J'étais en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
-          "Cela signifie que j'étais entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
-          "J'étais également chargé de faire passer des suivis, des soutenances de projets et d'encadrer les étudiants durant les piscines.",
-          "J'exerce principalement pour les formations des Web@cadémie de 1ère et 2ème année, mais aussi pour la formation Coding Club.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Socket.IO",
-          "React Native",
-          "PHP",
-          "HTML",
-          "CSS",
-          "TailwindCSS",
-          "Styled-Components",
-          "MongoDB",
-          "MySQL",
-          "Postman",
-        ]}
+        name={t("Work.professional.proMeetup.name")}
+        logo={freelance}
+        description={t("Work.professional.proMeetup.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.proMeetup.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
-        logo={ionis_stm}
-        nmemb={5}
-        job="Assistant pédagogique"
+        nmemb={1}
+        job={t("Common.freelanceFullStackDeveloper")}
+        t={t}
       />
       <Projet
-        name="Web@cademie"
-        logo={webac}
-        description={[
-          "Professeur / Assistant lors d'une piscine de PHP pour la Web@cademie.",
-          "Durant 3 semaines, j'ai accompagné des futurs développeurs dans l'apprentissage de la programmation en commençant par le langage PHP tout en gérant mes projets en parallèle.",
-        ]}
-        techUsed={["PHP", "GitHub"]}
+        name={t("Work.professional.nuvoleviaggi.name")}
+        logo={freelance}
+        description={t("Work.professional.nuvoleviaggi.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.nuvoleviaggi.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={2}
-        job="Professeur de PHP"
+        job={t("Common.freelanceFullStackDeveloper")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.fratelliB.name")}
+        logo={freelance}
+        description={t("Work.professional.fratelliB.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.fratelliB.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={1}
+        job={t("Common.freelanceFullStackDeveloper")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.ionis.name")}
+        logo={ionis_stm}
+        description={t("Work.professional.ionis.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.ionis.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={5}
+        job={t("Common.teacherAssistant")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.webAcademie.name")}
+        logo={webac}
+        description={t("Work.professional.webAcademie.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.webAcademie.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={2}
+        job={t("Common.PHPTeacher")}
+        t={t}
       />
     </div>
   );
 };
 
-const Game = () => {
+const Game = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
-        name="R-Type"
+        name={t("Work.game.rType.name")}
         logo={rtype}
-        description={[
-          "R-Type est un jeu vidéo d'arcade de tir à défilement horizontal développé et publié par Irem en 1987 et le premier jeu de la série R-Type.",
-          "Le joueur contrôle un vaisseau spatial, le R-9 'Arrowhead', dans ses efforts pour détruire le Bydo, une puissante race extraterrestre déterminée à anéantir toute l'humanité.",
-          "Le jeu est en réseau, ayant un client et un serveur.",
-          "Le serveur doit être en multithread pour pouvoir gérer plusieurs clients en même temps et limiter les laggs.",
-          "Ce projet doit être réalisé dans des conditions réelles de développement, c'est-à-dire en utilisant des outils de gestion de versions, de tests, de documentation, packaging, etc.",
-        ]}
-        techUsed={[
-          "C++",
-          "SFML",
-          "ECS",
-          "CMake",
-          "Conan",
-          "Docker",
-          "Doxygen",
-          "Boost",
-          "Asio",
-          "Network programming",
-          "Multithreading",
-          "GitHub",
-        ]}
+        description={t("Work.game.rType.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.rType.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={5}
+        t={t}
       />
-
       <Projet
-        name="Zappy"
+        name={t("Work.game.zappy.name")}
         logo={zappy}
-        description={[
-          "Le but de ce projet est de créer un jeu en réseau.",
-          "Plusieurs équipes s'affrontent sur une carte de tuiles contenant des ressources.",
-          "L'équipe gagnante est celle avec 6 joueurs qui a atteint l'élévation maximale.",
-          "Les joueurs sont contrôlés par une intelligence artificielle.",
-        ]}
-        techUsed={[
-          "C",
-          "C++",
-          "Python",
-          "Raylib",
-          "Makefile",
-          "GitHub",
-          "AI",
-          "Programmation réseau",
-        ]}
+        description={t("Work.game.zappy.description", { returnObjects: true })}
+        techUsed={t("Work.game.zappy.techUsed", { returnObjects: true })}
         done={true}
         nmemb={6}
+        t={t}
       />
       <Projet
-        name="Indie Studio"
+        name={t("Work.game.indieStudio.name")}
         logo={bomberman}
-        description={[
-          "L'objectif de ce projet est de mettre en œuvre un jeu vidéo 3D multiplateforme avec des outils du monde réel",
-          "Le jeu en question est un bomberman en 3D.",
-        ]}
-        techUsed={["C++", "Raylib", "cmake", "GitHub"]}
+        description={t("Work.game.indieStudio.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.indieStudio.techUsed", { returnObjects: true })}
         done={true}
         nmemb={6}
+        t={t}
       />
       <Projet
-        name="Arcade"
+        name={t("Work.game.arcade.name")}
         logo={arcade}
-        description={[
-          "L'objectif de ce projet était de créer une plateforme de jeu, avec un seul core qui peut charger dynamiquement plusieurs bibliothèques graphiques différentes et avec au moins deux jeux.",
-          "Les librairies graphiques choisies ont été la SFML, la Ncurses et la SDL2.",
-          "Les jeux choisis ont été Nibbler et Pacman.",
-          "Le joueur peut choisir son pseudo, selectionnez son jeu, dynamiquement changer de librairie graphique et a un score enregistré dans une base de données.",
-        ]}
-        techUsed={[
-          "C++",
-          "SFML",
-          "NCurses",
-          "SDL2",
-          "Makefile",
-          "GitHub",
-          "Shared librairies",
-        ]}
+        description={t("Work.game.arcade.description", { returnObjects: true })}
+        techUsed={t("Work.game.arcade.techUsed", { returnObjects: true })}
         done={true}
         nmemb={3}
+        t={t}
       />
       <Projet
-        name="my_rpg"
+        name={t("Work.game.myRpg.name")}
         logo={rpg}
-        description={[
-          "Comme son nom l'indique, le but de ce projet était de créer un Role Playing Game (RPG), dans lequel il y a une histoire, des quêtes, des niveaux, des combats, des donjons, un inventaire, des niveaux de compétences et énormément d'autres choses qui caractérise ce qu'est un RPG.",
-        ]}
-        techUsed={[
-          "C",
-          "CSFML",
-          "Makefile",
-          "HTML",
-          "CSS",
-          "GitHub",
-          "Photoshop",
-          "FL Studio",
-        ]}
+        description={t("Work.game.myRpg.description", { returnObjects: true })}
+        techUsed={t("Work.game.myRpg.techUsed", { returnObjects: true })}
         done={true}
         nmemb={4}
+        t={t}
       />
       <Projet
-        name="my_defender"
+        name={t("Work.game.myDefender.name")}
         logo={defender}
-        description={[
-          "Un mini League Of Legends ça vous dit ?",
-          "Le but ce projet était de créer un jeu de type Tower Defense, avec une base à défendre, des ennemis qui apparraissent et qui vont attaquer cette dernière.",
-          "Le joueur a pour but de défendre sa base, et pour cela il doit poser des tourelles qui peuvent détruire les ennemis, chaque tourelle a une spécification particulière (Dégâts, portée, impact sur les caractéristiques des ennemis, etc...)",
-          "Afin de poser une tourelle il faut avoir une certaine somme d'argent, les tourelles peuvent également être améliorées.",
-          "Tous les graphismes et sons sont tirés du jeu officiel de League Of Legends.",
-        ]}
-        techUsed={[
-          "C",
-          "CSFML",
-          "Makefile",
-          "HTML",
-          "CSS",
-          "GitHub",
-          "Photoshop",
-          "FL Studio",
-        ]}
+        description={t("Work.game.myDefender.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.myDefender.techUsed", { returnObjects: true })}
         done={true}
         nmemb={2}
+        t={t}
       />
       <Projet
-        name="my_runner"
+        name={t("Work.game.myRunner.name")}
         logo={runner}
-        description={[
-          "Vous connaissez sûrement le T-Rex Game ? Ce jeu que Google peut vous proposez lorsque vous n'avez pas de connexion.",
-          "J'en ai recrée un, avec des graphismes différents mais le but reste le même, c'est un runner.",
-          "Le but étant de sauter avec son personnage dans une immense carte qui défile, il doit éviter les obstacles et les ennemis.",
-          "À la fin de cette carte il y a une ligne d'arrivée, cela signifie que vous avez gagnez la partie !",
-          "À ce moment là, votre score est sauvegardé et vous pouvez recommencer une partie à partir de votre ancien score, c'est de cette manière que vous pourrez toujours faire en sorte d'avoir le plus grand score !",
-        ]}
-        techUsed={[
-          "C",
-          "CSFML",
-          "Makefile",
-          "GitHub",
-          "Photoshop",
-          "FL Studio",
-        ]}
+        description={t("Work.game.myRunner.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.myRunner.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="my_hunter"
+        name={t("Work.game.myHunter.name")}
         logo={hunter}
-        description={[
-          "Piou Piou ! + Among us = ?",
-          "Vous l'avez dans le mille ! Mon my_hunter.",
-          "Des ennemis arrivent de la droite et de la gauche, au milieu de la carte il y a une base que les ennemis ne doivent surtout pas franchir, sinon vous perdez des points de vie",
-          "Pour cela, vous êtes équipés d'une arme qui vous permet de tuer les ennemis avant qu'ils n'arrivent à destination !",
-        ]}
-        techUsed={[
-          "C",
-          "CSFML",
-          "Makefile",
-          "GitHub",
-          "Photoshop",
-          "FL Studio",
-        ]}
+        description={t("Work.game.myHunter.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.myHunter.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="my_sokoban"
+        name={t("Work.game.mySokoban.name")}
         logo="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sokoban_ani.gif"
-        description={[
-          "Le but de ce projet était de créer un jeu de type Sokoban, dans lequel il y a un personnage qui doit pousser des caisses sur des emplacements spécifiques.",
-          "Le personnage ne peut pas pousser plusieurs caisses en même temps, il ne peut pas pousser une caisse sur une autre caisse, il ne peut pas pousser une caisse sur un mur.",
-          "Le personnage peut se déplacer dans les quatre directions, recommencer une partie, quitter la partie, revenir au menu principal, etc...",
-        ]}
-        techUsed={["C", "Ncurses", "Makefile", "GitHub", "FL Studio"]}
+        description={t("Work.game.mySokoban.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.mySokoban.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="matchstick"
+        name={t("Work.game.matchstick.name")}
         logo={matchstick}
-        description={[
-          "Le but de ce projet était de créer un jeu de type Nim, dans lequel il y a un nombre d'allumettes, le joueur et l'ordinateur.",
-          "Le joueur et l'ordinateur vont tour à tour retirer des allumettes, le but étant de retirer la dernière allumette.",
-          "Le joueur peut retirer 1, 2 ou 3 allumettes à chaque tour, l'ordinateur va retirer le nombre d'allumettes qui lui permettra de gagner.",
-        ]}
-        techUsed={["C", "AI", "Makefile", "GitHub"]}
+        description={t("Work.game.matchstick.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.game.matchstick.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
     </div>
   );
 };
 
-const Web = () => {
+const Web = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
-        name="EpiSolidaire"
+        name={t("Work.web.epiSolidaire.name")}
         logo={EpiSolidaire}
-        description={[
-          "Site pour promouvoir l'association, pouvoir se présenter en ligne, reçevoir des dons, voir les évènements à venir et passés, nous contacter, accéder à son espace membre et par conséquent accéder à son dashboard",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "Postman",
-          "EmailJS",
-          "SendGrid",
-          "Paypal SDK API",
-          "Authentification",
-          "GitHub",
-          "Netlify",
-          "Heroku",
-        ]}
+        description={t("Work.web.epiSolidaire.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.epiSolidaire.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
         url="https://www.episolidaire.com/"
+        t={t}
       />
       <Projet
-        name="AREA"
+        name={t("Work.web.area.name")}
         logo={area}
-        description={[
-          "AREA est une plateforme de gestion de tâches automatisées. AREA signifie Action REAction.",
-          "Comme IFTTT ou Zapier, AREA permet de créer des tâches automatisées.",
-          "AREA a un serveur, un client web et un client mobile.",
-          "L'utilisateur peut se connecter grâce à notre authentification, mais il peut également se connecter grâce à son compte Google, Discord, Microsoft ou bien Facebook grâce à OAuth2.",
-          "Une fois connecté, l'utilisateur peut créer des tâches automatisées, pour cela il doit sélectionner une action et une réaction parmi une liste de services.",
-          "Il peut par exemple créer une tâche qui lui permet de recevoir un appel sur son téléphone lorsqu'il recoit un mail sur son compte Gmail qui contient un mot clé.",
-          "Une fois l'AREA créée, elle est sauvegardée dans la base de données et est disponible dans la liste des AREAs actives de l'utilisateur.",
-          "L'utilisateur peut également supprimer une AREA",
-          "AREA est principalement centré sur le serveur, ce qui signifie que tout ce qui est disponible sur le client web l'est également sur le client mobile.",
-          "Le déploiement de l'application se fait via Docker.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "NodeJS",
-          "Express",
-          "ReactJS",
-          "Flutter",
-          "TailwindCSS",
-          "CSS",
-          "MUI",
-          "MongoDB",
-          "Docker",
-          "Postman",
-          "OAuth2",
-          "Google API",
-          "Discord API",
-          "Microsoft API",
-          "Facebook API",
-          "Twitter API",
-          "WhatsApp",
-          "Twilio",
-          "SendGrid",
-          "OpenWeatherMap",
-          "Méthode agile",
-          "Authentification",
-          "Swagger",
-          "GitHub",
-          "Notion",
-        ]}
+        description={t("Work.web.area.description", { returnObjects: true })}
+        techUsed={t("Work.web.area.techUsed", { returnObjects: true })}
         done={true}
         nmemb={5}
+        t={t}
       />
       <Projet
-        name="Pro-meetup"
+        name={t("Work.web.proMeetup.name")}
         logo={promeetup}
-        description={[
-          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
-          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
-          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
-          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "Postman",
-          "Authentification",
-          "GitHub",
-        ]}
+        description={t("Work.web.proMeetup.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.proMeetup.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="MyAllociné"
+        name={t("Work.web.myAllocine.name")}
         logo={allocine}
-        description={[
-          "Conception et mise en œuvre d'un MVP pour une startup fictive 'NeoMovie', aspirant à concurrencer AlloCiné.",
-          "Développement d'une page d'accueil, d'une interface de connexion avec sauvegarde de sessions, personnalisation des préférences de films par utilisateur, recherche avancée avec filtres par année, genre et langue, ainsi que des fonctionnalités de création de playlists et de gestion d'historique de visionnage.",
-          "L'objectif était de fournir une expérience cinématographique immersive et personnalisée aux utilisateurs.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "Postman",
-          "Authentification",
-          "Swagger",
-          "GitHub",
-          "Netlify",
-          "Render",
-        ]}
+        description={t("Work.web.myAllocine.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.myAllocine.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
         url="https://myallocine-neomovie.netlify.app/"
+        t={t}
       />
       <Projet
-        name="R-Type Website"
+        name={t("Work.web.rTypeWebsite.name")}
         logo={rtype}
-        description={[
-          "Après avoir codé le jeu R-Type, j'ai décidé de créer un site pour le promouvoir, le télécharger et jouer en ligne.",
-          "Le site contient une section Accueil, une section Média où l'on peut voir des vidéos et des images du jeu, une section Jeux où l'on peut retrouver d'autres jeux que j'ai codé, une section À propos où l'on peut en savoir plus sur le jeu et l'équipe de développement, et enfin une section Téléchargement où l'on peut télécharger le jeu et voir les dernières mises à jour.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "TailwindCSS",
-          "CSS",
-          "GitHub",
-          "Netlify",
-        ]}
+        description={t("Work.web.rTypeWebsite.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.rTypeWebsite.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={1}
         url="https://rtype.netlify.app/"
+        t={t}
       />
       <Projet
-        name="OWL"
+        name={t("Work.web.owl.name")}
         logo={OWL}
-        description={[
-          "OWL (Other Way to Look) est une application mobile qui permet de lutter contre la somnolence au volant.",
-          "L'application est composée d'un client mobile et d'un serveur.",
-          "L'application mobile est connectée à une montre connectée qui détecte principalement le rythme cardiaque, l'apport en oxygène et la durée de sommeil du conducteur.",
-          "Grâce à ces informations, un algorithme est appliqué pour déterminer si le conducteur est fatigué ou non.",
-          "Si le conducteur est fatigué, l'application mobile fait une action pour le prévenir et lui propose de prendre une pause.",
-          "Une action peut être caractérisée par une vibration de la montre connectée, du téléphone, un message sur le téléphone, un appel, etc...",
-          "Le conducteur peut ensuite obtenir une destination pour se rendre au point d'intérêt le plus proche (restaurant, hôtel, etc...) si nécessaire.",
-        ]}
-        techUsed={[
-          "TypeScript",
-          "React Native",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "CSS",
-          "Bluetooth",
-          "Postman",
-          "Authentification",
-          "GitHub",
-          "render.com",
-          "Connect smartwatch to mobile",
-        ]}
+        description={t("Work.web.owl.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.owl.techUsed", {
+          returnObjects: true,
+        })}
         done={false}
         nmemb={9}
+        t={t}
       />
       <Projet
-        name="ERP"
+        name={t("Work.web.erp.name")}
         logo={ERP}
-        description={[
-          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
-          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
-          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e).",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Express",
-          "MongoDB",
-          "TailwindCSS",
-          "CSS",
-          "XLSX",
-          "Postman",
-          "Authentification",
-          "GitHub",
-          "Netlify",
-          "Heroku",
-        ]}
+        description={t("Work.web.erp.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.erp.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={2}
         url="https://nuvoleviaggi.netlify.app/"
+        t={t}
       />
       <Projet
-        name="Portfolio"
+        name={t("Work.web.portfolio.name")}
         logo={react}
-        description={[
-          "Mon expérience, mes compétences, ma personnalité; tout ça ne peut pas être résumé en un CV, c'est pourquoi j'ai crée ce portfolio.",
-          "Vous pouvez y retrouver mes projets, mes compétences, mes expériences, mon association, me contacter et bien plus encore !",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "TailwindCSS",
-          "CSS",
-          "GitHub",
-          "Netlify",
-        ]}
+        description={t("Work.web.portfolio.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.portfolio.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
         url="https://www.wassini-bouzidi.com/"
+        t={t}
       />
       <Projet
-        name="Popeye"
+        name={t("Work.web.popeye.name")}
         logo={popeye}
-        description={[
-          "Popeye est un projet qui consiste à conteneriser une application web.",
-          "Pour cela, il fallait utiliser Docker, un outil qui permet de créer des conteneurs, c'est-à-dire des environnements virtuels.",
-          "L'application était constituée d'un poll en Flask, d'une queue en Redis, d'un worker en Java, d'une base de données PostgreSQL et d'un result en NodeJS.",
-          "Il fallait donc conteneriser notre application web, et pouvoir la déployer en local.",
-        ]}
-        techUsed={["Docker", "DevOps", "GitHub"]}
+        description={t("Work.web.popeye.description", { returnObjects: true })}
+        techUsed={t("Work.web.popeye.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
-
       <Projet
-        name="Fratelli Pizza"
+        name={t("Work.web.fratelliPizza.name")}
         logo={fratelli}
-        description={[
-          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
-          "L'administrateur a un dashboard pour gérer les commandes et les produits.",
-        ]}
-        techUsed={[
-          "JavaScript",
-          "React",
-          "NodeJS",
-          "Next.js",
-          "Redux",
-          "MongoDB",
-          "CSS",
-          "Postman",
-          "Paypal SDK API",
-          "Cloudinary",
-          "GitHub",
-        ]}
+        description={t("Work.web.fratelliPizza.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.fratelliPizza.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
     </div>
   );
 };
 
-const Unix = () => {
+const Unix = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
-        name="42sh"
+        name={t("Work.unix.42sh.name")}
         logo={shell}
-        description={["Crée un Shell Unix qui a pour model de référence TCSH."]}
-        techUsed={["C", "Makefile", "GitHub"]}
+        description={t("Work.unix.42sh.description", { returnObjects: true })}
+        techUsed={t("Work.unix.42sh.techUsed", { returnObjects: true })}
         done={true}
         nmemb={5}
+        t={t}
       />
       <Projet
-        name="my_malloc"
+        name={t("Work.unix.my_malloc.name")}
         logo={malloc}
-        description={[
-          "Recoder les fonctions malloc, realloc, calloc, reallocarray et free.",
-        ]}
-        techUsed={["C", "Makefile", "GitHub", "sbrk", "memory management"]}
+        description={t("Work.unix.my_malloc.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.unix.my_malloc.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="my_web"
+        name={t("Work.unix.my_web.name")}
         logo={web}
-        description={[
-          "Faire un dual boot entre Debian et Arch Linux sur une machine virtuel sans l'utilisation d'interface graphique pour assembler les partitions.",
-        ]}
-        techUsed={[
-          "Administration système",
-          "Commandes Unix",
-          "Oracle VM VirtualBox",
-          "LVM",
-        ]}
+        description={t("Work.unix.my_web.description", { returnObjects: true })}
+        techUsed={t("Work.unix.my_web.techUsed", { returnObjects: true })}
         done={true}
         nmemb={2}
+        t={t}
       />
       <Projet
-        name="my_printf"
+        name={t("Work.unix.my_printf.name")}
         logo={
           "https://developers.redhat.com/sites/default/files/styles/share/public/ST-c_1x%20%282%29.png?itok=wFoDINrX"
         }
-        description={["Recoder la fonction printf."]}
-        techUsed={["C", "Makefile", "va_arg", "GitHub"]}
+        description={t("Work.unix.my_printf.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.unix.my_printf.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="my_ls"
-        logo={
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDlKkshcRnYO7n-NP9HxOUAeC6hqsbzU-cPSX-Is8ajyAV0ASOT3GBuT8bd69GSL5XqR4&usqp=CAU"
-        }
-        description={["Recoder la commande ls."]}
-        techUsed={["C", "Makefile", "GitHub"]}
+        name={t("Work.unix.my_ls.name")}
+        logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDlKkshcRnYO7n-NP9HxOUAeC6hqsbzU-cPSX-Is8ajyAV0ASOT3GBuT8bd69GSL5XqR4&usqp=CAU"
+        description={t("Work.unix.my_ls.description", { returnObjects: true })}
+        techUsed={t("Work.unix.my_ls.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="my_cat"
+        name={t("Work.unix.my_cat.name")}
         logo={cat}
-        description={["Recoder la commande cat."]}
-        techUsed={["C", "GitHub"]}
+        description={t("Work.unix.my_cat.description", { returnObjects: true })}
+        techUsed={t("Work.unix.my_cat.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
     </div>
   );
 };
 
-const Else = () => {
+const Else = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
-        name="my_teams"
+        name={t("Work.other.my_teams.name")}
         logo={teams}
-        description={["Recoder teams"]}
-        techUsed={["C", "Makefile", "GitHub", "Programmation réseau", "CLI"]}
+        description={t("Work.other.my_teams.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.other.my_teams.techUsed", { returnObjects: true })}
         done={true}
         nmemb={3}
+        t={t}
       />
       <Projet
-        name="my_db"
+        name={t("Work.other.my_db.name")}
         logo={database}
-        description={[
-          "Création d'une database avec une table unique implémentée en liste chaînée.",
-          "La table est composée des champs suivants :",
-          "id (= Idendifiant unique par colonne)",
-          "firstname (= Prénom)",
-          "lastname (= Nom)",
-          "pseudonyme (= Pseudonyme)",
-          "birthday (= Date de naissance)",
-          "city (= Ville)",
-          "phone (= Numéro de téléphone)",
-          "email (= Email)",
-          "password (= Mot de passe)",
-          "registeredAt (= Date d'enregistrement)",
-        ]}
-        techUsed={["C", "Makefile", "GitHub"]}
+        description={t("Work.other.my_db.description", { returnObjects: true })}
+        techUsed={t("Work.other.my_db.techUsed", { returnObjects: true })}
         done={false}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="BSQ"
-        logo="https://camo.githubusercontent.com/3901ac95415ef9326702194b8b817827a7f7175dcb701e82d3a38a587c5ddfaa/687474703a2f2f692e696d6775722e636f6d2f436955733269332e706e67"
-        description={[
-          "Trouver le plus grand carré dans une grille de caractères.",
-          "La grille est composée de caractères '.' et de caractères 'o'.",
-          "Le programme doit afficher la grille avec le premier plus grand carré rempli de 'x'.",
-        ]}
-        techUsed={["C", "Makefile", "GitHub"]}
+        name={t("Work.other.BSQ.name")}
+        logo="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Maximum-size-square-sub-matrix-with-all-1s.png"
+        description={t("Work.other.BSQ.description", { returnObjects: true })}
+        techUsed={t("Work.other.BSQ.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
-
       <Projet
-        name="MiniLibC"
+        name={t("Work.other.MiniLibC.name")}
         logo="https://assets.exercism.io/tracks/x86-64-assembly-hex-turquoise.png"
-        description={[
-          "Recoder les fonctions de la librairie C standard en assembleur x86_64.",
-          "Les fonctions étaients :",
-          "• strlen",
-          "• strchr",
-          "• strrchr",
-          "• memset",
-          "• memcpy",
-          "• strcmp",
-          "• memmove",
-          "• strncmp",
-          "• strcasecmp",
-          "• strstr",
-          "• strpbrk",
-          "• strcspn",
-        ]}
-        techUsed={[
-          "Assembly",
-          "Shared librairies",
-          "x86_64",
-          "Makefile",
-          "GitHub",
-        ]}
+        description={t("Work.other.MiniLibC.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.other.MiniLibC.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
       <Projet
-        name="bdsh"
+        name={t("Work.other.bdsh.name")}
         logo="https://cameronnokes.com/images/json-bash.png"
-        description={[
-          "Écrire un script shell qui permet de gérer une base de données dans un fichier json.",
-          "Vous devez créer des tables, insérer-mettre à jour-supprimer des données, exécuter des requêtes, ...",
-          "La ligne de commande doit être capable de pouvoir créer une database, une table, insérer des données, supprimer des données, sélectionner des données, ...",
-          "La command-line jq était interdite.",
-        ]}
-        techUsed={["Bash", "JSON", "GitHub"]}
+        description={t("Work.other.bdsh.description", { returnObjects: true })}
+        techUsed={t("Work.other.bdsh.techUsed", { returnObjects: true })}
         done={true}
         nmemb={1}
+        t={t}
       />
-
       <Projet
-        name="Cash register"
+        name={t("Work.other.cashRegister.name")}
         logo={cash_register}
-        description={[
-          "Coder une caisse enregistreuse pouvant enregistrer des articles, les stockers dans une base de données, obtenir des tickets de caisse, crée de nouveaux caissiers qui sont également enregistrés dans une base de données etc...",
-        ]}
-        techUsed={["Python", "Tkinter", "GitHub"]}
+        description={t("Work.other.cashRegister.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.other.cashRegister.techUsed", {
+          returnObjects: true,
+        })}
         done={true}
         nmemb={2}
+        t={t}
       />
     </div>
   );
@@ -996,7 +641,7 @@ const a11yProps = (index) => {
   };
 };
 
-const WorkTabs = () => {
+const WorkTabs = ({ t }) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -1047,30 +692,46 @@ const WorkTabs = () => {
             }
           >
             <Tab
-              label={`Professionnel${getNbrProjet(Professional())}`}
+              label={`${t("Work.tabsHeader.professional")}${getNbrProjet(
+                Professional({ t })
+              )}`}
               {...a11yProps(0)}
             />
-            <Tab label={`Game${getNbrProjet(Game())}`} {...a11yProps(1)} />
-            <Tab label={`Web${getNbrProjet(Web())}`} {...a11yProps(2)} />
-            <Tab label={`Unix${getNbrProjet(Unix())}`} {...a11yProps(3)} />
-            <Tab label={`Autre${getNbrProjet(Else())}`} {...a11yProps(4)} />
+            <Tab
+              label={`${t("Work.tabsHeader.game")}${getNbrProjet(Game({ t }))}`}
+              {...a11yProps(1)}
+            />
+            <Tab
+              label={`${t("Work.tabsHeader.web")}${getNbrProjet(Web({ t }))}`}
+              {...a11yProps(2)}
+            />
+            <Tab
+              label={`${t("Work.tabsHeader.unix")}${getNbrProjet(Unix({ t }))}`}
+              {...a11yProps(3)}
+            />
+            <Tab
+              label={`${t("Work.tabsHeader.other")}${getNbrProjet(
+                Else({ t })
+              )}`}
+              {...a11yProps(4)}
+            />
           </Tabs>
         </div>
         <div className="border-main border-r-2 border-l-2">
           <TabPanel value={value} index={0}>
-            <Professional />
+            <Professional t={t} />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <Game />
+            <Game t={t} />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <Web />
+            <Web t={t} />
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <Unix />
+            <Unix t={t} />
           </TabPanel>
           <TabPanel value={value} index={4}>
-            <Else />
+            <Else t={t} />
           </TabPanel>
         </div>
       </Box>
@@ -1079,15 +740,17 @@ const WorkTabs = () => {
 };
 
 const Work = () => {
+  const { t } = useTranslation();
+
   return (
     <div name="work" className="w-full h-screen text-white pt-0 sm:pt-10">
       <div className="max-w-[1000px] mx-auto mt-7 p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-white border-secondary">
-            Expériences
+            {t("Work.work")}
           </p>
         </div>
-        <WorkTabs />
+        <WorkTabs t={t} />
         <div className="flex p-4 justify-between">
           <DownButtonRedirect to="contact" />
           <UpButtonRedirect to="skills" />

@@ -1,0 +1,847 @@
+{
+  "Common": {
+    "fullStack": "Full-Stack",
+    "frontEndDeveloper": "Développeur Front-End",
+    "backEndDeveloper": "Développeur Back-End",
+    "fullStackDeveloper": "Développeur Full-Stack",
+    "teacher": "Professeur d'informatique",
+    "freelanceFrontEndDeveloper": "Développeur Front-End (Freelance)",
+    "freelanceBackEndDeveloper": "Développeur Back-End (Freelance)",
+    "freelanceFullStackDeveloper": "Développeur Full-Stack (Freelance)",
+    "freelanceTeacher": "Professeur d'informatique (Freelance)",
+    "teacherAssistant": "Assistant pédagogique",
+    "PHPTeacher": "Professeur de PHP",
+    "freelance": "Freelance"
+  },
+  "Navbar": {
+    "home": "Accueil",
+    "about": "À propos de moi",
+    "skills": "Compétences",
+    "work": "Expériences",
+    "contact": "Contact"
+  },
+  "Home": {
+    "greetings": "Salutations !",
+    "intro": {
+      "university": "Actuellement étudiant à",
+      "ucla": "UCLA",
+      "universityFullName": "University of California, Los Angeles",
+      "sameTime": "je suis en parallèle développeur",
+      "withExperience": "avec une solide expérience dans le domaine du développement web/mobile. Je suis à la recherche de nouvelles",
+      "freelanceMissions": "missions freelance."
+    },
+    "skills": {
+      "webMobileDevelopment": "Mes compétences en développement web/mobile incluent",
+      "react": "React",
+      "tailwindCSS": "TailwindCSS",
+      "nodeJS": "Node.js",
+      "and": "et",
+      "mongoDB": "MongoDB",
+      "preferMERNStack": "avec une préférence pour la stack ",
+      "andMore": "et bien d'autres."
+    },
+    "lookingFor": "Si vous cherchez un développeur web/mobile fiable et compétent pour vos projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks techniques et les modalités de travail, et je serai heureux de discuter avec vous pour trouver la solution la plus adaptée à vos besoins.",
+    "portfolioInfo": "Ce portfolio a été codé en React, TailwindCSS et CSS par moi-même.",
+    "discoverMe": "Prêt à me découvrir ?",
+    "letsGo": "C'est parti !",
+    "accessResume": "Accéder directement à mon CV"
+  },
+  "About": {
+    "aboutMe": "À propos de moi",
+    "currentActivities": [
+      "Freelance Full-Stack",
+      "Étudiant à UCLA (University of California, Los Angeles)",
+      "Développeur chez OWL",
+      "Ex-Développeur chez Rakuten",
+      "Ex-Président d'EpiSolidaire"
+    ]
+  },
+  "Skills": {
+    "skills": "Compétences"
+  },
+  "Contact": {
+    "contact": "Contact",
+    "form": {
+      "name": "NOM Prénom (requis)",
+      "email": "Adresse e-mail (requis)",
+      "company": "Entreprise (optionnel)",
+      "message": "Votre message"
+    },
+    "send": "Collaborons !"
+  },
+  "Work": {
+    "work": "Expériences",
+    "link": "Lien",
+    "realisedWith": "Réalisé en",
+    "solo": "solo",
+    "group": "groupe de {{nmemb}} personnes",
+    "inComing": "À venir",
+    "inProgress": "En cours",
+    "done": "Terminé",
+    "tabsHeader": {
+      "professional": "Professionnel",
+      "game": "Game",
+      "web": "Web",
+      "unix": "Unix",
+      "other": "Autres"
+    },
+    "professional": {
+      "rakuten": {
+        "name": "Rakuten",
+        "description": [
+          "Développement en TypeScript, rendu côté serveur avec NextJS, chargement de données via GraphQL.",
+          "Ajout de nouvelles fonctionnalités au site web, de la conception UX jusqu'au déploiement.",
+          "Tests complets (End2End) avec Cypress, tests des composants React.",
+          "Collaboration sur les Pull Requests et les revues de code, travail au sein d'une équipe multilingue.",
+          "Migration de code JS vers TypeScript, compétence approfondie en CSS, modules CSS, MUI Style Overrides, et CSS en JS.",
+          "Utilisation avancée d'outils de gestion de projet comme Jira et Notion pour l'estimation de la complexité.",
+          "Expérience avec plusieurs dépôts Git et gestion des dépendances sur des dépôts self-hosted."
+        ],
+        "techUsed": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "TailwindCSS",
+          "CSS",
+          "GraphQL",
+          "Cypress",
+          "MUI",
+          "Bitbucket",
+          "Jira",
+          "Chromatic",
+          "Notion",
+          "Figma",
+          "Slack"
+        ]
+      },
+      "ublo": {
+        "name": "Ublo",
+        "description": [
+          "Ublo vise à simplifier la gestion locative par l'intermédiaire d'un logiciel de gestion immobilière intuitif et efficace.",
+          "J'ai été chargé de développer dans un premier temps un formulaire d'état des lieux d'entrée et de sortie devant être effectué sur tablette.",
+          "Et dans second temps, de travailler sur le site web d'Ublo pour les clients."
+        ],
+        "techUsed": [
+          "TypeScript",
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "React-Admin",
+          "PostgreSQL",
+          "MongoDB",
+          "TailwindCSS",
+          "Styled-Components",
+          "Material-UI",
+          "Postman",
+          "Docker",
+          "Algolia",
+          "DigitalOcean",
+          "GitHub",
+          "Nest",
+          "DBeaver",
+          "Figma",
+          "Notion",
+          "Méthode agile",
+          "Clean architecture"
+        ]
+      },
+      "proMeetup": {
+        "name": "Pro-meetup",
+        "description": [
+          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
+          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
+          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
+          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "GitHub"
+        ]
+      },
+      "nuvoleviaggi": {
+        "name": "Nuvoleviaggi",
+        "description": [
+          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
+          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
+          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e)."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "XLSX",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "Netlify",
+          "Heroku"
+        ]
+      },
+      "fratelliB": {
+        "name": "Fratelli.B",
+        "description": [
+          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
+          "L'administrateur a un dashboard pour gérer les commandes et les produits."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Next.js",
+          "Redux",
+          "MongoDB",
+          "CSS",
+          "Postman",
+          "Paypal SDK API",
+          "Cloudinary",
+          "GitHub"
+        ]
+      },
+      "evogue": {
+        "name": "EVOGUE",
+        "description": [
+          "En tant que professeur, j'ai été chargé de préparer, d'organiser, d'assurer des cours de programmation et de corriger les exercices et les TP des étudiants.",
+          "Les profils des étudiants étaient très variés, allant de débutants pour découvrir certaines notions de programmation à des étudiants plus avancés de niveau Bac +3/+4.",
+          "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "PHP",
+          "Java",
+          "C#",
+          "HTML",
+          "CSS",
+          "SQL",
+          "Cypress",
+          "Jest",
+          "PHPUnit",
+          "Tests unitaires",
+          "OOP",
+          "UML",
+          "Enseignement"
+        ]
+      },
+      "ionis": {
+        "name": "IONIS School of Technology and Management",
+        "description": [
+          "J'étais en charge de l'accompagnement des étudiants, l'animation pédagogique au travers notamment de l'encadrement d'activités et la participation à la vie de l'école.",
+          "Cela signifie que j'étais entre autres chargé d'accompagner les étudiants dans leur scolarité et de les aider à trouver des solutions aux problèmes qu'ils rencontrent.",
+          "J'étais également chargé de faire passer des suivis, des soutenances de projets et d'encadrer les étudiants durant les piscines.",
+          "J'exerce principalement pour les formations des Web@cadémie de 1ère et 2ème année, mais aussi pour la formation Coding Club."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Socket.IO",
+          "React Native",
+          "PHP",
+          "HTML",
+          "CSS",
+          "TailwindCSS",
+          "Styled-Components",
+          "MongoDB",
+          "MySQL",
+          "Postman"
+        ],
+        "done": true,
+        "nmemb": 5,
+        "job": "Assistant pédagogique"
+      },
+      "webAcademie": {
+        "name": "Web@cademie",
+        "description": [
+          "Professeur / Assistant lors d'une piscine de PHP pour la Web@cademie.",
+          "Durant 3 semaines, j'ai accompagné des futurs développeurs dans l'apprentissage de la programmation en commençant par le langage PHP tout en gérant mes projets en parallèle."
+        ],
+        "techUsed": ["PHP", "GitHub"],
+        "done": true,
+        "nmemb": 2,
+        "job": "Professeur de PHP"
+      }
+    },
+    "game": {
+      "rType": {
+        "name": "R-Type",
+        "description": [
+          "R-Type est un jeu vidéo d'arcade de tir à défilement horizontal développé et publié par Irem en 1987 et le premier jeu de la série R-Type.",
+          "Le joueur contrôle un vaisseau spatial, le R-9 'Arrowhead', dans ses efforts pour détruire le Bydo, une puissante race extraterrestre déterminée à anéantir toute l'humanité.",
+          "Le jeu est en réseau, ayant un client et un serveur.",
+          "Le serveur doit être en multithread pour pouvoir gérer plusieurs clients en même temps et limiter les lags.",
+          "Ce projet doit être réalisé dans des conditions réelles de développement, c'est-à-dire en utilisant des outils de gestion de versions, de tests, de documentation, packaging, etc."
+        ],
+        "techUsed": [
+          "C++",
+          "SFML",
+          "ECS",
+          "CMake",
+          "Conan",
+          "Docker",
+          "Doxygen",
+          "Boost",
+          "Asio",
+          "Network programming",
+          "Multithreading",
+          "GitHub"
+        ],
+        "done": true,
+        "nmemb": 5
+      },
+      "zappy": {
+        "name": "Zappy",
+        "description": [
+          "Le but de ce projet est de créer un jeu en réseau.",
+          "Plusieurs équipes s'affrontent sur une carte de tuiles contenant des ressources.",
+          "L'équipe gagnante est celle avec 6 joueurs qui a atteint l'élévation maximale.",
+          "Les joueurs sont contrôlés par une intelligence artificielle."
+        ],
+        "techUsed": [
+          "C",
+          "C++",
+          "Python",
+          "Raylib",
+          "Makefile",
+          "GitHub",
+          "AI",
+          "Programmation réseau"
+        ],
+        "done": true,
+        "nmemb": 6
+      },
+      "indieStudio": {
+        "name": "Indie Studio",
+        "description": [
+          "L'objectif de ce projet est de mettre en œuvre un jeu vidéo 3D multiplateforme avec des outils du monde réel",
+          "Le jeu en question est un bomberman en 3D."
+        ],
+        "techUsed": ["C++", "Raylib", "cmake", "GitHub"],
+        "done": true,
+        "nmemb": 6
+      },
+      "arcade": {
+        "name": "Arcade",
+        "description": [
+          "L'objectif de ce projet était de créer une plateforme de jeu, avec un seul core qui peut charger dynamiquement plusieurs bibliothèques graphiques différentes et avec au moins deux jeux.",
+          "Les librairies graphiques choisies ont été la SFML, la Ncurses et la SDL2.",
+          "Les jeux choisis ont été Nibbler et Pacman.",
+          "Le joueur peut choisir son pseudo, sélectionner son jeu, dynamiquement changer de librairie graphique et a un score enregistré dans une base de données."
+        ],
+        "techUsed": [
+          "C++",
+          "SFML",
+          "NCurses",
+          "SDL2",
+          "Makefile",
+          "GitHub",
+          "Shared libraries"
+        ],
+        "done": true,
+        "nmemb": 3
+      },
+      "myRpg": {
+        "name": "my_rpg",
+        "description": [
+          "Comme son nom l'indique, le but de ce projet était de créer un Role Playing Game (RPG), dans lequel il y a une histoire, des quêtes, des niveaux, des combats, des donjons, un inventaire, des niveaux de compétences et énormément d'autres choses qui caractérisent ce qu'est un RPG."
+        ],
+        "techUsed": [
+          "C",
+          "CSFML",
+          "Makefile",
+          "HTML",
+          "CSS",
+          "GitHub",
+          "Photoshop",
+          "FL Studio"
+        ],
+        "done": true,
+        "nmemb": 4
+      },
+      "myDefender": {
+        "name": "my_defender",
+        "description": [
+          "Un mini League Of Legends ça vous dit ?",
+          "Le but ce projet était de créer un jeu de type Tower Defense, avec une base à défendre, des ennemis qui apparaissent et qui vont attaquer cette dernière.",
+          "Le joueur a pour but de défendre sa base, et pour cela il doit poser des tourelles qui peuvent détruire les ennemis, chaque tourelle a une spécification particulière (Dégâts, portée, impact sur les caractéristiques des ennemis, etc...)",
+          "Afin de poser une tourelle il faut avoir une certaine somme d'argent, les tourelles peuvent également être améliorées.",
+          "Tous les graphismes et sons sont tirés du jeu officiel de League Of Legends."
+        ],
+        "techUsed": [
+          "C",
+          "CSFML",
+          "Makefile",
+          "HTML",
+          "CSS",
+          "GitHub",
+          "Photoshop",
+          "FL Studio"
+        ],
+        "done": true,
+        "nmemb": 2
+      },
+      "myRunner": {
+        "name": "my_runner",
+        "description": [
+          "Vous connaissez sûrement le T-Rex Game ? Ce jeu que Google peut vous proposer lorsque vous n'avez pas de connexion.",
+          "J'en ai recréé un, avec des graphismes différents mais le but reste le même, c'est un runner.",
+          "Le but étant de sauter avec son personnage dans une immense carte qui défile, il doit éviter les obstacles et les ennemis.",
+          "À la fin de cette carte il y a une ligne d'arrivée, cela signifie que vous avez gagné la partie !",
+          "À ce moment-là, votre score est sauvegardé et vous pouvez recommencer une partie à partir de votre ancien score, c'est de cette manière que vous pourrez toujours faire en sorte d'avoir le plus grand score !"
+        ],
+        "techUsed": [
+          "C",
+          "CSFML",
+          "Makefile",
+          "GitHub",
+          "Photoshop",
+          "FL Studio"
+        ],
+        "done": true,
+        "nmemb": 1
+      },
+      "myHunter": {
+        "name": "my_hunter",
+        "description": [
+          "Piou Piou ! + Among us = ?",
+          "Vous l'avez dans le mille ! Mon my_hunter.",
+          "Des ennemis arrivent de la droite et de la gauche, au milieu de la carte il y a une base que les ennemis ne doivent surtout pas franchir, sinon vous perdez des points de vie",
+          "Pour cela, vous êtes équipés d'une arme qui vous permet de tuer les ennemis avant qu'ils n'arrivent à destination !"
+        ],
+        "techUsed": [
+          "C",
+          "CSFML",
+          "Makefile",
+          "GitHub",
+          "Photoshop",
+          "FL Studio"
+        ],
+        "done": true,
+        "nmemb": 1
+      },
+      "mySokoban": {
+        "name": "my_sokoban",
+        "description": [
+          "Le but de ce projet était de créer un jeu de type Sokoban, dans lequel il y a un personnage qui doit pousser des caisses sur des emplacements spécifiques.",
+          "Le personnage ne peut pas pousser plusieurs caisses en même temps, il ne peut pas pousser une caisse sur une autre caisse, il ne peut pas pousser une caisse sur un mur.",
+          "Le personnage peut se déplacer dans les quatre directions, recommencer une partie, quitter la partie, revenir au menu principal, etc..."
+        ],
+        "techUsed": ["C", "Ncurses", "Makefile", "GitHub", "FL Studio"],
+        "done": true,
+        "nmemb": 1
+      },
+      "matchstick": {
+        "name": "matchstick",
+        "description": [
+          "Le but de ce projet était de créer un jeu de type Nim, dans lequel il y a un nombre d'allumettes, le joueur et l'ordinateur.",
+          "Le joueur et l'ordinateur vont tour à tour retirer des allumettes, le but étant de retirer la dernière allumette.",
+          "Le joueur peut retirer 1, 2 ou 3 allumettes à chaque tour, l'ordinateur va retirer le nombre d'allumettes qui lui permettra de gagner."
+        ],
+        "techUsed": ["C", "AI", "Makefile", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      }
+    },
+    "web": {
+      "epiSolidaire": {
+        "name": "EpiSolidaire",
+        "description": [
+          "Site pour promouvoir l'association, pouvoir se présenter en ligne, recevoir des dons, voir les évènements à venir et passés, nous contacter, accéder à son espace membre et par conséquent accéder à son dashboard"
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "EmailJS",
+          "SendGrid",
+          "Paypal SDK API",
+          "Authentification",
+          "GitHub",
+          "Netlify",
+          "Heroku"
+        ],
+        "done": true,
+        "nmemb": 1,
+        "url": "https://www.episolidaire.com/"
+      },
+      "area": {
+        "name": "AREA",
+        "description": [
+          "AREA est une plateforme de gestion de tâches automatisées. AREA signifie Action REAction.",
+          "Comme IFTTT ou Zapier, AREA permet de créer des tâches automatisées.",
+          "AREA a un serveur, un client web et un client mobile.",
+          "L'utilisateur peut se connecter grâce à notre authentification, mais il peut également se connecter grâce à son compte Google, Discord, Microsoft ou bien Facebook grâce à OAuth2.",
+          "Une fois connecté, l'utilisateur peut créer des tâches automatisées, pour cela il doit sélectionner une action et une réaction parmi une liste de services.",
+          "Il peut par exemple créer une tâche qui lui permet de recevoir un appel sur son téléphone lorsqu'il recoit un mail sur son compte Gmail qui contient un mot clé.",
+          "Une fois l'AREA créée, elle est sauvegardée dans la base de données et est disponible dans la liste des AREAs actives de l'utilisateur.",
+          "L'utilisateur peut également supprimer une AREA",
+          "AREA est principalement centré sur le serveur, ce qui signifie que tout ce qui est disponible sur le client web l'est également sur le client mobile.",
+          "Le déploiement de l'application se fait via Docker."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "NodeJS",
+          "Express",
+          "ReactJS",
+          "Flutter",
+          "TailwindCSS",
+          "CSS",
+          "MUI",
+          "MongoDB",
+          "Docker",
+          "Postman",
+          "OAuth2",
+          "Google API",
+          "Discord API",
+          "Microsoft API",
+          "Facebook API",
+          "Twitter API",
+          "WhatsApp",
+          "Twilio",
+          "SendGrid",
+          "OpenWeatherMap",
+          "Méthode agile",
+          "Authentification",
+          "Swagger",
+          "GitHub",
+          "Notion"
+        ],
+        "done": true,
+        "nmemb": 5
+      },
+      "proMeetup": {
+        "name": "Pro-meetup",
+        "description": [
+          "Création d'une plateforme web qui permet de mettre en relation des professionnels du bâtiment et des particuliers.",
+          "Le site intègre un processus d'approbation administrateur pour les profils des professionnels, permettant la proposition de leurs services.",
+          "Une barre de recherche est intégrée pour simplifier la découverte des professionnels adaptés aux besoins spécifiques des particuliers.",
+          "L'objectif principal était de simplifier la recherche et encourager les collaborations dans l'industrie du bâtiment."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "GitHub"
+        ],
+        "done": true,
+        "nmemb": 1
+      },
+      "myAllocine": {
+        "name": "MyAllociné",
+        "description": [
+          "Conception et mise en œuvre d'un MVP pour une startup fictive 'NeoMovie', aspirant à concurrencer AlloCiné.",
+          "Développement d'une page d'accueil, d'une interface de connexion avec sauvegarde de sessions, personnalisation des préférences de films par utilisateur, recherche avancée avec filtres par année, genre et langue, ainsi que des fonctionnalités de création de playlists et de gestion d'historique de visionnage.",
+          "L'objectif était de fournir une expérience cinématographique immersive et personnalisée aux utilisateurs."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "Postman",
+          "Authentification",
+          "Swagger",
+          "GitHub",
+          "Netlify",
+          "Render"
+        ],
+        "done": true,
+        "nmemb": 1,
+        "url": "https://myallocine-neomovie.netlify.app/"
+      },
+      "rTypeWebsite": {
+        "name": "R-Type Website",
+        "description": [
+          "Après avoir codé le jeu R-Type, j'ai décidé de créer un site pour le promouvoir, le télécharger et jouer en ligne.",
+          "Le site contient une section Accueil, une section Média où l'on peut voir des vidéos et des images du jeu, une section Jeux où l'on peut retrouver d'autres jeux que j'ai codé, une section À propos où l'on peut en savoir plus sur le jeu et l'équipe de développement, et enfin une section Téléchargement où l'on peut télécharger le jeu et voir les dernières mises à jour."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "TailwindCSS",
+          "CSS",
+          "GitHub",
+          "Netlify"
+        ],
+        "done": true,
+        "nmemb": 1,
+        "url": "https://rtype.netlify.app/"
+      },
+      "owl": {
+        "name": "OWL",
+        "description": [
+          "OWL (Other Way to Look) est une application mobile qui permet de lutter contre la somnolence au volant.",
+          "L'application est composée d'un client mobile et d'un serveur.",
+          "L'application mobile est connectée à une montre connectée qui détecte principalement le rythme cardiaque, l'apport en oxygène et la durée de sommeil du conducteur.",
+          "Grâce à ces informations, un algorithme est appliqué pour déterminer si le conducteur est fatigué ou non.",
+          "Si le conducteur est fatigué, l'application mobile fait une action pour le prévenir et lui propose de prendre une pause.",
+          "Une action peut être caractérisée par une vibration de la montre connectée, du téléphone, un message sur le téléphone, un appel, etc...",
+          "Le conducteur peut ensuite obtenir une destination pour se rendre au point d'intérêt le plus proche (restaurant, hôtel, etc...) si nécessaire."
+        ],
+        "techUsed": [
+          "TypeScript",
+          "React Native",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "CSS",
+          "Bluetooth",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "render.com",
+          "Connect smartwatch to mobile"
+        ],
+        "done": false,
+        "nmemb": 9
+      },
+      "erp": {
+        "name": "ERP",
+        "description": [
+          "Création d'une plateforme web qui permet de gérer un gestionnaire de commandes et de factures.",
+          "La plateforme contient un dashboard, une liste des commandes, des relevés bancaires, une liste des services, une liste des formulaires de remboursement, une page pour créer une commande, une page pour créer un compte bancaire, une page pour créer une réclamation et la possibilité d'exporter les données en format Excel.",
+          "Pour pouvoir utiliser la plateforme, il faut être authentifié(e)."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "TailwindCSS",
+          "CSS",
+          "XLSX",
+          "Postman",
+          "Authentification",
+          "GitHub",
+          "Netlify",
+          "Heroku"
+        ],
+        "done": true,
+        "nmemb": 2,
+        "url": "https://nuvoleviaggi.netlify.app/"
+      },
+      "portfolio": {
+        "name": "Portfolio",
+        "description": [
+          "Mon expérience, mes compétences, ma personnalité; tout ça ne peut pas être résumé en un CV, c'est pourquoi j'ai créé ce portfolio.",
+          "Vous pouvez y retrouver mes projets, mes compétences, mes expériences, mon association, me contacter et bien plus encore !"
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "TailwindCSS",
+          "CSS",
+          "GitHub",
+          "Netlify"
+        ],
+        "done": true,
+        "nmemb": 1,
+        "url": "https://www.wassini-bouzidi.com/"
+      },
+      "popeye": {
+        "name": "Popeye",
+        "description": [
+          "Popeye est un projet qui consiste à conteneriser une application web.",
+          "Pour cela, il fallait utiliser Docker, un outil qui permet de créer des conteneurs, c'est-à-dire des environnements virtuels.",
+          "L'application était constituée d'un poll en Flask, d'une queue en Redis, d'un worker en Java, d'une base de données PostgreSQL et d'un result en NodeJS.",
+          "Il fallait donc conteneriser notre application web, et pouvoir la déployer en local."
+        ],
+        "techUsed": ["Docker", "DevOps", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      },
+      "fratelliPizza": {
+        "name": "Fratelli Pizza",
+        "description": [
+          "Site pour promouvoir la pizzeria, pouvoir se présenter en ligne, voir les évènements actuellement, contacter la pizzeria, payer en avance une commande utilisant Paypal.",
+          "L'administrateur a un dashboard pour gérer les commandes et les produits."
+        ],
+        "techUsed": [
+          "JavaScript",
+          "React",
+          "NodeJS",
+          "Next.js",
+          "Redux",
+          "MongoDB",
+          "CSS",
+          "Postman",
+          "Paypal SDK API",
+          "Cloudinary",
+          "GitHub"
+        ],
+        "done": true,
+        "nmemb": 1
+      }
+    },
+    "unix": {
+      "42sh": {
+        "name": "42sh",
+        "description": [
+          "Crée un Shell Unix qui a pour modèle de référence TCSH."
+        ],
+        "techUsed": ["C", "Makefile", "GitHub"],
+        "done": true,
+        "nmemb": 5
+      },
+      "my_malloc": {
+        "name": "my_malloc",
+        "description": [
+          "Recoder les fonctions malloc, realloc, calloc, reallocarray et free."
+        ],
+        "techUsed": ["C", "Makefile", "GitHub", "sbrk", "memory management"],
+        "done": true,
+        "nmemb": 1
+      },
+      "my_web": {
+        "name": "my_web",
+        "description": [
+          "Faire un dual boot entre Debian et Arch Linux sur une machine virtuel sans l'utilisation d'interface graphique pour assembler les partitions."
+        ],
+        "techUsed": [
+          "Administration système",
+          "Commandes Unix",
+          "Oracle VM VirtualBox",
+          "LVM"
+        ],
+        "done": true,
+        "nmemb": 2
+      },
+      "my_printf": {
+        "name": "my_printf",
+        "description": ["Recoder la fonction printf."],
+        "techUsed": ["C", "Makefile", "va_arg", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      },
+      "my_ls": {
+        "name": "my_ls",
+        "description": ["Recoder la commande ls."],
+        "techUsed": ["C", "Makefile", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      },
+      "my_cat": {
+        "name": "my_cat",
+        "description": ["Recoder la commande cat."],
+        "techUsed": ["C", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      }
+    },
+    "other": {
+      "my_teams": {
+        "name": "my_teams",
+        "description": ["Recoder teams"],
+        "techUsed": ["C", "Makefile", "GitHub", "Programmation réseau", "CLI"],
+        "done": true,
+        "nmemb": 3
+      },
+      "my_db": {
+        "name": "my_db",
+        "description": [
+          "Création d'une database avec une table unique implémentée en liste chaînée.",
+          "La table est composée des champs suivants :",
+          "id (= Idendifiant unique par colonne)",
+          "firstname (= Prénom)",
+          "lastname (= Nom)",
+          "pseudonyme (= Pseudonyme)",
+          "birthday (= Date de naissance)",
+          "city (= Ville)",
+          "phone (= Numéro de téléphone)",
+          "email (= Email)",
+          "password (= Mot de passe)",
+          "registeredAt (= Date d'enregistrement)"
+        ],
+        "techUsed": ["C", "Makefile", "GitHub"],
+        "done": false,
+        "nmemb": 1
+      },
+      "BSQ": {
+        "name": "BSQ",
+        "description": [
+          "Trouver le plus grand carré dans une grille de caractères.",
+          "La grille est composée de caractères '.' et de caractères 'o'.",
+          "Le programme doit afficher la grille avec le premier plus grand carré rempli de 'x'."
+        ],
+        "techUsed": ["C", "Makefile", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      },
+      "MiniLibC": {
+        "name": "MiniLibC",
+        "description": [
+          "Recoder les fonctions de la librairie C standard en assembleur x86_64.",
+          "Les fonctions étaient :",
+          "• strlen",
+          "• strchr",
+          "• strrchr",
+          "• memset",
+          "• memcpy",
+          "• strcmp",
+          "• memmove",
+          "• strncmp",
+          "• strcasecmp",
+          "• strstr",
+          "• strpbrk",
+          "• strcspn"
+        ],
+        "techUsed": [
+          "Assembly",
+          "Shared librairies",
+          "x86_64",
+          "Makefile",
+          "GitHub"
+        ],
+        "done": true,
+        "nmemb": 1
+      },
+      "bdsh": {
+        "name": "bdsh",
+        "description": [
+          "Écrire un script shell qui permet de gérer une base de données dans un fichier json.",
+          "Vous devez créer des tables, insérer-mettre à jour-supprimer des données, exécuter des requêtes, ...",
+          "La ligne de commande doit être capable de pouvoir créer une database, une table, insérer des données, supprimer des données, sélectionner des données, ...",
+          "La command-line jq était interdite."
+        ],
+        "techUsed": ["Bash", "JSON", "GitHub"],
+        "done": true,
+        "nmemb": 1
+      },
+      "cashRegister": {
+        "name": "Cash register",
+        "description": [
+          "Coder une caisse enregistreuse pouvant enregistrer des articles, les stockers dans une base de données, obtenir des tickets de caisse, crée de nouveaux caissiers qui sont également enregistrés dans une base de données etc..."
+        ],
+        "techUsed": ["Python", "Tkinter", "GitHub"],
+        "done": true,
+        "nmemb": 2
+      }
+    }
+  }
+}
