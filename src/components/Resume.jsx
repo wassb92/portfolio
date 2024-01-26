@@ -1,12 +1,16 @@
 import React from "react";
 import resumeInternPdf from "assets/resume/intern.pdf";
-import resumeFreelancePdf from "assets/resume/freelance.pdf";
+import resumeFreelanceEN from "assets/resume/freelance_en.pdf";
+import resumeFreelanceFR from "assets/resume/freelance_fr.pdf";
 
 const Resume = () => {
-  const seeking = window?.location?.href
-    ?.split("/")
-    ?.pop()
-    ?.replace("resume_", "");
+  const url = new URL(window.location.href);
+
+  const pathArray = new URL(url).pathname.split("/");
+  const seeking = pathArray[1].replace("resume_", "");
+
+  const params = new URLSearchParams(url.search);
+  const language = params.get("language");
 
   if (!seeking) {
     window.location.href = "/";
@@ -15,7 +19,13 @@ const Resume = () => {
 
   return (
     <iframe
-      src={seeking === "freelance" ? resumeFreelancePdf : resumeInternPdf}
+      src={
+        seeking === "freelance"
+          ? language === "fr"
+            ? resumeFreelanceFR
+            : resumeFreelanceEN
+          : resumeInternPdf
+      }
       className="w-full h-screen"
       title={`CV ${seeking}`}
       name={`CV ${seeking}`}

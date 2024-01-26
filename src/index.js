@@ -5,7 +5,6 @@ import App from "./App";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Resume from "./components/Resume";
-
 import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {

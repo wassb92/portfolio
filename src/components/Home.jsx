@@ -7,13 +7,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import animatedReact from "assets/animatedReact.gif";
 import animatedNode from "assets/animatedNode.gif";
 import { SeekingContext } from "SeekingContext";
-import rakuten from "assets/projets/rakuten.png";
 import BruinGif from "assets/bruin.gif";
 
 import { TypeAnimation } from "react-type-animation";
 
-import resumeInternPdf from "assets/resume/intern.pdf";
-import resumeFreelancePdf from "assets/resume/freelance.pdf";
 import SwitchLanguage from "./SwitchLanguage";
 
 const UnderlinedText = ({ children, className = "" }) => {
@@ -114,12 +111,14 @@ const InternSearchingText = () => {
 
 const AccessResume = ({ t }) => {
   const { seeking } = useContext(SeekingContext);
+  const { i18n } = useTranslation();
+  const selectedLanguage = i18n.language;
 
   return (
     <div className="FromBottom flex items-center">
       <a
         className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-        href={`resume_${seeking}`}
+        href={`resume_${seeking}?language=${selectedLanguage}`}
         target="_blank"
         rel="noreferrer"
       >
