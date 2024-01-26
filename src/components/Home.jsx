@@ -14,6 +14,7 @@ import { TypeAnimation } from "react-type-animation";
 
 import resumeInternPdf from "assets/resume/intern.pdf";
 import resumeFreelancePdf from "assets/resume/freelance.pdf";
+import SwitchLanguage from "./SwitchLanguage";
 
 const UnderlinedText = ({ children, className = "" }) => {
   return (
@@ -195,7 +196,10 @@ const Home = () => {
   };
 
   return (
-    <div name="home" className="w-full h-full sm:pt-40 pt-28">
+    <div name="home" className="w-full h-full sm:pt-24 pt-24">
+      <div className="flex justify-end mr-4">
+        <SwitchLanguage />
+      </div>
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className=" xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">

@@ -7,9 +7,6 @@ import Malt from "assets/malt.png";
 import { SeekingContext } from "SeekingContext";
 import { useTranslation } from "react-i18next";
 
-import resumeInternPdf from "assets/resume/intern.pdf";
-import resumeFreelancePdf from "assets/resume/freelance.pdf";
-
 const MenuBar = (props) => {
   return (
     <li className="text-xl font-bold cursor-pointer">
@@ -120,7 +117,6 @@ const Navbar = () => {
           handleClick={handleClick}
         />
       </ul>
-
       <div className="hidden md:flex fixed flex-col top-[35%] left-0">
         <ul>
           <SocialBar
