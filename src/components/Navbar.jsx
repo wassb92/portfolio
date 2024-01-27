@@ -59,7 +59,8 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const { seeking } = useContext(SeekingContext);
   const handleClick = () => setNav(!nav);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const selectedLanguage = i18n.language;
 
   const FaMalt = () => {
     return (
@@ -148,7 +149,7 @@ const Navbar = () => {
           <SocialBar
             name="CV"
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect={`resume_${seeking}`}
+            redirect={`resume_${seeking}?language=${selectedLanguage}`}
             color="bg-gray-700"
           />
         </ul>
@@ -182,7 +183,7 @@ const Navbar = () => {
         />
         <SocialBar
           icon={<BsFillPersonLinesFill size={30} />}
-          redirect={`resume_${seeking}`}
+          redirect={`resume_${seeking}?language=${selectedLanguage}`}
           color="bg-gray-700"
           shortSize
         />
