@@ -18,6 +18,8 @@ import Netlify from "assets/langages/netlify.png";
 import Heroku from "assets/langages/heroku.png";
 import Docker from "assets/langages/docker.png";
 import MUI from "assets/langages/MUI.png";
+import NestJS from "assets/langages/nestjs.png";
+import Golang from "assets/langages/golang.png";
 
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
@@ -84,10 +86,12 @@ const FreelanceSkills = () => {
 const MergedSkills = () => {
   return (
     <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-      <Skill name="TypeScript" logo={TypeScript} />
-      <Skill name="JavaScript" logo={JavaScript} />
+      {/* <Skill name="TypeScript" logo={TypeScript} /> */}
+      {/* <Skill name="JavaScript" logo={JavaScript} /> */}
       <Skill name="React" logo={ReactImg} />
       <Skill name="Node.js" logo={Node} />
+      <Skill name="NestJS" logo={NestJS} />
+      <Skill name="Golang" logo={Golang} />
       <Skill name="TailwindCSS" logo={Tailwind} />
       <Skill name="MongoDB" logo={Mongo} />
       <Skill name="PostgreSQL" logo={PostgreSQL} />
