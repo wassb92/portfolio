@@ -25,24 +25,31 @@ const FreelanceSearchingText = ({ t }) => {
   return (
     <div>
       <div className="mt-2">
-        {t("Home.intro.university")}{" "}
-        <UnderlinedText>{t("Home.intro.ucla")}</UnderlinedText> (
-        {t("Home.intro.universityFullName")}), {t("Home.intro.sameTime")}{" "}
+        {t("Home.Freelance.intro.university")}{" "}
+        <UnderlinedText>{t("Home.Freelance.intro.ucla")}</UnderlinedText> (
+        {t("Home.Freelance.intro.universityFullName")}),{" "}
+        {t("Home.Freelance.intro.sameTime")}{" "}
         <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
-        {t("Home.intro.withExperience")}{" "}
-        <UnderlinedText>{t("Home.intro.freelanceMissions")}</UnderlinedText>.
+        {t("Home.Freelance.intro.withExperience")}{" "}
+        <UnderlinedText>
+          {t("Home.Freelance.intro.freelanceMissions")}
+        </UnderlinedText>
+        .
       </div>
       <div className="mt-2">
-        {t("Home.skills.webMobileDevelopment")}{" "}
-        <UnderlinedText>{t("Home.skills.react")}</UnderlinedText>,{" "}
-        <UnderlinedText>{t("Home.skills.tailwindCSS")}</UnderlinedText>,{" "}
-        <UnderlinedText>{t("Home.skills.nodeJS")}</UnderlinedText>,{" "}
-        {t("Home.skills.and")}{" "}
-        <UnderlinedText>{t("Home.skills.mongoDB")}</UnderlinedText>,{" "}
-        {t("Home.skills.preferMERNStack")} <UnderlinedText>MERN</UnderlinedText>
-        , {t("Home.skills.andMore")}
+        {t("Home.Freelance.skills.webMobileDevelopment")}{" "}
+        <UnderlinedText>{t("Home.Freelance.skills.react")}</UnderlinedText>,{" "}
+        <UnderlinedText>
+          {t("Home.Freelance.skills.tailwindCSS")}
+        </UnderlinedText>
+        , <UnderlinedText>{t("Home.Freelance.skills.nodeJS")}</UnderlinedText>,{" "}
+        {t("Home.Freelance.skills.and")}{" "}
+        <UnderlinedText>{t("Home.Freelance.skills.mongoDB")}</UnderlinedText>,{" "}
+        {t("Home.Freelance.skills.preferMERNStack")}{" "}
+        <UnderlinedText>MERN</UnderlinedText>,{" "}
+        {t("Home.Freelance.skills.andMore")}
       </div>
-      <div className="mt-2">{t("Home.lookingFor")}</div>
+      <div className="mt-2">{t("Home.Freelance.lookingFor")}</div>
     </div>
   );
 };
@@ -74,7 +81,74 @@ const Help = ({ text }) => {
   );
 };
 
-const InternSearchingText = () => {
+const InternSearchingText = ({ t }) => {
+  const isIntern = true;
+
+  if (isIntern) {
+    return (
+      <div>
+        {/* Actuellement etudiant a UCLA, je suis a la recherche d'un CDD de debut */}
+        {/* septembre a fin fevrier pour la rentree 2024 en ile de France. */}
+        <div className="mt-2">
+          {t("Home.Internship.intro.university")}{" "}
+          <UnderlinedText>{t("Home.Internship.intro.ucla")}</UnderlinedText> (
+          {t("Home.Internship.intro.universityFullName")}),{" "}
+          {t("Home.Internship.intro.sameTime")}{" "}
+          <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
+          {t("Home.Internship.intro.withExperience")}{" "}
+          <UnderlinedText>
+            {t("Home.Internship.intro.internship")}
+          </UnderlinedText>
+          .
+        </div>
+        <div className="mt-2">
+          {t("Home.Internship.skills.webMobileDevelopment")}{" "}
+          <UnderlinedText>{t("Home.Internship.skills.react")}</UnderlinedText>,{" "}
+          <UnderlinedText>
+            {t("Home.Internship.skills.tailwindCSS")}
+          </UnderlinedText>
+          ,{" "}
+          <UnderlinedText>{t("Home.Internship.skills.nodeJS")}</UnderlinedText>,{" "}
+          {t("Home.Internship.skills.and")}{" "}
+          <UnderlinedText>{t("Home.Internship.skills.mongoDB")}</UnderlinedText>
+          , {t("Home.Internship.skills.preferMERNStack")}{" "}
+          <UnderlinedText>MERN</UnderlinedText>,{" "}
+          {t("Home.Internship.skills.andMore")}
+        </div>
+        <div className="mt-2">{t("Home.Internship.lookingFor")}</div>
+      </div>
+    );
+  }
+  return (
+    <div>
+      <div className="mt-2">
+        {t("Home.Internship.intro.university")}{" "}
+        <UnderlinedText>{t("Home.Internship.intro.ucla")}</UnderlinedText> (
+        {t("Home.Internship.intro.universityFullName")}),{" "}
+        {t("Home.Internship.intro.sameTime")}{" "}
+        <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
+        {t("Home.Internship.intro.withExperience")}{" "}
+        <UnderlinedText>
+          {t("Home.Internship.intro.freelanceMissions")}
+        </UnderlinedText>
+        .
+      </div>
+      <div className="mt-2">
+        {t("Home.Internship.skills.webMobileDevelopment")}{" "}
+        <UnderlinedText>{t("Home.Internship.skills.react")}</UnderlinedText>,{" "}
+        <UnderlinedText>
+          {t("Home.Internship.skills.tailwindCSS")}
+        </UnderlinedText>
+        , <UnderlinedText>{t("Home.Internship.skills.nodeJS")}</UnderlinedText>,{" "}
+        {t("Home.Internship.skills.and")}{" "}
+        <UnderlinedText>{t("Home.Internship.skills.mongoDB")}</UnderlinedText>,{" "}
+        {t("Home.Internship.skills.preferMERNStack")}{" "}
+        <UnderlinedText>MERN</UnderlinedText>,{" "}
+        {t("Home.Internship.skills.andMore")}
+      </div>
+      <div className="mt-2">{t("Home.Internship.lookingFor")}</div>
+    </div>
+  );
   return (
     <div>
       <p className="inline">
@@ -122,7 +196,7 @@ const AccessResume = ({ t }) => {
         target="_blank"
         rel="noreferrer"
       >
-        {t("Home.accessResume")}
+        {t("Home.Freelance.accessResume")}
       </a>
     </div>
   );
@@ -153,7 +227,7 @@ const Home = () => {
               : "sm:hover:shadow-main"
           }`}
         >
-          {t("Home.letsGo")}
+          {t("Home.Freelance.letsGo")}
           <span className="group-hover:rotate-90 duration-300">
             <HiArrowNarrowRight className="ml-3" />
           </span>
@@ -202,7 +276,7 @@ const Home = () => {
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className=" xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">
-            {t("Home.greetings")}
+            {t("Home.Freelance.greetings")}
           </div>
           <div className="FromLeft text-4xl sm:text-7xl font-bold text-white flex items-center">
             <strong className="mr-2">Wassini Bouzidi</strong>{" "}
@@ -220,64 +294,60 @@ const Home = () => {
             " sm:text-6xl font-bold"
           }
         >
-          {seeking === "freelance" ? (
-            <div className="flex h-full mt-2">
-              <div className="px-2 rounded-md FromFrontHard">
-                <img
-                  src={animatedReact}
-                  alt="react"
-                  className="sm:w-20 w-10 sm:-mt-2 BackFlip"
-                />
-              </div>
-              <strong className="FromRight text-xl sm:text-4xl lg:text-6xl">
-                <div
-                  style={{
-                    color: textColor,
-                  }}
-                >
-                  <TypeAnimation
-                    sequence={[
-                      () => setTextColor("#61DBFB"),
-                      t("Common.frontEndDeveloper"),
-                      1000,
-                      () => setTextColor("#68A063"),
-                      t("Common.backEndDeveloper"),
-                      1000,
-                      () => setTextColor("#8A37DC"),
-                      t("Common.fullStackDeveloper"),
-                      1000,
-                    ]}
-                    wrapper="span"
-                    speed={30}
-                    style={{ display: "inline-block" }}
-                    repeat={Infinity}
-                  />
-                </div>
-              </strong>
-              <div className="px-2 rounded-md FromFrontHard">
-                <img
-                  src={animatedNode}
-                  alt="node"
-                  className="sm:w-20 w-10 sm:-mt-2 BackFlip"
-                />
-              </div>
+          <div className="flex h-full mt-2">
+            <div className="px-2 rounded-md FromFrontHard">
+              <img
+                src={animatedReact}
+                alt="react"
+                className="sm:w-20 w-10 sm:-mt-2 BackFlip"
+              />
             </div>
-          ) : (
-            <strong className="FromRight flex h-full mb-10">
-              Développeur chez Epitech Paris
+            <strong className="FromRight text-xl sm:text-4xl lg:text-6xl">
+              <div
+                style={{
+                  color: textColor,
+                }}
+              >
+                <TypeAnimation
+                  sequence={[
+                    () => setTextColor("#61DBFB"),
+                    t("Common.frontEndDeveloper"),
+                    1000,
+                    () => setTextColor("#68A063"),
+                    t("Common.backEndDeveloper"),
+                    1000,
+                    () => setTextColor("#8A37DC"),
+                    t("Common.fullStackDeveloper"),
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={30}
+                  style={{ display: "inline-block" }}
+                  repeat={Infinity}
+                />
+              </div>
             </strong>
-          )}
+            <div className="px-2 rounded-md FromFrontHard">
+              <img
+                src={animatedNode}
+                alt="node"
+                className="sm:w-20 w-10 sm:-mt-2 BackFlip"
+              />
+            </div>
+          </div>
         </div>
         <div className="text-white py-4 max-w-[700px] mt-6">
           <div>
             {seeking === "freelance" ? (
               <FreelanceSearchingText t={t} />
             ) : (
-              <InternSearchingText />
+              <InternSearchingText t={t} />
             )}
           </div>
-          <div className="mt-2">{t("Home.portfolioInfo")}</div>
-          <div className="mt-10 font-semibold">{t("Home.discoverMe")}</div>
+          <div className="mt-2">{t("Home.Freelance.portfolioInfo")}</div>
+          <div className="mt-10 font-semibold">
+            {t("Home.Freelance.discoverMe")}
+          </div>
         </div>
 
         <div className="space-y-2">
@@ -287,10 +357,12 @@ const Home = () => {
               <AccessResume t={t} />
             </div>
             <div className="sm:flex hidden">
-              {defaultSeek !== "freelance" && <SwitchSeeking />}
+              {/* DISABLED FOR NOW */}
+              {/* {defaultSeek !== "freelance" && <SwitchSeeking />} */}
             </div>
             <div className="sm:hidden flex">
-              {defaultSeek !== "freelance" && <SwitchSeeking />}
+              {/* DISABLED FOR NOW */}
+              {/* {defaultSeek !== "freelance" && <SwitchSeeking />} */}
             </div>
           </div>
           <div className="sm:hidden flex">

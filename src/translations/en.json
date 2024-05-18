@@ -21,30 +21,59 @@
     "contact": "Contact"
   },
   "Home": {
-    "greetings": "Greetings!",
-    "intro": {
-      "university": "Currently a student at",
-      "ucla": "UCLA",
-      "universityFullName": "University of California, Los Angeles",
-      "sameTime": "I am also a developer",
-      "withExperience": "with solid experience in web/mobile development. I am looking for new",
-      "freelanceMissions": "freelance missions"
+    "Freelance": {
+      "greetings": "Greetings!",
+      "intro": {
+        "university": "Currently a student at",
+        "ucla": "UCLA",
+        "universityFullName": "University of California, Los Angeles",
+        "sameTime": "I am also a developer",
+        "withExperience": "with solid experience in web/mobile development. I am looking for new",
+        "freelanceMissions": "freelance missions"
+      },
+      "skills": {
+        "webMobileDevelopment": "My skills in web/mobile development include",
+        "react": "React",
+        "tailwindCSS": "TailwindCSS",
+        "nodeJS": "Node.js",
+        "and": "and",
+        "mongoDB": "MongoDB",
+        "preferMERNStack": "with a preference for the ",
+        "andMore": "and many more."
+      },
+      "lookingFor": "If you are looking for a reliable and competent web/mobile developer for your projects, feel free to contact me. I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
+      "portfolioInfo": "This portfolio was coded in React, TailwindCSS, and CSS by myself.",
+      "discoverMe": "Ready to discover me?",
+      "letsGo": "Let's go!",
+      "accessResume": "Access my resume directly"
     },
-    "skills": {
-      "webMobileDevelopment": "My skills in web/mobile development include",
-      "react": "React",
-      "tailwindCSS": "TailwindCSS",
-      "nodeJS": "Node.js",
-      "and": "and",
-      "mongoDB": "MongoDB",
-      "preferMERNStack": "with a preference for the ",
-      "andMore": "and many more."
-    },
-    "lookingFor": "If you are looking for a reliable and competent web/mobile developer for your projects, feel free to contact me. I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
-    "portfolioInfo": "This portfolio was coded in React, TailwindCSS, and CSS by myself.",
-    "discoverMe": "Ready to discover me?",
-    "letsGo": "Let's go!",
-    "accessResume": "Access my resume directly"
+    "Internship": {
+      "greetings": "Greetings!",
+      "intro": {
+        "university": "Currently a student at",
+        "ucla": "UCLA",
+        "universityFullName": "University of California, Los Angeles",
+        "sameTime": "I am also a developer",
+        "withExperience": "with solid experience in web/mobile development. I am looking for a",
+        "freelanceMissions": "freelance missions",
+        "internship": "fixed-term contract from September 2024 to the end of February 2025"
+      },
+      "skills": {
+        "webMobileDevelopment": "My skills in web/mobile development include",
+        "react": "React",
+        "tailwindCSS": "TailwindCSS",
+        "nodeJS": "Node.js",
+        "and": "and",
+        "mongoDB": "MongoDB",
+        "preferMERNStack": "with a preference for the ",
+        "andMore": "and many more."
+      },
+      "lookingFor": "If you are looking for a reliable and competent web/mobile developer for your projects, feel free to contact me. I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
+      "portfolioInfo": "This portfolio was coded in React, TailwindCSS, and CSS by myself.",
+      "discoverMe": "Ready to discover me?",
+      "letsGo": "Let's go!",
+      "accessResume": "Access my resume directly"
+    }
   },
   "About": {
     "aboutMe": "About Me",

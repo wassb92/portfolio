@@ -126,14 +126,12 @@ const Navbar = () => {
             redirect="https://www.linkedin.com/in/wassini-bouzidi/"
             color="bg-blue-600"
           />
-          {seeking === "freelance" && (
-            <SocialBar
-              name="Malt"
-              icon={<FaMalt />}
-              redirect="https://www.malt.fr/profile/wassinibouzidi"
-              color="bg-[#ff3b6d]"
-            />
-          )}
+          <SocialBar
+            name="Malt"
+            icon={<FaMalt />}
+            redirect="https://www.malt.fr/profile/wassinibouzidi"
+            color="bg-[#ff3b6d]"
+          />
           <SocialBar
             name="GitHub"
             icon={<FaGithub size={30} />}
@@ -161,14 +159,12 @@ const Navbar = () => {
           color="bg-blue-600"
           shortSize
         />
-        {seeking === "freelance" && (
-          <SocialBar
-            icon={<FaMalt />}
-            redirect="https://www.malt.fr/profile/wassinibouzidi"
-            color="bg-[#ff3b6d]"
-            shortSize
-          />
-        )}
+        <SocialBar
+          icon={<FaMalt />}
+          redirect="https://www.malt.fr/profile/wassinibouzidi"
+          color="bg-[#ff3b6d]"
+          shortSize
+        />
         <SocialBar
           icon={<FaGithub size={30} />}
           redirect="https://github.com/wassb92"

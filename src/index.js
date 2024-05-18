@@ -9,7 +9,7 @@ import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {
   const seeks = ["internship", "freelance"];
-  const defaultSeek = seeks[1];
+  const defaultSeek = seeks[0];
   const [seeking, setSeeking] = useState(defaultSeek);
 
   return (
