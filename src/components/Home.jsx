@@ -81,72 +81,69 @@ const Help = ({ text }) => {
   );
 };
 
-const InternSearchingText = ({ t }) => {
-  const isIntern = true;
+const FixedTermSearchingText = ({ t }) => {
+  const isFixedTerm = true;
 
-  if (isIntern) {
+  if (isFixedTerm) {
     return (
       <div>
         {/* Actuellement etudiant a UCLA, je suis a la recherche d'un CDD de debut */}
         {/* septembre a fin fevrier pour la rentree 2024 en ile de France. */}
         <div className="mt-2">
-          {t("Home.Internship.intro.university")}{" "}
-          <UnderlinedText>{t("Home.Internship.intro.ucla")}</UnderlinedText> (
-          {t("Home.Internship.intro.universityFullName")}),{" "}
-          {t("Home.Internship.intro.sameTime")}{" "}
+          {t("Home.FixedTerm.intro.university")}{" "}
+          <UnderlinedText>{t("Home.FixedTerm.intro.ucla")}</UnderlinedText> (
+          {t("Home.FixedTerm.intro.universityFullName")}),{" "}
+          {t("Home.FixedTerm.intro.sameTime")}{" "}
           <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
-          {t("Home.Internship.intro.withExperience")}{" "}
-          <UnderlinedText>
-            {t("Home.Internship.intro.internship")}
-          </UnderlinedText>
+          {t("Home.FixedTerm.intro.withExperience")}{" "}
+          <UnderlinedText>{t("Home.FixedTerm.intro.fixedTerm")}</UnderlinedText>
           .
         </div>
         <div className="mt-2">
-          {t("Home.Internship.skills.webMobileDevelopment")}{" "}
-          <UnderlinedText>{t("Home.Internship.skills.react")}</UnderlinedText>,{" "}
+          {t("Home.FixedTerm.skills.webMobileDevelopment")}{" "}
+          <UnderlinedText>{t("Home.FixedTerm.skills.react")}</UnderlinedText>,{" "}
           <UnderlinedText>
-            {t("Home.Internship.skills.tailwindCSS")}
+            {t("Home.FixedTerm.skills.tailwindCSS")}
           </UnderlinedText>
-          ,{" "}
-          <UnderlinedText>{t("Home.Internship.skills.nodeJS")}</UnderlinedText>,{" "}
-          {t("Home.Internship.skills.and")}{" "}
-          <UnderlinedText>{t("Home.Internship.skills.mongoDB")}</UnderlinedText>
-          , {t("Home.Internship.skills.preferMERNStack")}{" "}
+          , <UnderlinedText>{t("Home.FixedTerm.skills.nodeJS")}</UnderlinedText>
+          , {t("Home.FixedTerm.skills.and")}{" "}
+          <UnderlinedText>{t("Home.FixedTerm.skills.mongoDB")}</UnderlinedText>,{" "}
+          {t("Home.FixedTerm.skills.preferMERNStack")}{" "}
           <UnderlinedText>MERN</UnderlinedText>,{" "}
-          {t("Home.Internship.skills.andMore")}
+          {t("Home.FixedTerm.skills.andMore")}
         </div>
-        <div className="mt-2">{t("Home.Internship.lookingFor")}</div>
+        <div className="mt-2">{t("Home.FixedTerm.lookingFor")}</div>
       </div>
     );
   }
   return (
     <div>
       <div className="mt-2">
-        {t("Home.Internship.intro.university")}{" "}
-        <UnderlinedText>{t("Home.Internship.intro.ucla")}</UnderlinedText> (
-        {t("Home.Internship.intro.universityFullName")}),{" "}
-        {t("Home.Internship.intro.sameTime")}{" "}
+        {t("Home.FixedTerm.intro.university")}{" "}
+        <UnderlinedText>{t("Home.FixedTerm.intro.ucla")}</UnderlinedText> (
+        {t("Home.FixedTerm.intro.universityFullName")}),{" "}
+        {t("Home.FixedTerm.intro.sameTime")}{" "}
         <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
-        {t("Home.Internship.intro.withExperience")}{" "}
+        {t("Home.FixedTerm.intro.withExperience")}{" "}
         <UnderlinedText>
-          {t("Home.Internship.intro.freelanceMissions")}
+          {t("Home.FixedTerm.intro.freelanceMissions")}
         </UnderlinedText>
         .
       </div>
       <div className="mt-2">
-        {t("Home.Internship.skills.webMobileDevelopment")}{" "}
-        <UnderlinedText>{t("Home.Internship.skills.react")}</UnderlinedText>,{" "}
+        {t("Home.FixedTerm.skills.webMobileDevelopment")}{" "}
+        <UnderlinedText>{t("Home.FixedTerm.skills.react")}</UnderlinedText>,{" "}
         <UnderlinedText>
-          {t("Home.Internship.skills.tailwindCSS")}
+          {t("Home.FixedTerm.skills.tailwindCSS")}
         </UnderlinedText>
-        , <UnderlinedText>{t("Home.Internship.skills.nodeJS")}</UnderlinedText>,{" "}
-        {t("Home.Internship.skills.and")}{" "}
-        <UnderlinedText>{t("Home.Internship.skills.mongoDB")}</UnderlinedText>,{" "}
-        {t("Home.Internship.skills.preferMERNStack")}{" "}
+        , <UnderlinedText>{t("Home.FixedTerm.skills.nodeJS")}</UnderlinedText>,{" "}
+        {t("Home.FixedTerm.skills.and")}{" "}
+        <UnderlinedText>{t("Home.FixedTerm.skills.mongoDB")}</UnderlinedText>,{" "}
+        {t("Home.FixedTerm.skills.preferMERNStack")}{" "}
         <UnderlinedText>MERN</UnderlinedText>,{" "}
-        {t("Home.Internship.skills.andMore")}
+        {t("Home.FixedTerm.skills.andMore")}
       </div>
-      <div className="mt-2">{t("Home.Internship.lookingFor")}</div>
+      <div className="mt-2">{t("Home.FixedTerm.lookingFor")}</div>
     </div>
   );
   return (
@@ -216,13 +213,13 @@ const Home = () => {
           duration={350}
           className={`group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
           ${
-            seeking === "internship"
+            seeking === "fixedTerm"
               ? "hover:border-secondary"
               : "hover:border-main"
           }
           sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
           ${
-            seeking === "internship"
+            seeking === "fixedTerm"
               ? "sm:hover:shadow-secondary"
               : "sm:hover:shadow-main"
           }`}
@@ -238,10 +235,10 @@ const Home = () => {
 
   const SwitchSeeking = () => {
     const handleClick = () => {
-      if (seeking === "internship") {
+      if (seeking === "fixedTerm") {
         setSeeking("freelance");
       } else if (seeking === "freelance") {
-        setSeeking("internship");
+        setSeeking("fixedTerm");
       }
     };
 
@@ -249,13 +246,13 @@ const Home = () => {
       <button
         className={`text-white group border-2 sm:px-6 px-2 py-3 my-2 flex items-center rounded-xl
           ${
-            seeking === "internship"
+            seeking === "fixedTerm"
               ? "hover:border-main"
               : "hover:border-secondary"
           }
           sm:hover:cursor-pointer sm:hover:shadow-[0px_0px_25px_0px]
           ${
-            seeking === "internship"
+            seeking === "fixedTerm"
               ? "sm:hover:shadow-main"
               : "sm:hover:shadow-secondary"
           }`}
@@ -341,7 +338,7 @@ const Home = () => {
             {seeking === "freelance" ? (
               <FreelanceSearchingText t={t} />
             ) : (
-              <InternSearchingText t={t} />
+              <FixedTermSearchingText t={t} />
             )}
           </div>
           <div className="mt-2">{t("Home.Freelance.portfolioInfo")}</div>

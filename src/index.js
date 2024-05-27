@@ -8,7 +8,7 @@ import Resume from "./components/Resume";
 import { SeekingContext } from "SeekingContext";
 
 const Routing = () => {
-  const seeks = ["internship", "freelance"];
+  const seeks = ["fixedTerm", "freelance"];
   const defaultSeek = seeks[0];
   const [seeking, setSeeking] = useState(defaultSeek);
 

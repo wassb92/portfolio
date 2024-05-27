@@ -1,6 +1,6 @@
 import React from "react";
-import resumeInternEN from "assets/resume/intern_en.pdf";
-import resumeInternFR from "assets/resume/intern_fr.pdf";
+import resumeFixedTermEN from "assets/resume/fixedTerm_en.pdf";
+import resumeFixedTermFR from "assets/resume/fixedTerm_fr.pdf";
 import resumeFreelanceEN from "assets/resume/freelance_en.pdf";
 import resumeFreelanceFR from "assets/resume/freelance_fr.pdf";
 
@@ -26,8 +26,8 @@ const Resume = () => {
             ? resumeFreelanceFR
             : resumeFreelanceEN
           : language === "fr"
-          ? resumeInternFR
-          : resumeInternEN
+          ? resumeFixedTermFR
+          : resumeFixedTermEN
       }
       className="w-full h-screen"
       title={`CV ${seeking}`}

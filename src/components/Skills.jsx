@@ -39,7 +39,7 @@ const Skill = (props) => {
   );
 };
 
-const InternSkills = () => {
+const FixedTermSkills = () => {
   return (
     <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
       <Skill name="C" logo={C} />

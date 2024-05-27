@@ -47,7 +47,7 @@
       "letsGo": "C'est parti !",
       "accessResume": "Accéder directement à mon CV"
     },
-    "Internship": {
+    "FixedTerm": {
       "greetings": "Salutations !",
       "intro": {
         "university": "Actuellement étudiant à",
@@ -56,7 +56,7 @@
         "sameTime": "je suis en parallèle développeur",
         "withExperience": "avec une solide expérience dans le domaine du développement web/mobile. Je suis à la recherche d'un",
         "freelanceMissions": "missions freelance",
-        "internship": "CDD de Septembre 2024 à fin Février 2025 en Île-de-France"
+        "fixedTerm": "CDD de Septembre 2024 à fin Février 2025 en Île-de-France"
       },
       "skills": {
         "webMobileDevelopment": "Mes compétences en développement web/mobile incluent",
