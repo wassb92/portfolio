@@ -1,6 +1,6 @@
 import React from "react";
-import resumeFixedTermEN from "assets/resume/fixedTerm_en.pdf";
-import resumeFixedTermFR from "assets/resume/fixedTerm_fr.pdf";
+import resumeFixedTermEN from "assets/resume/FixedContract_Internship_en.pdf";
+import resumeFixedTermFR from "assets/resume/FixedContract_Internship_fr.pdf";
 import resumeFreelanceEN from "assets/resume/freelance_en.pdf";
 import resumeFreelanceFR from "assets/resume/freelance_fr.pdf";
 
