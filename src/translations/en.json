@@ -78,8 +78,8 @@
   "About": {
     "aboutMe": "About Me",
     "currentActivities": [
-      "Freelance Full-Stack",
-      "Student at UCLA (University of California, Los Angeles)",
+      "Freelance Full-Stack Developer & IT Teacher",
+      "UCLA Alumni (University of California, Los Angeles)",
       "Developer at OWL",
       "Former Developer at Rakuten",
       "Former President of EpiSolidaire"
@@ -101,7 +101,7 @@
   "Work": {
     "work": "Work Experience",
     "link": "Link",
-    "realisedWith": "Realized with",
+    "realisedWith": "Realized in",
     "solo": "solo",
     "group": "group of {{nmemb}} people",
     "inComing": "Upcoming",
@@ -240,12 +240,21 @@
           "GitHub"
         ]
       },
-      "evogue": {
-        "name": "EVOGUE",
+      "teacher": {
+        "name": "IT Teacher",
         "description": [
-          "As a teacher, I was responsible for preparing, organizing, and delivering programming courses, as well as correcting exercises and assignments for students.",
-          "The students had diverse profiles, ranging from beginners learning programming concepts to more advanced students at the Bachelor's and Master's level.",
-          "I had to adapt my teaching to their level and needs."
+          "As a teacher, I was in charge of preparing, organizing, and giving programming lessons, as well as correcting students' exercises and practical work.",
+          "The students' profiles covered all levels, from first-year undergraduates (Bac +1) to master's level students (Bac +5).",
+          "So I had to adapt my teaching to their level and needs.",
+          "I conducted these lessons at several institutions, including:",
+          "• Efrei",
+          "• Epitech Digital School",
+          "• MyDigitalSchool",
+          "• Doranco",
+          "• Aston",
+          "• Alt-RH",
+          "• Konexio",
+          "• Evogue Formation"
         ],
         "techUsed": [
           "JavaScript",
@@ -256,13 +265,14 @@
           "HTML",
           "CSS",
           "SQL",
+          "WordPress",
           "Cypress",
           "Jest",
           "PHPUnit",
-          "Unit Testing",
+          "Tests unitaires",
           "OOP",
           "UML",
-          "Teaching"
+          "Enseignement"
         ]
       },
       "ionis": {

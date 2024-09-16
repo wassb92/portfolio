@@ -152,12 +152,12 @@ const Professional = ({ t }) => {
         t={t}
       />
       <Projet
-        name={t("Work.professional.evogue.name")}
-        logo={evogue}
-        description={t("Work.professional.evogue.description", {
+        name={t("Work.professional.teacher.name")}
+        logo={freelance}
+        description={t("Work.professional.teacher.description", {
           returnObjects: true,
         })}
-        techUsed={t("Work.professional.evogue.techUsed", {
+        techUsed={t("Work.professional.teacher.techUsed", {
           returnObjects: true,
         })}
         done={true}

@@ -78,8 +78,8 @@
   "About": {
     "aboutMe": "À propos de moi",
     "currentActivities": [
-      "Freelance Full-Stack",
-      "Étudiant à UCLA (University of California, Los Angeles)",
+      "Freelance Full-Stack Developer & IT Teacher",
+      "UCLA Alumni (University of California, Los Angeles)",
       "Développeur chez OWL",
       "Ex-Développeur chez Rakuten",
       "Ex-Président d'EpiSolidaire"
@@ -238,12 +238,21 @@
           "GitHub"
         ]
       },
-      "evogue": {
-        "name": "EVOGUE",
+      "teacher": {
+        "name": "Professeur d'informatique",
         "description": [
-          "En tant que professeur, j'ai été chargé de préparer, d'organiser, d'assurer des cours de programmation et de corriger les exercices et les TP des étudiants.",
-          "Les profils des étudiants étaient très variés, allant de débutants pour découvrir certaines notions de programmation à des étudiants plus avancés de niveau Bac +3/+4.",
-          "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins."
+          "En tant que professeur, j'ai été chargé de préparer, d'organiser, d'assurer des cours de programmation et de corrigés les exercices et les TP des étudiants.",
+          "Les profils des étudiants couvraient tous les niveaux, allant de Bac +1 à Bac +5.",
+          "Il m'a fallu donc adapter mon enseignement en fonction de leur niveau et de leurs besoins.",
+          "J'ai dispensé ces cours dans plusieurs établissements, dont :",
+          "• Efrei",
+          "• Epitech Digital School",
+          "• MyDigitalSchool",
+          "• Doranco",
+          "• Aston",
+          "• Alt-RH",
+          "• Konexio",
+          "• Evogue Formation"
         ],
         "techUsed": [
           "JavaScript",
@@ -254,6 +263,7 @@
           "HTML",
           "CSS",
           "SQL",
+          "WordPress",
           "Cypress",
           "Jest",
           "PHPUnit",
