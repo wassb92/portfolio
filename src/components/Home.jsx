@@ -87,32 +87,27 @@ const FixedTermSearchingText = ({ t }) => {
   if (isFixedTerm) {
     return (
       <div>
-        {/* Actuellement etudiant a UCLA, je suis a la recherche d'un CDD de debut */}
-        {/* septembre a fin fevrier pour la rentree 2024 en ile de France. */}
         <div className="mt-2">
-          {t("Home.FixedTerm.intro.university")}{" "}
-          <UnderlinedText>{t("Home.FixedTerm.intro.ucla")}</UnderlinedText> (
-          {t("Home.FixedTerm.intro.universityFullName")}),{" "}
-          {t("Home.FixedTerm.intro.sameTime")}{" "}
-          <UnderlinedText>{t("Common.fullStack")}</UnderlinedText>{" "}
-          {t("Home.FixedTerm.intro.withExperience")}{" "}
-          <UnderlinedText>{t("Home.FixedTerm.intro.fixedTerm")}</UnderlinedText>
-          .
-        </div>
-        <div className="mt-2">
-          {t("Home.FixedTerm.skills.webMobileDevelopment")}{" "}
-          <UnderlinedText>{t("Home.FixedTerm.skills.react")}</UnderlinedText>,{" "}
+          {t("Home.AboutMe.intro.freelance")},{" "}
+          {t("Home.AboutMe.intro.uclaGraduate")}{" "}
           <UnderlinedText>
-            {t("Home.FixedTerm.skills.tailwindCSS")}
-          </UnderlinedText>
-          , <UnderlinedText>{t("Home.FixedTerm.skills.nodeJS")}</UnderlinedText>
-          , {t("Home.FixedTerm.skills.and")}{" "}
-          <UnderlinedText>{t("Home.FixedTerm.skills.mongoDB")}</UnderlinedText>,{" "}
-          {t("Home.FixedTerm.skills.preferMERNStack")}{" "}
-          <UnderlinedText>MERN</UnderlinedText>,{" "}
-          {t("Home.FixedTerm.skills.andMore")}
+            ({t("Home.AboutMe.intro.uclaFullName")})
+          </UnderlinedText>{" "}
+          {t("Home.AboutMe.intro.readyToContribute")}
         </div>
-        <div className="mt-2">{t("Home.FixedTerm.lookingFor")}</div>
+        <div className="mt-2">
+          {t("Home.AboutMe.skills.webMobileDevelopment")}{" "}
+          <UnderlinedText>{t("Home.AboutMe.skills.react")}</UnderlinedText>,{" "}
+          <UnderlinedText>{t("Home.AboutMe.skills.nodeJS")}</UnderlinedText>,{" "}
+          <UnderlinedText>{t("Home.AboutMe.skills.nuxtJS")}</UnderlinedText>,{" "}
+          <UnderlinedText>
+            {t("Home.AboutMe.skills.tailwindCSS")}
+          </UnderlinedText>
+          , <UnderlinedText>{t("Home.AboutMe.skills.mongoDB")}</UnderlinedText>,{" "}
+          <UnderlinedText>MERN</UnderlinedText>,{" "}
+          {t("Home.AboutMe.skills.andMore")}
+        </div>
+        <div className="mt-2">{t("Home.AboutMe.contact.lookingFor")}</div>
       </div>
     );
   }
@@ -193,7 +188,7 @@ const AccessResume = ({ t }) => {
         target="_blank"
         rel="noreferrer"
       >
-        {t("Home.Freelance.accessResume")}
+        {t("Home.AboutMe.accessResume")}
       </a>
     </div>
   );
@@ -224,7 +219,7 @@ const Home = () => {
               : "sm:hover:shadow-main"
           }`}
         >
-          {t("Home.Freelance.letsGo")}
+          {t("Home.AboutMe.letsGo")}
           <span className="group-hover:rotate-90 duration-300">
             <HiArrowNarrowRight className="ml-3" />
           </span>
@@ -273,7 +268,7 @@ const Home = () => {
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <div className=" xs:pt-0 xs:mt-0">
           <div className="text-secondary font-bold text-xl FromTop">
-            {t("Home.Freelance.greetings")}
+            {t("Home.AboutMe.greetings")}
           </div>
           <div className="FromLeft text-4xl sm:text-7xl font-bold text-white flex items-center">
             <strong className="mr-2">Wassini Bouzidi</strong>{" "}
@@ -316,6 +311,9 @@ const Home = () => {
                     () => setTextColor("#8A37DC"),
                     t("Common.fullStackDeveloper"),
                     1000,
+                    () => setTextColor("#FFD700"),
+                    t("Common.teacher"),
+                    1000,
                   ]}
                   wrapper="span"
                   speed={30}
@@ -341,9 +339,9 @@ const Home = () => {
               <FixedTermSearchingText t={t} />
             )}
           </div>
-          <div className="mt-2">{t("Home.Freelance.portfolioInfo")}</div>
+          <div className="mt-2">{t("Home.AboutMe.portfolioInfo")}</div>
           <div className="mt-10 font-semibold">
-            {t("Home.Freelance.discoverMe")}
+            {t("Home.AboutMe.discoverMe")}
           </div>
         </div>
 

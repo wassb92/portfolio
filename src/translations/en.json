@@ -4,11 +4,11 @@
     "frontEndDeveloper": "Front-End Developer",
     "backEndDeveloper": "Back-End Developer",
     "fullStackDeveloper": "Full-Stack Developer",
-    "teacher": "Computer Science Teacher",
+    "teacher": "IT Teacher",
     "freelanceFrontEndDeveloper": "Front-End Developer (Freelance)",
     "freelanceBackEndDeveloper": "Back-End Developer (Freelance)",
     "freelanceFullStackDeveloper": "Full-Stack Developer (Freelance)",
-    "freelanceTeacher": "Computer Science Teacher (Freelance)",
+    "freelanceTeacher": "IT Teacher (Freelance)",
     "teacherAssistant": "Teaching Assistant",
     "PHPTeacher": "PHP Teacher",
     "freelance": "Freelance"
@@ -21,58 +21,31 @@
     "contact": "Contact"
   },
   "Home": {
-    "Freelance": {
-      "greetings": "Greetings!",
+    "AboutMe": {
       "intro": {
-        "university": "Currently a student at",
-        "ucla": "UCLA",
-        "universityFullName": "University of California, Los Angeles",
-        "sameTime": "I am also a developer",
-        "withExperience": "with solid experience in web/mobile development. I am looking for new",
-        "freelanceMissions": "freelance missions"
+        "freelance": "Freelance Full-Stack Developer and IT Teacher",
+        "uclaGraduate": "freshly graduated from UCLA",
+        "uclaFullName": "University of California, Los Angeles",
+        "readyToContribute": "and ready to bring my expertise to your projects."
       },
       "skills": {
-        "webMobileDevelopment": "My skills in web/mobile development include",
+        "webMobileDevelopment": "I have solid experience in web/mobile development with skills in",
         "react": "React",
-        "tailwindCSS": "TailwindCSS",
         "nodeJS": "Node.js",
-        "and": "and",
-        "mongoDB": "MongoDB",
-        "preferMERNStack": "with a preference for the ",
-        "andMore": "and many more."
-      },
-      "lookingFor": "If you are looking for a reliable and competent web/mobile developer for your projects, feel free to contact me. I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
-      "portfolioInfo": "This portfolio was coded in React, TailwindCSS, and CSS by myself.",
-      "discoverMe": "Ready to discover me?",
-      "letsGo": "Let's go!",
-      "accessResume": "Access my resume directly"
-    },
-    "FixedTerm": {
-      "greetings": "Greetings!",
-      "intro": {
-        "university": "Currently a student at",
-        "ucla": "UCLA",
-        "universityFullName": "University of California, Los Angeles",
-        "sameTime": "I am also a developer",
-        "withExperience": "with solid experience in web/mobile development. I am looking for a",
-        "freelanceMissions": "freelance missions",
-        "fixedTerm": "fixed-term contract from September 2024 to the end of February 2025"
-      },
-      "skills": {
-        "webMobileDevelopment": "My skills in web/mobile development include",
-        "react": "React",
+        "nuxtJS": "Nuxt.js",
         "tailwindCSS": "TailwindCSS",
-        "nodeJS": "Node.js",
-        "and": "and",
         "mongoDB": "MongoDB",
-        "preferMERNStack": "with a preference for the ",
-        "andMore": "and many more."
+        "preferMERNStack": "with a preference for the MERN stack",
+        "andMore": "and many other technologies."
       },
-      "lookingFor": "If you are looking for a reliable and competent web/mobile developer for your projects, feel free to contact me. I am flexible with technical stacks and working arrangements, and I will be happy to discuss with you to find the most suitable solution for your needs.",
-      "portfolioInfo": "This portfolio was coded in React, TailwindCSS, and CSS by myself.",
-      "discoverMe": "Ready to discover me?",
+      "contact": {
+        "lookingFor": "If you are looking for a reliable and skilled web/mobile developer for your projects or an IT teacher, feel free to contact me. I am flexible with technical stacks and work arrangements and would be happy to discuss the best solution for your needs."
+      },
+      "portfolioInfo": "This portfolio was coded by myself using React, TailwindCSS, and CSS.",
+      "discoverMe": "Ready to discover more about me?",
       "letsGo": "Let's go!",
-      "accessResume": "Access my resume directly"
+      "accessResume": "Access my resume directly",
+      "greetings": "Greetings!"
     }
   },
   "About": {

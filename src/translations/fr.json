@@ -4,11 +4,11 @@
     "frontEndDeveloper": "Développeur Front-End",
     "backEndDeveloper": "Développeur Back-End",
     "fullStackDeveloper": "Développeur Full-Stack",
-    "teacher": "Professeur d'informatique",
+    "teacher": "IT Formateur",
     "freelanceFrontEndDeveloper": "Développeur Front-End (Freelance)",
     "freelanceBackEndDeveloper": "Développeur Back-End (Freelance)",
     "freelanceFullStackDeveloper": "Développeur Full-Stack (Freelance)",
-    "freelanceTeacher": "Professeur d'informatique (Freelance)",
+    "freelanceTeacher": "IT Formateur (Freelance)",
     "teacherAssistant": "Assistant pédagogique",
     "PHPTeacher": "Professeur de PHP",
     "freelance": "Freelance"
@@ -21,58 +21,31 @@
     "contact": "Contact"
   },
   "Home": {
-    "Freelance": {
-      "greetings": "Salutations !",
+    "AboutMe": {
       "intro": {
-        "university": "Actuellement étudiant à",
-        "ucla": "UCLA",
-        "universityFullName": "University of California, Los Angeles",
-        "sameTime": "je suis en parallèle développeur",
-        "withExperience": "avec une solide expérience dans le domaine du développement web/mobile. Je suis à la recherche de nouvelles",
-        "freelanceMissions": "missions freelance"
+        "freelance": "Freelance Full-Stack Developer et IT Teacher",
+        "uclaGraduate": "je sors tout fraîchement de UCLA",
+        "uclaFullName": "University of California, Los Angeles",
+        "readyToContribute": "et suis prêt à apporter mon expertise à vos projets."
       },
       "skills": {
-        "webMobileDevelopment": "Mes compétences en développement web/mobile incluent",
+        "webMobileDevelopment": "J'ai une solide expérience dans le développement web/mobile avec des compétences en",
         "react": "React",
-        "tailwindCSS": "TailwindCSS",
         "nodeJS": "Node.js",
-        "and": "et",
+        "nuxtJS": "Nuxt.js",
+        "tailwindCSS": "TailwindCSS",
         "mongoDB": "MongoDB",
-        "preferMERNStack": "avec une préférence pour la stack ",
-        "andMore": "et bien d'autres."
+        "preferMERNStack": "avec une préférence pour la stack",
+        "andMore": "et bien d'autres technologies."
       },
-      "lookingFor": "Si vous cherchez un développeur web/mobile fiable et compétent pour vos projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks techniques et les modalités de travail, et je serai heureux de discuter avec vous pour trouver la solution la plus adaptée à vos besoins.",
+      "contact": {
+        "lookingFor": "Si vous cherchez un développeur web/mobile fiable et compétent pour vos projets ou un formateur en informatique, n'hésitez pas à me contacter. Je suis flexible sur les stacks techniques et les modalités de travail, et je serai heureux de discuter avec vous pour trouver la solution la plus adaptée à vos besoins."
+      },
       "portfolioInfo": "Ce portfolio a été codé en React, TailwindCSS et CSS par moi-même.",
       "discoverMe": "Prêt à me découvrir ?",
       "letsGo": "C'est parti !",
-      "accessResume": "Accéder directement à mon CV"
-    },
-    "FixedTerm": {
-      "greetings": "Salutations !",
-      "intro": {
-        "university": "Actuellement étudiant à",
-        "ucla": "UCLA",
-        "universityFullName": "University of California, Los Angeles",
-        "sameTime": "je suis en parallèle développeur",
-        "withExperience": "avec une solide expérience dans le domaine du développement web/mobile. Je suis à la recherche d'un",
-        "freelanceMissions": "missions freelance",
-        "fixedTerm": "CDD de Septembre 2024 à fin Février 2025 en Île-de-France"
-      },
-      "skills": {
-        "webMobileDevelopment": "Mes compétences en développement web/mobile incluent",
-        "react": "React",
-        "tailwindCSS": "TailwindCSS",
-        "nodeJS": "Node.js",
-        "and": "et",
-        "mongoDB": "MongoDB",
-        "preferMERNStack": "avec une préférence pour la stack ",
-        "andMore": "et bien d'autres."
-      },
-      "lookingFor": "Si vous cherchez un développeur web/mobile fiable et compétent pour vos projets, n'hésitez pas à me contacter. Je suis flexible sur les stacks techniques et les modalités de travail, et je serai heureux de discuter avec vous pour trouver la solution la plus adaptée à vos besoins.",
-      "portfolioInfo": "Ce portfolio a été codé en React, TailwindCSS et CSS par moi-même.",
-      "discoverMe": "Prêt à me découvrir ?",
-      "letsGo": "C'est parti !",
-      "accessResume": "Accéder directement à mon CV"
+      "accessResume": "Accéder directement à mon CV",
+      "greetings": "Salutations !"
     }
   },
   "About": {
