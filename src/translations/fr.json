@@ -1,10 +1,10 @@
 {
   "Common": {
     "fullStack": "Full-Stack",
-    "frontEndDeveloper": "Développeur Front-End",
-    "backEndDeveloper": "Développeur Back-End",
-    "fullStackDeveloper": "Développeur Full-Stack",
-    "teacher": "IT Formateur",
+    "frontEndDeveloper": "Front-End Developer",
+    "backEndDeveloper": "Back-End Developer",
+    "fullStackDeveloper": "Full-Stack Developer",
+    "teacher": "IT Instructor",
     "freelanceFrontEndDeveloper": "Développeur Front-End (Freelance)",
     "freelanceBackEndDeveloper": "Développeur Back-End (Freelance)",
     "freelanceFullStackDeveloper": "Développeur Full-Stack (Freelance)",
@@ -223,6 +223,7 @@
           "• MyDigitalSchool",
           "• Doranco",
           "• Aston",
+          "• The Bridge",
           "• Alt-RH",
           "• Konexio",
           "• Evogue Formation"

@@ -160,7 +160,7 @@ const Professional = ({ t }) => {
         techUsed={t("Work.professional.teacher.techUsed", {
           returnObjects: true,
         })}
-        done={true}
+        done={false}
         nmemb={1}
         job={t("Common.freelanceTeacher")}
         t={t}

@@ -19,7 +19,7 @@ const resources = {
   fr: { translation: frTranslation },
 };
 
-const lng = "fr";
+const lng = "en";
 
 i18n.use(initReactI18next).init({
   resources,
