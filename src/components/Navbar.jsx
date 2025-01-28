@@ -147,7 +147,7 @@ const Navbar = () => {
           <SocialBar
             name="CV"
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect={`resume_${seeking}?language=${selectedLanguage}`}
+            redirect={`cv`}
             color="bg-gray-700"
           />
         </ul>
@@ -179,7 +179,7 @@ const Navbar = () => {
         />
         <SocialBar
           icon={<BsFillPersonLinesFill size={30} />}
-          redirect={`resume_${seeking}?language=${selectedLanguage}`}
+          redirect={`cv`}
           color="bg-gray-700"
           shortSize
         />

@@ -184,7 +184,7 @@ const AccessResume = ({ t }) => {
     <div className="FromBottom flex items-center">
       <a
         className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-        href={`resume_${seeking}?language=${selectedLanguage}`}
+        href={`cv`}
         target="_blank"
         rel="noreferrer"
       >

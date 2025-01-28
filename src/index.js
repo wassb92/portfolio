@@ -16,9 +16,10 @@ const Routing = () => {
     <SeekingContext.Provider value={{ seeking, setSeeking, defaultSeek }}>
       <Routes>
         <Route path="/" element={<App />} />
-        {seeks.map((seek) => (
+        {/* {seeks.map((seek) => (
           <Route path={`resume_${seek}`} element={<Resume />} key={seek} />
-        ))}
+        ))} */}
+        <Route path="cv" element={<Resume />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </SeekingContext.Provider>

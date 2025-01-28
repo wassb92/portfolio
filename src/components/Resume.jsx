@@ -40,7 +40,8 @@
 // export default Resume;
 
 import React from "react";
-import resumePDF from "assets/resume/CV_Wassini_Bouzidi_Dev.pdf";
+// import resumePDF from "assets/resume/CV_Wassini_Bouzidi_Dev.pdf";
+import resumePDF from "assets/resume/LTS.pdf";
 
 const Resume = () => {
   return (
