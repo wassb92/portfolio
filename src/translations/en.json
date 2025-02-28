@@ -32,6 +32,7 @@
         "webMobileDevelopment": "I have solid experience in web/mobile development with skills in",
         "react": "React",
         "nodeJS": "Node.js",
+        "nextJS": "Next.js",
         "nuxtJS": "Nuxt.js",
         "tailwindCSS": "TailwindCSS",
         "mongoDB": "MongoDB",
@@ -51,9 +52,9 @@
   "About": {
     "aboutMe": "About Me",
     "currentActivities": [
-      "Freelance Full-Stack Developer & IT Instructor",
+      "Freelance Full-Stack Developer",
       "UCLA Alumni (University of California, Los Angeles)",
-      "Developer at OWL",
+      "IT Teacher",
       "Former Developer at Rakuten",
       "Former President of EpiSolidaire"
     ]
@@ -223,9 +224,12 @@
           "• Efrei",
           "• Epitech Digital School",
           "• MyDigitalSchool",
+          "• IA Institut",
           "• Doranco",
           "• Aston",
+          "• Start-Zup",
           "• The Bridge",
+          "• École Multimédia",
           "• Alt-RH",
           "• Konexio",
           "• Evogue Formation"
@@ -236,17 +240,34 @@
           "PHP",
           "Java",
           "C#",
+          "NodeJS",
+          "NestJS",
+          "Python",
+          "R",
+          "Bash",
+          "MongoDB",
+          "PostgreSQL",
+          "MySQL",
           "HTML",
           "CSS",
           "SQL",
           "WordPress",
+          "Godot",
+          "Postman",
+          "Swagger",
+          "GitHub",
+          "Docker",
           "Cypress",
           "Jest",
           "PHPUnit",
           "Tests unitaires",
+          "Electron",
+          "API",
+          "IA",
+          "Machine Learning",
           "OOP",
           "UML",
-          "Enseignement"
+          "Teaching"
         ]
       },
       "ionis": {
@@ -860,5 +881,10 @@
         "nmemb": 2
       }
     }
+  },
+  "NotFound": {
+    "pageNotFound": "Page not found",
+    "message": "This page does not exist!",
+    "backToHome": "Back to home"
   }
 }

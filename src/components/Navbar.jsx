@@ -61,6 +61,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
   const { t, i18n } = useTranslation();
   const selectedLanguage = i18n.language;
+  console.log("selectedLanguage", selectedLanguage);
 
   const FaMalt = () => {
     return (
@@ -123,7 +124,10 @@ const Navbar = () => {
           <SocialBar
             name="LinkedIn"
             icon={<FaLinkedin size={30} />}
-            redirect="https://www.linkedin.com/in/wassini-bouzidi/"
+            redirect={
+              `https://www.linkedin.com/in/wassini-bouzidi/` +
+              (selectedLanguage === "fr" ? "?locale=fr_FR" : "")
+            }
             color="bg-blue-600"
           />
           <SocialBar
@@ -147,7 +151,7 @@ const Navbar = () => {
           <SocialBar
             name="CV"
             icon={<BsFillPersonLinesFill size={30} />}
-            redirect={`cv`}
+            redirect={`cv?lang=${selectedLanguage}`}
             color="bg-gray-700"
           />
         </ul>
@@ -155,7 +159,10 @@ const Navbar = () => {
       <div className="flex z-999 md:hidden fixed space-x-1">
         <SocialBar
           icon={<FaLinkedin size={30} />}
-          redirect="https://www.linkedin.com/in/wassini-bouzidi/"
+          redirect={
+            `https://www.linkedin.com/in/wassini-bouzidi/` +
+            (selectedLanguage === "fr" ? "?locale=fr_FR" : "")
+          }
           color="bg-blue-600"
           shortSize
         />

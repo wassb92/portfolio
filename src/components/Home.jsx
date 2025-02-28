@@ -99,6 +99,7 @@ const FixedTermSearchingText = ({ t }) => {
           {t("Home.AboutMe.skills.webMobileDevelopment")}{" "}
           <UnderlinedText>{t("Home.AboutMe.skills.react")}</UnderlinedText>,{" "}
           <UnderlinedText>{t("Home.AboutMe.skills.nodeJS")}</UnderlinedText>,{" "}
+          <UnderlinedText>{t("Home.AboutMe.skills.nextJS")}</UnderlinedText>,{" "}
           <UnderlinedText>{t("Home.AboutMe.skills.nuxtJS")}</UnderlinedText>,{" "}
           <UnderlinedText>
             {t("Home.AboutMe.skills.tailwindCSS")}
@@ -184,7 +185,7 @@ const AccessResume = ({ t }) => {
     <div className="FromBottom flex items-center">
       <a
         className="FromRight p-3 border-2 font-semibold text-white rounded-xl transition-all duration-500 bg-gradient-to-br from-main via-black to-secondary bg-size-200 hover:bg-right-bottom"
-        href={`cv`}
+        href={`cv?lang=${selectedLanguage}`}
         target="_blank"
         rel="noreferrer"
       >

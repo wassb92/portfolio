@@ -4,7 +4,7 @@ import UpButtonRedirect from "./UpButtonRedirect";
 import GitHubCalendar from "react-github-calendar";
 import { useTranslation } from "react-i18next";
 
-const emojisMapping = ["💻", "📚", "🦉", "🛒", "🤝🏼"];
+const emojisMapping = ["💻", "📚", "🧑🏻‍🏫", "🛒", "🤝🏼"];
 
 const About = () => {
   const { t } = useTranslation();

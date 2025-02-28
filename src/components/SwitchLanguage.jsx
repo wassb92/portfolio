@@ -8,7 +8,7 @@ const SwitchLanguage = () => {
   const selectedLanguage = i18n.language;
 
   return (
-    <div className="space-x-4">
+    <div className="z-49 sm:fixed w-full flex justify-end space-x-4">
       <button
         className={`rounded-lg border ${
           selectedLanguage === "fr"
