@@ -1,12 +1,21 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import HTML from "assets/langages/html.png";
 import CSS from "assets/langages/css.png";
 import JavaScript from "assets/langages/javascript.png";
 import TypeScript from "assets/langages/typescript.png";
+import Nextjs from "assets/langages/nextjs.png";
+import Nuxtjs from "assets/langages/nuxtjs.png";
+import tRCP from "assets/langages/tRCP.png";
+import Vuejs from "assets/langages/vuejs.png";
+import Flutter from "assets/langages/flutter.png";
 import ReactImg from "assets/langages/react.png";
 import Node from "assets/langages/node.png";
+import Python from "assets/langages/python.png";
+import Stripe from "assets/langages/stripe.png";
+import OOP from "assets/langages/OOP.png";
 import Cpp from "assets/langages/cpp.png";
 import C from "assets/langages/c.png";
+import C_CPP from "assets/langages/c_cpp.png";
 import Bash from "assets/langages/bash.png";
 import GitHub from "assets/langages/github.png";
 import Tailwind from "assets/langages/tailwind.png";
@@ -27,88 +36,135 @@ import { SeekingContext } from "SeekingContext";
 import { useTranslation } from "react-i18next";
 
 const Skill = (props) => {
+  const [flipped, setFlipped] = useState(false);
+
   return (
-    <div className="-z-1 reveal shadow-lg shadow-secondary hover:scale-110 duration-300 hover:shadow-main">
-      <img
-        className={"my-4 w-20 mx-auto " + props.className}
-        src={props.logo}
-        alt={props.name}
+    <div
+      className={`relative z-10 rounded-lg overflow-hidden shadow-lg shadow-secondary hover:scale-110 duration-300 hover:shadow-main group ${props.className} cursor-pointer`}
+      onMouseEnter={() => setFlipped(!flipped)}
+      onClick={() => props.link && window.open(props.link, "_blank")}
+    >
+      <p
+        className={`px-3 font-semibold rounded-t-lg text-white transition-all duration-500 bg-gradient-to-r ${
+          flipped ? "from-main to-secondary" : "from-secondary to-main"
+        } bg-[length:100%_50%] bg-left`}
+      >
+        {props.name}
+      </p>
+      <img className={"my-3 w-20 mx-auto"} src={props.logo} alt={props.name} />
+    </div>
+  );
+};
+
+const SkillsList = () => {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language || "en";
+
+  return (
+    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
+      <Skill name="Next.js" logo={Nextjs} link="https://nextjs.org/" />
+      <Skill name="Nuxt.js" logo={Nuxtjs} link="https://nuxt.com/" />
+      <Skill
+        name="React"
+        logo={ReactImg}
+        link={
+          currentLanguage === "en"
+            ? "https://react.dev/"
+            : "https://fr.react.dev/"
+        }
       />
-      <div className="my-4 text-white font-semibold">{props.name}</div>
-    </div>
-  );
-};
-
-const FixedTermSkills = () => {
-  return (
-    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-      <Skill name="C" logo={C} />
-      <Skill name="C++" logo={Cpp} />
-      <Skill name="Bash" logo={Bash} />
-      <Skill name="Linux" logo={Linux} />
-      <Skill name="GitHub" logo={GitHub} />
-      <Skill name="TypeScript" logo={TypeScript} />
-      <Skill name="JavaScript" logo={JavaScript} />
-      <Skill name="React" logo={ReactImg} />
-      <Skill name="Node.js" logo={Node} />
-      <Skill name="TailwindCSS" logo={Tailwind} />
-      <Skill name="PostgreSQL" logo={PostgreSQL} />
-      <Skill name="MongoDB" logo={Mongo} />
-      <Skill name="HTML" logo={HTML} />
-      <Skill name="CSS" logo={CSS} />
-      <Skill name="Visual Studio Code" logo={VSCode} />
-    </div>
-  );
-};
-
-const FreelanceSkills = () => {
-  return (
-    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-      <Skill name="React" logo={ReactImg} />
-      <Skill name="Node.js" logo={Node} />
-      <Skill name="TailwindCSS" logo={Tailwind} />
-      <Skill name="MongoDB" logo={Mongo} />
-      <Skill name="Docker" logo={Docker} />
-      <Skill name="TypeScript" logo={TypeScript} className="mt-8" />
-      <Skill name="JavaScript" logo={JavaScript} className="mt-8" />
-      <Skill name="GitHub" logo={GitHub} className="mt-8" />
-      <Skill name="Netlify" logo={Netlify} className="mt-8" />
-      <Skill name="Heroku" logo={Heroku} />
-      <Skill name="Linux" logo={Linux} />
-      <Skill name="Bash" logo={Bash} className="mt-5" />
-      <Skill name="MUI" logo={MUI} className="mt-8" />
-      <Skill name="HTML" logo={HTML} className="mt-8" />
-      <Skill name="CSS" logo={CSS} className="mt-8" />
-    </div>
-  );
-};
-
-const MergedSkills = () => {
-  return (
-    <div className="w-full grid grid-cols-3 xs:grid-cols-5 sm:grid-cols-5 gap-4 md:gap-6 text-center py-8">
-      {/* <Skill name="TypeScript" logo={TypeScript} /> */}
-      {/* <Skill name="JavaScript" logo={JavaScript} /> */}
-      <Skill name="React" logo={ReactImg} />
-      <Skill name="Node.js" logo={Node} />
-      <Skill name="NestJS" logo={NestJS} />
-      <Skill name="Golang" logo={Golang} />
-      <Skill name="TailwindCSS" logo={Tailwind} />
-      <Skill name="MongoDB" logo={Mongo} />
-      <Skill name="PostgreSQL" logo={PostgreSQL} />
-      <Skill name="MUI" logo={MUI} />
-      <Skill name="Docker" logo={Docker} />
-      <Skill name="GitHub" logo={GitHub} />
-      <Skill name="C" logo={C} />
-      <Skill name="C++" logo={Cpp} />
-      <Skill name="Bash" logo={Bash} />
-      <Skill name="Linux" logo={Linux} />
-      <Skill name="Visual Studio Code" logo={VSCode} className="mt-8" />
+      <Skill
+        name="Node.js"
+        logo={Node}
+        link={`https://nodejs.org/${currentLanguage}/`}
+      />
+      <Skill name="NestJS" logo={NestJS} link="https://nestjs.com/" />
+      <Skill name="tRCP" logo={tRCP} link="https://trpc.io/" />
+      <Skill
+        name="Vue.js"
+        logo={Vuejs}
+        link={
+          currentLanguage === "fr"
+            ? "https://fr.vuejs.org/"
+            : "https://vuejs.org/"
+        }
+      />
+      <Skill
+        name="TailwindCSS"
+        logo={Tailwind}
+        link="https://tailwindcss.com/"
+      />
+      <Skill name="Flutter" logo={Flutter} link="https://flutter.dev/" />
+      <Skill name="Golang" logo={Golang} link="https://go.dev/" />
+      <Skill name="Python" logo={Python} link="https://www.python.org/" />
+      <Skill
+        name="MongoDB"
+        logo={Mongo}
+        link={
+          currentLanguage === "fr"
+            ? "https://www.mongodb.com/fr-fr"
+            : "https://www.mongodb.com/"
+        }
+      />
+      <Skill
+        name="PostgreSQL"
+        logo={PostgreSQL}
+        link={`https://www.postgresql.${
+          currentLanguage === "fr" ? "fr" : "org"
+        }/`}
+      />
+      <Skill name="Docker" logo={Docker} link="https://www.docker.com/" />
+      <Skill name="GitHub" logo={GitHub} link="https://github.com/" />
+      <Skill
+        name="C / C++"
+        logo={C_CPP}
+        link={`https://${currentLanguage}.cppreference.com/`}
+      />
+      <Skill
+        name="Bash"
+        logo={Bash}
+        link={
+          currentLanguage === "fr"
+            ? "https://fr.wikipedia.org/wiki/Bourne-Again_shell"
+            : "https://en.wikipedia.org/wiki/Bash_(Unix_shell)"
+        }
+      />
+      <Skill
+        name="Linux"
+        logo={Linux}
+        link={`https://${
+          currentLanguage === "fr" ? "fr" : "en"
+        }.wikipedia.org/wiki/Linux`}
+      />
+      <Skill
+        name="Stripe"
+        logo={Stripe}
+        link={
+          currentLanguage === "fr"
+            ? "https://stripe.com/fr"
+            : "https://stripe.com/"
+        }
+      />
+      <Skill
+        name="OOP"
+        logo={OOP}
+        link={
+          currentLanguage === "fr"
+            ? "https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet"
+            : "https://en.wikipedia.org/wiki/Object-oriented_programming"
+        }
+      />
+      <Skill
+        name="VSCode"
+        logo={VSCode}
+        className="sm:hidden"
+        link="https://code.visualstudio.com/"
+      />
     </div>
   );
 };
 
 const Skills = () => {
-  const { seeking } = useContext(SeekingContext);
   const { t } = useTranslation();
 
   return (
@@ -119,7 +175,7 @@ const Skills = () => {
             {t("Skills.skills")}
           </div>
         </div>
-        {seeking === "freelance" ? <FreelanceSkills /> : <MergedSkills />}
+        <SkillsList />
         <div className="flex justify-between">
           <DownButtonRedirect to="work" />
           <UpButtonRedirect to="about" />
