@@ -1,10 +1,13 @@
 {
   "Common": {
     "fullStack": "Full-Stack",
-    "frontEndDeveloper": "Front-End Developer",
-    "backEndDeveloper": "Back-End Developer",
-    "fullStackDeveloper": "Full-Stack Developer",
-    "teacher": "IT Instructor",
+    "frontEndDeveloper": "Développeur Front-End",
+    "backEndDeveloper": "Développeur Back-End",
+    "fullStackDeveloper": "Développeur Full-Stack",
+    "leadBackEndDeveloper": "Lead Développeur Back-End",
+    "leadFrontEndDeveloper": "Lead Développeur Front-End",
+    "leadFullStackDeveloper": "Lead Développeur Full-Stack",
+    "teacher": "IT Teacher",
     "freelanceFrontEndDeveloper": "Développeur Front-End (Freelance)",
     "freelanceBackEndDeveloper": "Développeur Back-End (Freelance)",
     "freelanceFullStackDeveloper": "Développeur Full-Stack (Freelance)",
@@ -23,7 +26,7 @@
   "Home": {
     "AboutMe": {
       "intro": {
-        "freelance": "Freelance Full-Stack Developer et IT Teacher",
+        "freelance": "Freelance Full-Stack Développeur et IT Teacher",
         "uclaGraduate": "je sors tout fraîchement de UCLA",
         "uclaFullName": "University of California, Los Angeles",
         "readyToContribute": "et suis prêt à apporter mon expertise à vos projets."
@@ -52,7 +55,7 @@
   "About": {
     "aboutMe": "À propos de moi",
     "currentActivities": [
-      "Freelance Full-Stack Developer",
+      "Freelance Full-Stack Développeur",
       "UCLA Alumni (University of California, Los Angeles)",
       "Professeur d'informatique",
       "Ex-Développeur chez Rakuten",
@@ -89,6 +92,13 @@
       "other": "Autres"
     },
     "professional": {
+      "stakimo": {
+        "name": "Stakimo",
+        "description": [
+          "Développement d'une solution SaaS moderne pour révolutionner les ventes immobilières en remplaçant les méthodes traditionnelles obsolètes par des outils numériques innovants et efficaces adaptés aux besoins actuels des promoteurs."
+        ],
+        "techUsed": ["Nuxt.js", "Vue.js", "tRPC", "PostgreSQL", "TailwindCSS"]
+      },
       "rakuten": {
         "name": "Rakuten",
         "description": [
@@ -117,6 +127,51 @@
           "Slack"
         ]
       },
+      "owl": {
+        "name": "OWL",
+        "description": [
+          "Développement d'une application mobile qui aide à prévenir la somnolence au volant.",
+          "L'application se compose d'un client mobile et d'un serveur.",
+          "L'application mobile est connectée à un smartwatch qui détecte principalement le rythme cardiaque, l'apport en oxygène et la durée de sommeil du conducteur.",
+          "En fonction de ces informations, un algorithme est appliqué pour déterminer si le conducteur est fatigué ou non.",
+          "Si le conducteur est fatigué, l'application mobile prend des mesures pour l'alerter et lui suggère de faire une pause.",
+          "Une action peut être caractérisée par une vibration du smartwatch, du téléphone, un message sur le téléphone, un appel, etc...",
+          "Le conducteur peut alors obtenir un itinéraire pour se rendre au point d'intérêt le plus proche (restaurant, hôtel, etc...) si nécessaire."
+        ],
+        "techUsed": [
+          "TypeScript",
+          "React Native",
+          "Expo",
+          "NestJS",
+          "Golang",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "CSS",
+          "Bluetooth",
+          "Postman",
+          "Authentication",
+          "GitHub",
+          "render.com",
+          "Connect smartwatch to mobile"
+        ]
+      },
+      "isograd": {
+        "name": "Isograd Testing Services",
+        "description": [
+          "Responsable de la révision et de l'optimisation du contenu technique pour les services de tests logiciels, en veillant à la clarté, à l'exactitude et à l'alignement avec les exigences des clients."
+        ],
+        "techUsed": ["JavaScript", "Python", "Anglais"]
+      },
+      "hunterfood": {
+        "name": "Hunterfood",
+        "description": [
+          "Développement d'une application mobile proposant des codes promo exclusifs pour les restaurants locaux, avec un système d'abonnement mensuel ou annuel intégré utilisant Stripe.",
+          "L'application comprend un tableau de bord pour les propriétaires de restaurants pour gérer leurs codes promo et leurs abonnements."
+        ],
+        "techUsed": ["Node.js", "React Native", "MongoDB", "Stripe"]
+      },
+
       "ublo": {
         "name": "Ublo",
         "description": [

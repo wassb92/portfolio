@@ -57,11 +57,9 @@ const SocialBar = (props) => {
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const { seeking } = useContext(SeekingContext);
   const handleClick = () => setNav(!nav);
   const { t, i18n } = useTranslation();
   const selectedLanguage = i18n.language;
-  console.log("selectedLanguage", selectedLanguage);
 
   const FaMalt = () => {
     return (

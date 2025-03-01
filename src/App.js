@@ -7,7 +7,6 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import Footer from "./components/Footer";
 import Snowfall from "react-snowfall";
-import { SeekingContext } from "./SeekingContext";
 
 import { initReactI18next } from "react-i18next";
 import i18n from "i18next";
@@ -46,12 +45,10 @@ const reveal = () => {
 window.addEventListener("scroll", reveal);
 
 const App = () => {
-  const { seeking } = useContext(SeekingContext);
-
   return (
     <div className="overflow-hidden font-sans w-full h-full">
       <Snowfall
-        color={seeking === "fixedTerm" ? "#4031D9" : "#8A37DC"}
+        color="#8A37DC"
         style={{ position: "fixed" }}
         snowflakeCount={200}
       />

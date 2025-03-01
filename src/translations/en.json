@@ -4,6 +4,9 @@
     "frontEndDeveloper": "Front-End Developer",
     "backEndDeveloper": "Back-End Developer",
     "fullStackDeveloper": "Full-Stack Developer",
+    "leadBackEndDeveloper": "Lead Back-End Developer",
+    "leadFrontEndDeveloper": "Lead Front-End Developer",
+    "leadFullStackDeveloper": "Lead Full-Stack Developer",
     "teacher": "IT Teacher",
     "freelanceFrontEndDeveloper": "Front-End Developer (Freelance)",
     "freelanceBackEndDeveloper": "Back-End Developer (Freelance)",
@@ -89,6 +92,13 @@
       "other": "Other"
     },
     "professional": {
+      "stakimo": {
+        "name": "Stakimo",
+        "description": [
+          "Development of a modern SaaS solution to revolutionize real estate sales by replacing outdated traditional methods with innovative and efficient digital tools tailored to the current needs of developers."
+        ],
+        "techUsed": ["Nuxt.js", "Vue.js", "tRPC", "PostgreSQL", "TailwindCSS"]
+      },
       "rakuten": {
         "name": "Rakuten",
         "description": [
@@ -117,7 +127,50 @@
           "Slack"
         ]
       },
-
+      "owl": {
+        "name": "OWL",
+        "description": [
+          "Development of a mobile application that helps prevent drowsiness while driving.",
+          "The application consists of a mobile client and a server.",
+          "The mobile application is connected to a smartwatch that mainly detects the driver's heart rate, oxygen intake, and sleep duration.",
+          "Based on this information, an algorithm is applied to determine if the driver is tired or not.",
+          "If the driver is tired, the mobile application takes action to alert them and suggests taking a break.",
+          "An action can be characterized by a vibration of the smartwatch, phone, a message on the phone, a call, etc...",
+          "The driver can then get a destination to go to the nearest point of interest (restaurant, hotel, etc...) if needed."
+        ],
+        "techUsed": [
+          "TypeScript",
+          "React Native",
+          "Expo",
+          "NestJS",
+          "Golang",
+          "NodeJS",
+          "Express",
+          "MongoDB",
+          "CSS",
+          "Bluetooth",
+          "Postman",
+          "Authentication",
+          "GitHub",
+          "render.com",
+          "Connect smartwatch to mobile"
+        ]
+      },
+      "isograd": {
+        "name": "Isograd Testing Services",
+        "description": [
+          "Responsible for reviewing and optimizing technical content for software testing services, ensuring clarity, accuracy, and alignment with client requirements."
+        ],
+        "techUsed": ["JavaScript", "Python", "English"]
+      },
+      "hunterfood": {
+        "name": "Hunterfood",
+        "description": [
+          "Development of a mobile application offering exclusive promo codes for local restaurants, with an integrated monthly or yearly subscription system using Stripe.",
+          "The application includes a dashboard for restaurant owners to manage their promo codes and subscriptions."
+        ],
+        "techUsed": ["Node.js", "React Native", "MongoDB", "Stripe"]
+      },
       "ublo": {
         "name": "Ublo",
         "description": [

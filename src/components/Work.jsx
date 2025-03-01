@@ -26,6 +26,9 @@ import ERP from "assets/projets/ERP.png";
 import OWL from "assets/projets/OWL.png";
 import rtype from "assets/projets/rtype.png";
 import rakuten from "assets/projets/rakuten.png";
+import stakimo from "assets/projets/stakimo.jpeg";
+import isograd from "assets/projets/isograd.jpeg";
+import hunterfood from "assets/projets/hunterfood.png";
 import freelance from "assets/projets/freelance.png";
 import evogue from "assets/projets/evogue.jpeg";
 import allocine from "assets/projets/allocine.png";
@@ -126,6 +129,20 @@ const Professional = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
+        name={t("Work.professional.stakimo.name")}
+        logo={stakimo}
+        description={t("Work.professional.stakimo.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.stakimo.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={3}
+        job={t("Common.freelanceFullStackDeveloper")}
+        t={t}
+      />
+      <Projet
         name={t("Work.professional.rakuten.name")}
         logo={rakuten}
         description={t("Work.professional.rakuten.description", {
@@ -137,6 +154,48 @@ const Professional = ({ t }) => {
         done={true}
         nmemb={9}
         job={t("Common.frontEndDeveloper")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.owl.name")}
+        logo={OWL}
+        description={t("Work.professional.owl.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.owl.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={6}
+        job={t("Common.leadBackEndDeveloper")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.isograd.name")}
+        logo={isograd}
+        description={t("Work.professional.isograd.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.isograd.techUsed", {
+          returnObjects: true,
+        })}
+        done={false}
+        nmemb={1}
+        job={t("Common.freelanceFullStackDeveloper")}
+        t={t}
+      />
+      <Projet
+        name={t("Work.professional.hunterfood.name")}
+        logo={hunterfood}
+        description={t("Work.professional.hunterfood.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.professional.hunterfood.techUsed", {
+          returnObjects: true,
+        })}
+        done={true}
+        nmemb={1}
+        job={t("Common.freelanceFullStackDeveloper")}
         t={t}
       />
       <Projet
