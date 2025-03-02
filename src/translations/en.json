@@ -545,6 +545,16 @@
       }
     },
     "web": {
+      "owlShowcase": {
+        "name": "OWL Showcase",
+        "description": [
+          "Website to showcase the OWL project, introduce it online, and give the possibility to download the application."
+        ],
+        "techUsed": ["React", "TailwindCSS", "GitHub", "Netlify"],
+        "done": true,
+        "nmemb": 6,
+        "url": "https://owl-showcase-eip.netlify.app/"
+      },
       "epiSolidaire": {
         "name": "EpiSolidaire",
         "description": [
@@ -708,7 +718,7 @@
           "render.com",
           "Connect smartwatch to mobile"
         ],
-        "done": false,
+        "done": true,
         "nmemb": 9
       },
       "erp": {

@@ -543,6 +543,16 @@
       }
     },
     "web": {
+      "owlShowcase": {
+        "name": "Site vitrine OWL",
+        "description": [
+          "Site web pour présenter le projet OWL, le présenter en ligne et donner la possibilité de télécharger l'application."
+        ],
+        "techUsed": ["React", "TailwindCSS", "GitHub", "Netlify"],
+        "done": true,
+        "nmemb": 6,
+        "url": "https://owl-showcase-eip.netlify.app/"
+      },
       "epiSolidaire": {
         "name": "EpiSolidaire",
         "description": [

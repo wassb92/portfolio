@@ -415,6 +415,18 @@ const Web = ({ t }) => {
   return (
     <div className="space-y-20 divide-y divide-solid divide-secondary">
       <Projet
+        name={t("Work.web.owlShowcase.name")}
+        logo={OWL}
+        description={t("Work.web.owlShowcase.description", {
+          returnObjects: true,
+        })}
+        techUsed={t("Work.web.owlShowcase.techUsed", { returnObjects: true })}
+        done={true}
+        nmemb={6}
+        url="https://owl-showcase-eip.netlify.app/"
+        t={t}
+      />
+      <Projet
         name={t("Work.web.epiSolidaire.name")}
         logo={EpiSolidaire}
         description={t("Work.web.epiSolidaire.description", {
