@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HTML from "assets/langages/html.png";
 import CSS from "assets/langages/css.png";
 import JavaScript from "assets/langages/javascript.png";
@@ -29,33 +29,44 @@ import Docker from "assets/langages/docker.png";
 import MUI from "assets/langages/MUI.png";
 import NestJS from "assets/langages/nestjs.png";
 import Golang from "assets/langages/golang.png";
-
 import DownButtonRedirect from "./DownButtonRedirect";
 import UpButtonRedirect from "./UpButtonRedirect";
-import { SeekingContext } from "SeekingContext";
 import { useTranslation } from "react-i18next";
 
 const Skill = (props) => {
-  const [flipped, setFlipped] = useState(false);
+  const [hue, setHue] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHue((prevHue) => (prevHue + 2) % 360);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div
       className={`relative z-10 rounded-lg overflow-hidden shadow-lg shadow-secondary hover:scale-110 duration-300 hover:shadow-main group ${props.className} cursor-pointer`}
-      onMouseEnter={() => setFlipped(!flipped)}
       onClick={() => props.link && window.open(props.link, "_blank")}
     >
       <p
-        className={`px-3 font-semibold rounded-t-lg text-white transition-all duration-500 bg-gradient-to-r ${
-          flipped ? "from-main to-secondary" : "from-secondary to-main"
-        } bg-[length:100%_50%] bg-left`}
+        className="px-3 font-semibold rounded-t-lg text-white transition-all duration-500"
+        style={{
+          background: `linear-gradient(90deg, hsl(${hue}, 100%, 40%), hsl(${
+            (hue + 60) % 360
+          }, 100%, 40%))`,
+          backgroundSize: "200% 100%",
+          backgroundPosition: "0% 0",
+          textShadow: `0 0 5px #4031D9, 0 0 10px #4031D9, 0 0 15px #4031D9`,
+          transition: "background 0.5s ease-in-out, text-shadow 0.1s linear",
+        }}
       >
         {props.name}
       </p>
-      <img className={"my-3 w-20 mx-auto"} src={props.logo} alt={props.name} />
+      <img className="my-3 w-20 mx-auto" src={props.logo} alt={props.name} />
     </div>
   );
 };
-
 const SkillsList = () => {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language || "en";
